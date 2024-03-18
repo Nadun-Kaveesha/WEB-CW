@@ -25,6 +25,15 @@ function updateProgressBar(progressBar, value) {
   progressBar.querySelector("#progress__text").textContent = `${value}%`;
 }
 
+document.querySelector("#next").onclick = function () {
+  // Update the progress bar
+  progressIndex += 25;
+  const myProgressBar = document.querySelector("#progress");
+  updateProgressBar(myProgressBar, progressIndex);
+};
+
+
+
 // Function to handle click event on the "Add" button
 document.querySelector("#add").onclick = function () {
   const inputValue = document.querySelector("#newtask input").value;
@@ -43,7 +52,6 @@ document.querySelector("#add").onclick = function () {
 
   // Move to the next question
   questionIndex++;
-  progressIndex += 5;
 
   // If all questions have been asked, hide the "Add" button
   if (questionIndex >= questions.length) {
@@ -54,17 +62,11 @@ document.querySelector("#add").onclick = function () {
     inputField.placeholder = "Press Next to Proceed..";
     inputField.style.width = "100%";
     inputField.style.textAlign = "center";
-    
     return;
   }
 
-
   // Update input description and placeholder for the next question
   updateInputDescriptionAndPlaceholder();
-
-  // Update the progress bar
-  const myProgressBar = document.querySelector("#progress");
-  updateProgressBar(myProgressBar, progressIndex);
 };
 
 // Add keypress event listener to the input field
