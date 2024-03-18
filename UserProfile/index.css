@@ -30,8 +30,6 @@ body {
   padding: 30px 40px;
 }
 
-
-
 #inputDescription {
   font-family: "poppins", sans-serif;
   padding-bottom: 10px;
@@ -65,7 +63,7 @@ body {
   border-color: #8052ec;
 }
 
-#add  {
+#add {
   float: right;
   width: 25%;
   height: 45px;
@@ -87,13 +85,13 @@ body {
 .button-container {
   display: flex;
   justify-content: space-between;
- 
-
 }
 
-#next, #skip, #previous {
+#next,
+#skip,
+#previous {
   display: flex;
-  align-items: center; 
+  align-items: center;
   justify-content: center;
   width: 25%;
   height: 45px;
@@ -113,22 +111,23 @@ body {
   box-sizing: border-box;
 }
 
-.bx-skip-previous{
+.bx-skip-previous {
   font-size: 25px;
-  margin-right: 1px; 
+  margin-right: 1px;
 }
 
 .bx-skip-next {
   font-size: 25px;
-  margin-left: 3px; 
+  margin-left: 3px;
 }
 
-
-#next:last-child, #skip:last-child, #previous:last-child {
+#next:last-child,
+#skip:last-child,
+#previous:last-child {
   margin-right: 0;
 }
 
-#progressBar{
+.progress-container {
   background-color: #ffffff;
   padding: 30px 20px;
   margin-top: 20px;
@@ -141,8 +140,32 @@ body {
   font-weight: 200;
 }
 
+#progress {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  background: #83f099;
+  border-radius: 50px;
+  overflow: hidden;
+  margin-top: 10px;
+}
 
+#progress__fill {
+  width: 00%;
+  height: 100%;
+  background: #0c5d11;
+  transition: all 0.2s;
+}
 
+#progress__text {
+  position: absolute;
+  top: 50%;
+  right: 40%;
+  transform: translate(-50%, -50%);
+  font: bold 14px "poppins", sans-serif;
+  color: #ffffff;
+  text-align: center;
+}
 
 #tasks {
   background-color: #ffffff;
