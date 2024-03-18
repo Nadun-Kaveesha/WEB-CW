@@ -41,7 +41,7 @@ body {
 
 #newtask {
   background-color: white;
-  padding: 20px 20px 30px;
+  padding: 20px 20px 25px;
   border-radius: 5px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
@@ -54,6 +54,7 @@ body {
   font-size: 15px;
   border: 2px solid #d1d3d4;
   padding: 12px;
+  margin-bottom: 15px;
   font-weight: 500;
   position: relative;
   border-radius: 5px;
@@ -64,7 +65,7 @@ body {
   border-color: #8052ec;
 }
 
-#newtask button {
+#add  {
   float: right;
   width: 25%;
   height: 45px;
@@ -72,15 +73,63 @@ body {
   font-size: 15px;
   border: 2px solid #d1d3d4;
   padding: 12px;
+  margin-bottom: 12px;
   font-weight: 500;
   position: relative;
   font-size: 16px;
   border-radius: 5px;
   border: none;
-  background-color: #8052ec;
+  background-color: #0c5d11;
   color: #ffffff;
   cursor: pointer;
 }
+
+.button-container {
+  display: flex;
+  justify-content: space-between; 
+
+}
+
+#next, #skip, #previous {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  width: 25%;
+  height: 45px;
+  font-family: "poppins", sans-serif;
+  font-size: 15px;
+  border: 2px solid #d1d3d4;
+  padding: 12px;
+  margin-right: 56px;
+  font-weight: 500;
+  position: relative;
+  font-size: 16px;
+  border-radius: 50px;
+  border: none;
+  background-color: #83f099;
+  color: #000000;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.bx-skip-previous{
+  font-size: 25px;
+  margin-right: 1px; 
+}
+
+.bx-skip-next {
+  font-size: 25px;
+  margin-left: 3px; 
+}
+
+
+
+#next:last-child, #skip:last-child, #previous:last-child {
+  margin-right: 0;
+}
+
+
+
 
 #tasks {
   background-color: #ffffff;
@@ -90,4 +139,7 @@ body {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   width: 100%;
   position: relative;
+  font-family: "poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
 }

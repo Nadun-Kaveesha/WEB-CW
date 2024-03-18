@@ -1,4 +1,4 @@
-document.querySelector("#push").onclick = function () {
+document.querySelector("#add").onclick = function () {
     if(document.querySelector('#newtask input').value.length == 0) {
     alert("Please Enter a Valid Input");
     }
@@ -21,6 +21,6 @@ document.querySelector("#newtask input").addEventListener("keypress", function (
     // Prevent the default behavior of the Enter key
     event.preventDefault();
     // Trigger the click event of the button with id 'push'
-    document.querySelector("#push").click();
+    document.querySelector("#add").click();
   }
 });
