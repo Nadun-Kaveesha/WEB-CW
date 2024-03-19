@@ -160,7 +160,7 @@ body {
 #progress__text {
   position: absolute;
   top: 50%;
-  right: 40%;
+  right: 45%;
   transform: translate(-50%, -50%);
   font: bold 14px "poppins", sans-serif;
   color: #ffffff;

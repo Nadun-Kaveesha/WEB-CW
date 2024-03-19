@@ -25,13 +25,20 @@ function updateProgressBar(progressBar, value) {
   progressBar.querySelector("#progress__text").textContent = `${value}%`;
 }
 
-document.querySelector("#next").onclick = function () {
-  // Update the progress bar
-  progressIndex += 25;
-  const myProgressBar = document.querySelector("#progress");
-  updateProgressBar(myProgressBar, progressIndex);
-};
+// Function to increment the progressbar and proceed to next page
+function initializeProgressBarIncrement() {
+  let isFirstClick = true; // Flag to track the first click
 
+  document.querySelector("#next").onclick = function () {
+    if (isFirstClick) {
+      // Update the progress bar only on the first click
+      progressIndex += 25;
+      const myProgressBar = document.querySelector("#progress");
+      updateProgressBar(myProgressBar, progressIndex);
+      isFirstClick = false; // Set the flag to false after the first click
+    }
+  };
+}
 
 
 // Function to handle click event on the "Add" button
@@ -62,6 +69,7 @@ document.querySelector("#add").onclick = function () {
     inputField.placeholder = "Press Next to Proceed..";
     inputField.style.width = "100%";
     inputField.style.textAlign = "center";
+    initializeProgressBarIncrement();
     return;
   }
 
