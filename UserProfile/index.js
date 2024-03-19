@@ -1,10 +1,34 @@
-// Define an array of questions and corresponding placeholders
-const questions = [
+// Define an array of question sets and corresponding placeholders
+const questionSet1 = [
   { description: "Name :", placeholder: "Please Enter Your Name" },
   { description: "Surname :", placeholder: "Please Enter Your Surname" },
   { description: "Age :", placeholder: "Please Enter Your Age" },
   { description: "Gender :", placeholder: "Please Enter Your Gender" },
   { description: "Agree with the conditions :", placeholder: "Yes or No" },
+];
+
+const questionSet2 = [
+  { description: "Rational :", placeholder: "Please Enter Your Rationality" },
+  { description: "DoA :", placeholder: "Please Enter Your DoA" },
+  { description: "Task :", placeholder: "Please Enter Your Task" },
+  { description: "Place :", placeholder: "Please Enter Your Place" },
+  { description: "Assignment Type :", placeholder: "Please Enter Your Assignment Type" },
+];
+
+const questionSet3 = [
+  { description: "Area of Study :", placeholder: "Please Enter Your Area of Study" },
+  { description: "Highest Degree :", placeholder: "Please Enter Highest Degree Level" },
+  { description: "University :", placeholder: "Please Enter Your University / Institute" },
+  { description: "Complete Year :", placeholder: "Please Enter Your Completion Year of Study" },
+  { description: "Country :", placeholder: "Please Enter Country the University Belongs" },
+];
+
+const questionSet4 = [
+  { description: "Availability for Volunteering :", placeholder: "Min Hours Per Week " },
+  { description: "Surname :", placeholder: "Please Enter Your Surname" },
+  { description: "Telephone No. :", placeholder: "Please Enter Your Telephone No." },
+  { description: "Availability on Social Media :", placeholder: "Yes or No" },
+  { description: "Email :", placeholder: "Please Enter Your Email address" },
 ];
 
 // Initialize question index and progress index
@@ -13,12 +37,13 @@ let progressIndex = 0;
 
 // Function to update input description and placeholder
 function updateInputDescriptionAndPlaceholder() {
-  const currentQuestion = questions[questionIndex];
+  const currentQuestion = questionSet1[questionIndex];
   document.getElementById("inputDescription").innerText = currentQuestion.description;
   document.querySelector("#newtask input").placeholder = currentQuestion.placeholder;
-  document.getElementById("questionDescription").innerText = `Step 1 Personal Details | Question ${questionIndex + 1} of ${questions.length}`;
+  document.getElementById("questionDescription").innerText = `Step 1 Personal Details | Question ${
+    questionIndex + 1
+  } of ${questionSet1.length}`;
 }
-
 
 // Function to update the progress bar
 function updateProgressBar(progressBar, value) {
@@ -47,7 +72,7 @@ document.querySelector("#skip").onclick = function () {
   document.querySelector("#tasks").innerHTML += `
       <div class="task">
         <span id="taskname">
-          ${questions[questionIndex].description} ${"?"}
+          ${questionSet1[questionIndex].description} ${"?"}
         </span>
       </div>
     `;
@@ -58,7 +83,7 @@ document.querySelector("#skip").onclick = function () {
   progressIndex -= 5;
 
   // If all questions have been asked, hide the "Add" button
-  if (questionIndex >= questions.length) {
+  if (questionIndex >= questionSet1.length) {
     document.querySelector("#add").style.display = "none";
     document.getElementById("inputDescription").innerText = "";
     const inputField = document.querySelector("#newtask input");
@@ -74,18 +99,17 @@ document.querySelector("#skip").onclick = function () {
   updateInputDescriptionAndPlaceholder();
 };
 
-
 // Function to handle click event on the "Add" button
 document.querySelector("#add").onclick = function () {
   // Update the task with the answer to the current question
   const inputValue = document.querySelector("#newtask input").value;
-  if (inputValue ==0){
+  if (inputValue == 0) {
     alert("Please Enter a Valid Input");
-  }else{
+  } else {
     document.querySelector("#tasks").innerHTML += `
       <div class="task">
         <span id="taskname">
-          ${questions[questionIndex].description} ${inputValue}
+          ${questionSet1[questionIndex].description} ${inputValue}
         </span>
       </div>
     `;
@@ -97,7 +121,7 @@ document.querySelector("#add").onclick = function () {
     questionIndex++;
 
     // If all questions have been asked, hide the "Add" button
-    if (questionIndex >= questions.length) {
+    if (questionIndex >= questionSet1.length) {
       document.querySelector("#add").style.display = "none";
       document.getElementById("inputDescription").innerText = "";
       const inputField = document.querySelector("#newtask input");
@@ -109,8 +133,8 @@ document.querySelector("#add").onclick = function () {
       return;
     }
 
-  // Update input description and placeholder for the next question
-  updateInputDescriptionAndPlaceholder();
+    // Update input description and placeholder for the next question
+    updateInputDescriptionAndPlaceholder();
   }
 };
 
