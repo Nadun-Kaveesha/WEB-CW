@@ -126,6 +126,15 @@ body {
   box-sizing: border-box;
 }
 
+#previous:hover,
+#skip:hover,
+#next:hover {
+  background-color: #00ff33;
+}
+#add:hover{
+  background-color: #0e3d01;
+}
+
 .bx-skip-previous {
   font-size: 25px;
   margin-right: 1px;
