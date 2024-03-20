@@ -90,6 +90,7 @@
     .NavigationBar ul li a:hover {
         background-color: #d7fddf;
         color: black;
+        border-radius: 0% !important ;
     }
 
 
