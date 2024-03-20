@@ -25,13 +25,31 @@ body {
 }
 
 .NavigationBar ul li a {
+    font-weight: bold;
     display: block;
     color: rgb(255, 255, 255);
     text-align: center;
     padding: 13px 14px;
+    padding-left: 25px;
+    padding-right: 25px;
     font-size: 130% ;
     text-decoration: none;
     
+}
+
+.logo {
+    position: absolute;
+    top: 6px;
+    left: 28px;
+    z-index: 1;
+}
+
+.logo img {
+    width: 140px;
+    height: 84px;
+    border: 2px solid #d7fddf;
+    border-radius: 70%;
+
 }
 
 .NavigationBar ul li.SearchBar input[type = "text"]{
@@ -66,10 +84,10 @@ body {
     color: black;
 }
 
-.homeLink {
-    display: none;
-}
 
+.UserProfile1 , 
 .moreOption {
     display: none;
 }
+
+

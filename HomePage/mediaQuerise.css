@@ -13,8 +13,36 @@
         width: 100%;
         height: 60px;
         background-color: #00891b ;
-        text-align: left;
+        text-align: center;
         z-index: 1;
+    }
+
+    .logo{
+        position: relative;
+        display: inline-block;
+
+    }
+
+    .logo img {
+        width: 110px;
+        height: 64px;
+    }
+
+    .UserProfile1 {
+        display: block;
+        position: absolute;
+        top: 7px;
+        left: 7px;
+        width: 40px;
+        height: 40px;
+        
+    }
+
+    .UserProfile1 img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 3px solid rgb(0, 52, 0) ;
     }
     
     .NavigationBar ul {
@@ -26,7 +54,7 @@
         background-color: #00891b;
         position: absolute;
         top: 60px;
-        right: 0px;
+        left: 0px;
         width: 100% ;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
@@ -35,10 +63,10 @@
     .moreOption {
         display: block;
         float: right;
-        margin-top: 5px;
-        margin-right: 10px;
+        margin-top: -5px;
+        margin-right: 14px;
         color: white;
-        font-size: 25px;
+        font-size: 45px;
         cursor: pointer;
     }
     
@@ -52,7 +80,9 @@
         color: rgb(255, 255, 255);
         text-align: center;
         padding: 8px;
+        padding-top: 12px;
         font-size: 19px;
+        font-weight: bold;
         text-decoration: none;
         
     }
@@ -62,22 +92,15 @@
         color: black;
     }
 
-    .homeLink {
-        float: left;
-        margin-top: 5px;
-        margin-left: 10px;
-        color: white;
-        font-size: 18px;
-    }
 
-    .NavigationBar ul li.UserProfile {
-        display: none;
-    
-    }
     
     .NavigationBar ul li.SearchBar input[type = "text"]{
         display: none;
     
+    }
+
+    .NavigationBar ul li.UserProfile {
+        display: none;
     }
 
 }
