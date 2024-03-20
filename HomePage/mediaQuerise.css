@@ -6,6 +6,17 @@
         font-family:"poppins" , sans-serif;
         padding-top: 0px;
     }
+
+    .card{
+        width: 100%;
+        margin: 0px auto;
+        overflow: hidden;    
+    }
+    
+    .card img {
+        width: 300%;
+        display: block;
+    }
     
     .NavigationBar {
         position: sticky;
@@ -90,6 +101,7 @@
     .NavigationBar ul li a:hover {
         background-color: #d7fddf;
         color: black;
+        border-radius: 0% !important ;
     }
 
 
