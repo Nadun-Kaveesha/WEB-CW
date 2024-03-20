@@ -11,7 +11,7 @@
         position: sticky;
         top: 0;
         width: 100%;
-        height: 50px;
+        height: 60px;
         background-color: #00891b ;
         text-align: left;
         z-index: 1;
@@ -22,48 +22,62 @@
         margin: 0;
         padding: 0;
         overflow: hidden;
+        display: none;
+        background-color: #00891b;
+        position: absolute;
+        top: 60px;
+        right: 0px;
+        width: 140px ;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    .moreOption {
+        display: block;
+        float: right;
+        margin-top: 5px;
+        margin-right: 10px;
+        color: white;
+        font-size: 25px;
+        cursor: pointer;
     }
     
     .NavigationBar ul li {
-        padding-top: 0px;
-        display: inline-block ;
+        display: block ;
+        text-align: center;
     }
     
     .NavigationBar ul li a {
-        padding-top: 0px;
-        padding-bottom: 8px;
         display: block;
         color: rgb(255, 255, 255);
         text-align: center;
-        padding-left: 6px;
-        padding-right: 6px;
-        font-size: 16px ;
+        padding: 8px;
+        font-size: 19px;
         text-decoration: none;
         
+    }
+    
+    .NavigationBar ul li a:hover {
+        background-color: #d7fddf;
+        color: black;
+    }
+
+    .homeLink {
+        float: left;
+        margin-top: 5px;
+        margin-left: 10px;
+        color: white;
+        font-size: 18px;
+    }
+
+    .NavigationBar ul li.UserProfile {
+        display: none;
+    
     }
     
     .NavigationBar ul li.SearchBar input[type = "text"]{
         display: none;
     
-    }
-    
-    .NavigationBar ul li.UserProfile img {
-        vertical-align: middle;
-        margin-top: 1px;
-        margin-left: 0px;
-        margin-right: 10px;
-        margin-bottom: 10px;
-        width: 50px;
-        height: 50px;
-        border: 3px solid rgb(0, 52, 0) ;
-        border-radius: 50%;
-        cursor: pointer;
-    
-    }
-    
-    .NavigationBar ul li:not(.UserProfile) a:hover {
-        background-color: #d7fddf;
-        color: black;
     }
 
 }
