@@ -1,16 +1,16 @@
 body {
     margin: 0;
     font-family:"poppins" , sans-serif;
-    padding-top: 60px;
+    padding-top: 0px;
 }
 
 .NavigationBar {
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
     background-color: #00891b ;
     text-align: right;
-    z-index: 1000;
+    z-index: 1;
 }
 
 .NavigationBar ul {
@@ -61,7 +61,7 @@ body {
 
 }
 
-.NavigationBar ul li a:hover {
+.NavigationBar ul li:not(.UserProfile) a:hover {
     background-color: white;
     color: black;
 }
