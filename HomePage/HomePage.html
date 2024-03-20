@@ -9,7 +9,9 @@
 </head>
 <body>
     <div class="NavigationBar">
-        <ul>
+        <div class="homeLink"><a href="#home">Home</a></div>
+        <div class="moreOption" onclick = "toggleDropdown()">&#9776;</div>
+        <ul id="navDropdown">
             <li><a href="#Home">Home</a></li>
             <li><a href="#Shop">Shop</a></li>
             <li><a href="#Site Map">Site Map</a></li>
@@ -20,6 +22,17 @@
         
         </ul>
     </div>
+
+    <script>
+        function toggleDropdown() {
+            var dropdown = document.getElementById("navDropdown") ;
+            if (dropdown.style.display === "none") {
+                dropdown.style.display = "block" ;
+            } else {
+                dropdown.style.display = "none"
+            }
+        }
+    </script>
 
 
 <p> Welcome to website ! </p>
