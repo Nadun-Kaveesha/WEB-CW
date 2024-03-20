@@ -1,29 +1,20 @@
-// Define an array of question sets and corresponding placeholders
-const questionSet1 = [
+// Define an array of questions and corresponding placeholders
+const questions = [
   { description: "Name :", placeholder: "Please Enter Your Name" },
   { description: "Surname :", placeholder: "Please Enter Your Surname" },
   { description: "Age :", placeholder: "Please Enter Your Age" },
   { description: "Gender :", placeholder: "Please Enter Your Gender" },
   { description: "Agree with the conditions :", placeholder: "Yes or No" },
-];
-
-const questionSet2 = [
   { description: "Rational :", placeholder: "Please Enter Your Rationality" },
   { description: "DoA :", placeholder: "Please Enter Your DoA" },
   { description: "Task :", placeholder: "Please Enter Your Task" },
   { description: "Place :", placeholder: "Please Enter Your Place" },
   { description: "Assignment Type :", placeholder: "Please Enter Your Assignment Type" },
-];
-
-const questionSet3 = [
   { description: "Area of Study :", placeholder: "Please Enter Your Area of Study" },
   { description: "Highest Degree :", placeholder: "Please Enter Highest Degree Level" },
   { description: "University :", placeholder: "Please Enter Your University / Institute" },
   { description: "Complete Year :", placeholder: "Please Enter Your Completion Year of Study" },
   { description: "Country :", placeholder: "Please Enter Country the University Belongs" },
-];
-
-const questionSet4 = [
   { description: "Availability for Volunteering :", placeholder: "Min Hours Per Week " },
   { description: "Surname :", placeholder: "Please Enter Your Surname" },
   { description: "Telephone No. :", placeholder: "Please Enter Your Telephone No." },
@@ -37,12 +28,12 @@ let progressIndex = 0;
 
 // Function to update input description and placeholder
 function updateInputDescriptionAndPlaceholder() {
-  const currentQuestion = questionSet1[questionIndex];
+  const currentQuestion = questions[questionIndex];
   document.getElementById("inputDescription").innerText = currentQuestion.description;
   document.querySelector("#newtask input").placeholder = currentQuestion.placeholder;
   document.getElementById("questionDescription").innerText = `Step 1 Personal Details | Question ${
     questionIndex + 1
-  } of ${questionSet1.length}`;
+  } of ${questions.length}`;
 }
 
 // Function to update the progress bar
@@ -72,7 +63,7 @@ document.querySelector("#skip").onclick = function () {
   document.querySelector("#tasks").innerHTML += `
       <div class="task">
         <span id="taskname">
-          ${questionSet1[questionIndex].description} ${"?"}
+          ${questions[questionIndex].description} ${"?"}
         </span>
       </div>
     `;
@@ -83,7 +74,7 @@ document.querySelector("#skip").onclick = function () {
   progressIndex -= 5;
 
   // If all questions have been asked, hide the "Add" button
-  if (questionIndex >= questionSet1.length) {
+  if (questionIndex >= questions.length) {
     document.querySelector("#add").style.display = "none";
     document.getElementById("inputDescription").innerText = "";
     const inputField = document.querySelector("#newtask input");
@@ -109,7 +100,7 @@ document.querySelector("#add").onclick = function () {
     document.querySelector("#tasks").innerHTML += `
       <div class="task">
         <span id="taskname">
-          ${questionSet1[questionIndex].description} ${inputValue}
+          ${questions[questionIndex].description} ${inputValue}
         </span>
       </div>
     `;
@@ -121,7 +112,7 @@ document.querySelector("#add").onclick = function () {
     questionIndex++;
 
     // If all questions have been asked, hide the "Add" button
-    if (questionIndex >= questionSet1.length) {
+    if (questionIndex >= questions.length) {
       document.querySelector("#add").style.display = "none";
       document.getElementById("inputDescription").innerText = "";
       const inputField = document.querySelector("#newtask input");
