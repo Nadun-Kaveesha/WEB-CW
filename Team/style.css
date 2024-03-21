@@ -8,13 +8,17 @@
     font-weight: 500;
 }
 
+
 .home-container{
     width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #00891b;
+    background-image: url("/images/teamBackground1.png");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 #heading {
@@ -32,16 +36,16 @@
     position: relative;
     width: 220px;
     height: 220px;
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 30px;
     border-radius: 50%;
     box-shadow: -5px 8px 45px rgba(51, 51, 51, 0.126);
     transition: all .4s;
-    margin: 0 20px;
+    margin: 0 20px ;
 }
 .profile-card:hover{
     border-radius: 10px;
-    height: 260px;
+    height: 350px;
 }
 .profile-card .img{
     position: relative;
@@ -56,12 +60,13 @@
     object-fit: fill;
     width: 100%;
     border-radius: 50%;
+    border: 5px solid #23a20c;
     transition: all .4s;
     z-index: 99;
 }
 .caption{
     text-align: center;
-    transform: translateY(-90px);
+    transform: translateY(-180px);
     opacity: 0;
     pointer-events: none;
     transition: all .5s;
@@ -72,11 +77,11 @@
 }
 .caption h3{
     font-size: 21px;
-    color: #0c52a1;
+    color: #06661e;
     font-weight: 600;
 }
 .caption p{
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
     margin: 2px 0 12px 0;
 }
