@@ -33,6 +33,18 @@ body {
     left: 0; /* Align to the left */
 }
 
+#quantity {
+    width: 30px;
+}
+
+.quantity-text-box {
+    display: inline-block;
+}
+
+#add-to-cart {
+    margin-top: 10px;
+}
+
 .product {
     width: 250px;
     height: 300px;
