@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 , viewport-fit=cover">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , viewport-fit=cover" />
     <title>Navigation Bar</title>
-    <link rel="stylesheet" href = "style.css" >
-    <link rel="stylesheet" href = "mediaQuerise.css" >
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaQuerise.css" />
     <!--Google Font-->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
@@ -14,31 +14,30 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
-</head>
-<body>
+  </head>
+  <body>
     <div class="NavigationBar">
-        <div class="logo"><img src="logo.jpeg" alt="webside logo"></div>
-        <div class="UserProfile1"><a href="#User Profile"><img src="profile.png" alt="user profile" ></a></div>
-        <div class="moreOption" onclick = "toggleDropdown()">&#9776;</div>
-       
+      <div class="logo"><img src="logo.jpeg" alt="webside logo" /></div>
+      <div class="UserProfile1">
+        <a href="#User Profile"><img src="profile.png" alt="user profile" /></a>
+      </div>
+      <div class="moreOption" onclick="toggleDropdown()">&#9776;</div>
 
-
-        <ul id="navDropdown">
-            <li><a href="#Home">Home</a></li>
-            <li><a href="#Shop">Shop</a></li>
-            <li><a href="#Site Map">Site Map</a></li>
-            <li><a href="#About us">About us</a></li>
-            <li><a href="#Gallery">Gallery</a></li>
-            <li class="SearchBar"><input type = "text" placeholder="Search Here.. "></li>
-            <li class="UserProfile"><a href="#User Profile"><img src="profile.png" alt="user profile" ></a></li>
-            
-        
-        </ul>
+      <ul id="navDropdown">
+        <li><a id="Home" href="#">Home</a></li>
+        <li><a id="Shop" href="#">Shop</a></li>
+        <li><a id="Site Map" href="#">Site Map</a></li>
+        <li><a id="About us" href="#">About us</a></li>
+        <li><a id="Gallery" href="#">Gallery</a></li>
+        <li class="SearchBar"><input type="text" placeholder="Search Here.. " /></li>
+        <li class="UserProfile">
+          <a href="#User Profile"><img src="profile.png" alt="user profile" /></a>
+        </li>
+      </ul>
     </div>
-    <div class="card"><img src="background2.jpg" alt="second background image"></div>
-    <div class="card"><img src="background1.webp" alt="first background image"></div>
+    <div class="card"><img src="background2.jpg" alt="second background image" /></div>
+    <div class="card"><img src="background1.webp" alt="first background image" /></div>
 
     <script src="index.js" defer></script>
-    
-    
-</body>
+  </body>
+</html>
