@@ -41,3 +41,4 @@ if (window.innerWidth <= 720) {
   document.getElementById("Gallery").addEventListener("click", function () {
     window.location.href = "/Gallery/Gallery.html";
   });
+  
