@@ -1,21 +1,67 @@
-.body {
-    background-color: rgb(166, 220, 151);
+.font {
+    text-align: center;
+
+}
+body {
+    background-color: #83f099;
+    font-family: "poppins", sans-serif;
+}
+
+.img {
+    border-radius: 6px;
 }
 
 .box {
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2em 1em;
     margin: 0 auto;
-    height: 800px;
-    width: 1500px;
+    height: 800px; /* You may want to adjust this value based on your content */
+    width: 80%;
     position: relative; /* Set the position to relative */
 }
 
-.card {
-    background-color: rgb(60, 60, 60);
-    border-radius: 10px;
-    width: 300px;
-    height: 50%; /* Set the height to 50% of the parent (.box) height */
+.footer {
+    background-color: aqua;
+    width: 100%; /* Adjust the width as needed */
+    height: 300px; /* Adjust the height as needed */
     position: absolute; /* Set the position to absolute */
-    left: 10px; /* Align to the left */
-    top: 10px; /* Align to the top */
+    top: calc(800px + 80px + 20px); /* Place the footer below the box div */
+    left: 0; /* Align to the left */
+}
+
+#quantity {
+    width: 30px;
+}
+
+.quantity-text-box {
+    display: inline-block;
+}
+
+#add-to-cart {
+    margin-top: 10px;
+}
+
+.product {
+    width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;  
+    transition-duration: 0.5s;
+}
+
+.product:hover {
+    transform: scale(1.1); /* Scale the product by 10% on hover */
 }
