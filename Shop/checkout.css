@@ -87,3 +87,23 @@ h1 {
 #country {
     padding: 10px;
 }
+
+#place-order {
+    background-color: tomato;
+    font-family: "poppins", sans-serif;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 15px 60px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    border: none;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+#place-order:hover {
+    background-color: rgb(255, 0, 0);
+}

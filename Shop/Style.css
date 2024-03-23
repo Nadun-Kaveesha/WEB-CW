@@ -97,3 +97,40 @@ body {
 .product:hover {
     transform: scale(1.1); /* Scale the product by 10% on hover */
 }
+
+/* cart pop up window */
+
+/* Add these styles to your existing style.css file */
+.cart-popup {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translate(100%, -50%);
+    background-color: #fff;
+    width: 300px;
+    height: 400px;
+    border: 1px solid #000;
+    z-index: 9999;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cart-popup.minimized {
+    transform: translate(200%, -50%);
+}
+
+#cart-header {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    text-align: right;
+}
+
+#minimize-button {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.cart-content {
+    padding: 10px;
+    overflow-y: auto;
+}
