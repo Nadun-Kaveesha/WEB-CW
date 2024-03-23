@@ -5,16 +5,33 @@
     <title>Shop</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <h1 class="font">Shop</h1>
+    <h1 class="font">
+        Shop
+      
+    </h1>
+    <a href="#" id="cart"><i class="fa-solid fa-cart-shopping"></i></a>
     <div class="box">
 
         <div class="product">
             <img class="img" src="/images/product.jpg" width="90%">
-            <h2 class="font">Product 1</h2>
-            
+            <h2 class="product-name" id="product-name1">Product 1</h2>
+            <div class="price" id="product-price1">$9.99</div>
+            <!-- Quantity selection -->
+            <div class="quantity-text-box">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1"><br>
+            </div>
+            <button id="add-to-cart">Add to Cart</button>  
+        </div>
+
+        <div class="product">
+            <img class="img" src="/images/product.jpg" width="90%">
+            <h2 class="product-name" id="product-name2">Product 2</h2>
+            <div class="price" id="product-price2">$9.99</div>
             <!-- Quantity selection -->
             <div class="quantity-text-box">
                 <label for="quantity">Quantity:</label>
@@ -25,7 +42,8 @@
 
         <div class="product">
             <img class="img" src="/images/product.jpg" width="90%">
-            <h2 class="font">Product 2</h2>
+            <h2 class="product-name" id="product-name3">Product 3</h2>
+            <div class="price" id="product-price3">$9.99</div>
             <!-- Quantity selection -->
             <div class="quantity-text-box">
                 <label for="quantity">Quantity:</label>
@@ -36,7 +54,8 @@
 
         <div class="product">
             <img class="img" src="/images/product.jpg" width="90%">
-            <h2 class="font">Product 3</h2>
+            <h2 class="product-name" id="product-name4">Product 4</h2>
+            <div class="price" id="product-price4">$9.99</div>
             <!-- Quantity selection -->
             <div class="quantity-text-box">
                 <label for="quantity">Quantity:</label>
@@ -47,7 +66,8 @@
 
         <div class="product">
             <img class="img" src="/images/product.jpg" width="90%">
-            <h2 class="font">Product 4</h2>
+            <h2 class="product-name" id="product-name5">Product 5</h2>
+            <div class="price" id="product-price5">$9.99</div>
             <!-- Quantity selection -->
             <div class="quantity-text-box">
                 <label for="quantity">Quantity:</label>
@@ -58,7 +78,8 @@
 
         <div class="product">
             <img class="img" src="/images/product.jpg" width="90%">
-            <h2 class="font">Product 5</h2>
+            <h2 class="product-name" id="product-name6">Product 6</h2>
+            <div class="price" id="product-price6">$9.99</div>
             <!-- Quantity selection -->
             <div class="quantity-text-box">
                 <label for="quantity">Quantity:</label>
@@ -69,7 +90,8 @@
 
         <div class="product">
             <img class="img" src="/images/product.jpg" width="90%">
-            <h2 class="font">Product 6</h2>
+            <h2 class="product-name" id="product-name7">Product 7</h2>
+            <div class="price" id="product-price7">$9.99</div>
             <!-- Quantity selection -->
             <div class="quantity-text-box">
                 <label for="quantity">Quantity:</label>
@@ -80,18 +102,8 @@
 
         <div class="product">
             <img class="img" src="/images/product.jpg" width="90%">
-            <h2 class="font">Product 7</h2>
-            <!-- Quantity selection -->
-            <div class="quantity-text-box">
-                <label for="quantity">Quantity:</label>
-                <input type="number" id="quantity" name="quantity" min="1" value="1"><br>
-            </div>
-            <button class="font" id="add-to-cart">Add to Cart</button>  
-        </div>
-
-        <div class="product">
-            <img class="img" src="/images/product.jpg" width="90%">
-            <h2 class="font">Product 8</h2>
+            <h2 class="product-name" id="product-name8">Product 8</h2>
+            <div class="price" id="product-price8">$9.99</div>
             <!-- Quantity selection -->
             <div class="quantity-text-box">
                 <label for="quantity">Quantity:</label>
