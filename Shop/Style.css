@@ -1,9 +1,10 @@
 .font {
     text-align: center;
-    font-family: "poppins", sans-serif;
+
 }
 body {
     background-color: #83f099;
+    font-family: "poppins", sans-serif;
 }
 
 .img {
