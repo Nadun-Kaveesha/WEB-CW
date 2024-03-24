@@ -1,4 +1,5 @@
 if (window.innerWidth <= 720) {
+
   function toggleDropdown() {
     var dropdown = document.getElementById("navDropdown");
     if (dropdown.style.display === "none") {
@@ -41,4 +42,5 @@ document.getElementById("Site Map").addEventListener("click", function () {
 document.getElementById("Gallery").addEventListener("click", function () {
   window.location.href = "/Gallery/Gallery.html";
 });
+
 
