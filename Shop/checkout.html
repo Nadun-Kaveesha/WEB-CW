@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+
+<!-- header section -->
+<div class="header"> 
+    <h1>Products checkout</h1>
+    <h4 class="text">Fill in the details below to complete your order</h4>
+</div>
+
+<!-- information form -->
+
+<form class="form1">
+
+    <fieldset class="fieldset">
+        <legend class="legend">Payment Details</legend>
+
+        <label for = "cardNumber">Card Number: </label><br>
+        <input type="text" id="cardNumber" name="cardNumber" size="30px">
+        <br><br>
+        <label for = "personName">Cardholder Name: </label><br>
+        <input type="text" id="personName" name="personName" size="30px">
+        <br><br>
+        Expiry date: <br><br>
+        <label for = "expDate">Month: </label>
+        <input type="text" id="expDate" name="expDate" size="5px" placeholder="MM">
+        <label for = "expDate">Year: </label>
+        <input type="text" id="expDate" name="expDate" size="5px" placeholder="YY">
+        <br><br>
+        <label for = "cvv">CVV: </label><br>
+        <input type="text" id="cvv" name="cvv" size="10px">
+        <br><br>
+
+        <div class="buttons">
+            <input type="reset" value="Clear fields" class="btn">
+            <input type= "submit" value="Save Changes" class="btn">
+        </div>
+  
+    </fieldset><br>
+
+    <fieldset class="fieldset">
+        <legend class="legend">Billing Address Details</legend>
+
+        <br>
+        <lable for="adressLine1">Adress Line 1:</lable><br>
+        <input type="text" id="adressLine1" name="adressLine1" size="30px">
+        <br><br>
+        <label for = "adressLine2">Adress Line 2: </label><br>
+        <input type="text" id="adressLine2" name="addressLine2" size="30px">
+        <br><br>
+        <label for = "adressLine3">Adress Line 3: </label><br>
+        <input type="text" id="adressLine3" name="addressLine3" size="30px">
+        <br><br>
+        <label for = "state">state: </label><br>
+        <input type="text" id="state" name="state" size="30px">
+        <br><br>
+        <label for = "cvv">Postcode / Zip code: </label><br>
+        <input type="text" id="zipCode" name="zipCode" size="30px">
+        <br><br>
+        <label for="country">Country: </label><br>
+        <select name="country" id="country" size="1">
+            <option value="argentina">Argentina</option>
+            <option value="australia">Australia</option>
+            <option value="brazil">Brazil</option>
+            <option value="canada">Canada</option>
+            <option value="china">China</option>
+            <option value="france">France</option>
+            <option value="germany">Germany</option>
+            <option value="india">India</option>
+            <option value="indonesia">Indonesia</option>
+            <option value="italy">Italy</option>
+            <option value="japan">Japan</option>
+            <option value="mexico">Mexico</option>
+            <option value="russia">Russia</option>
+            <option value="saudi-arabia">Saudi Arabia</option>
+            <option value="sri-lanka" selected>Sri Lanka</option>
+            <option value="south-africa">South Africa</option>
+            <option value="south-korea">South Korea</option>
+            <option value="turkey">Turkey</option>
+            <option value="united-kingdom">United Kingdom</option>
+            <option value="united-states">United States of America</option>
+            
+        </select>
+        <br><br>
+
+        <div class="buttons">
+            <input type="reset" value="Clear fields" class="btn">
+            <input type= "submit" value="Save Changes" class="btn">
+        </div>
+    </fieldset><br>
+
+    <fieldset class="fieldset">
+        <legend class="legend">Contact Details</legend>
+
+        <br>
+        <lable for="firstName">First Name:</lable><br>
+        <input type="text" id="firstName" name="first nane" size="30px">
+        <br><br>
+        <label for = "surname">Surname: </label><br>
+        <input type="text" id="surname" name="surname" size="30px">
+        <br><br>
+        <label for = "contactNo">Contact number: </label><br>
+        <input type="text" id="contactNo" name="contact number" size="30px">
+        <br><br>
+        <label for = "email">Email: </label><br>
+        <input type="text" id="email" name="email" size="30px">
+        <br><br>
+
+        <div class="buttons">
+            <input type="reset" value="Clear fields" class="btn">
+            <input type= "submit" value="Save Changes" class="btn">
+        </div>
+    </fieldset>
+
+</form>
+<center>
+<button id="place-order">Place Order</button>
+</center>
+
+</body>
+</html>
