@@ -1,0 +1,16 @@
+@media screen and (max-width : 720px) {
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 320px;
+    }
+
+    .radioContainer label img[satisfied="1"] {
+        margin-left: 35px;
+    }
+    
+
+    .radioContainer label img[satisfied="3"] {
+        margin-right: 35px;
+    }
+}
