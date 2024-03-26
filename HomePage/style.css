@@ -1,10 +1,43 @@
 .card{
+    position: relative;
     width: 100%;
     margin: 0px auto;
-    overflow: hidden;    
+    overflow: hidden;
+    opacity: 0.65;   
 }
 
 .card img {
     width: 100%;
     display: block;
+}
+
+.MisstionOverlay {
+    position: absolute ;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background-color: white;
+    width: 80%;
+    height: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0.8;
+
+}
+
+.Misstion{
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+    font-size: 40px;
+    color: black;
+    text-align: left;
+    font-weight: 900;
+
+}
+
+.content{
+    margin-top: 30px;
+    font-family: "poppins" , sans-serif;
+    font-size: 20px ;
+    color: rgb(0, 3, 37);
+    font-weight: 450;
 }

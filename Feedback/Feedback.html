@@ -17,13 +17,15 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
 </head>
 <body>
-    
     <link rel="stylesheet" href="/NavigationBar/style.css">
     <link rel="stylesheet" href="/NavigationBar/mediaQuerise.css" >
     <div class="NavigationBar">
-      <div class="logo"><img src="/NavigationBar/logo.jpeg" alt="webside logo" /></div>
+      <div class="logo">
+        <img src="/NavigationBar/logo.jpeg" alt="webside logo" />
+        <span class="logoText">Life on Earth</span>
+      </div>
       <div class="UserProfile1">
-        <a href="#User Profile"><img src="profile.png" alt="user profile" /></a>
+        <a href="/UserProfile/UserProfile.html"><img src="profile.png" alt="user profile" /></a>
       </div>
       <div class="moreOption" onclick="toggleDropdown()">&#9776;</div>
 
@@ -42,6 +44,7 @@
     </div>
     <script src="/NavigationBar/index.js" defer></script>
 </body>
+
 <body>
         <h1>Feedback Form</h1>
     <form id="feedbackform" onsubmit="return confirmation()">
