@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback Form</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaQuerise.css"
-    <!--Google Font-->
-    <link
+    <link rel="stylesheet" href="mediaQueries.css" >
+    
+    <!-- goole fonts -->
+    <link 
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
       rel="stylesheet" />
     <!--Font Awesome CDN-->
@@ -16,13 +17,38 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
 </head>
 <body>
-    <h1>Feedback Form</h1>
-    <form id="feedbackform">
+    <link rel="stylesheet" href="/NavigationBar/style.css">
+    <link rel="stylesheet" href="/NavigationBar/mediaQuerise.css" >
+    <div class="NavigationBar">
+      <div class="logo"><img src="/NavigationBar/logo.jpeg" alt="webside logo" /></div>
+      <div class="UserProfile1">
+        <a href="#User Profile"><img src="profile.png" alt="user profile" /></a>
+      </div>
+      <div class="moreOption" onclick="toggleDropdown()">&#9776;</div>
+
+      <ul id="navDropdown">
+        <li><a id="Home" href="/HomePage/HomePage.html">Home</a></li>
+        <li><a id="Shop" href="/Shop/Shop.html">Shop</a></li>
+        <li><a id="Site Map" href="/Sitemap/Sitemap.html">Site Map</a></li>
+        <li><a id="About us" href="/Team/Team.html">About us</a></li>
+        <li><a id="Gallery" href="/Gallery/Gallery.html">Gallery</a></li>
+        <li><a id="Feedback" href="/Feedback/Feedback.html">Feedback</a></li>
+        <li class="SearchBar"><input type="text" placeholder="Search Here.. " /></li>
+        <li class="UserProfile">
+          <a href="/UserProfile/UserProfile.html"><img src="profile.png" alt="user profile" /></a>
+        </li>
+      </ul>
+    </div>
+    <script src="/NavigationBar/index.js" defer></script>
+</body>
+<body>
+        <h1>Feedback Form</h1>
+    <form id="feedbackform" onsubmit="return confirmation()">
         <label for="name">Enter your Name : </label>
         <input type="text" id="name" name="name" required>
 
         <label for="email">Enter your Email : </label>
-        <input type="email" id="email" name="email">
+        <input type="email" id="email" name="email" required>
 
         <div class="FT_Visite">
             <p>Was this your first time visiting ? </p>
@@ -41,7 +67,7 @@
             <label for="isInformativeYes">Yes</label>
 
             <input type="radio" id="isInformativeNo" name="isInformative" value="No" >
-            <label for="isInformativeYes">No</label>
+            <label for="isInformativeNo">No</label>
         </div>
 
         <label for="suggestImprovements">If "No", suggest any improvementes for the future :</label>
@@ -50,7 +76,7 @@
         <div class="isSatisfied">
             <p>How satisfied are you with our services ? </p>
 
-            <div class="radioContainer">
+            <div class="radioContainer" >
 
                 <label for="satisfied1">
                     <img src="excellent.jpeg" alt="excellent satisfied Face" satisfied="1">
@@ -86,14 +112,17 @@
 
             <select id="getUpdates" name="getUpdates">
                 <option value="Email">Yes - via Email</option>
-                <option value="Notification">Yes - via Notification</option>
+                <option value="Notification">Yes - via Chrome Notification</option>
             </select>
         </div>
 
         <label for="Comments">Do you have any additional questions or requests ? </label>
         <textarea id="Comments" name="Comments"></textarea>
 
+        <button class="clear" type="button" onclick="clearform()">Clear</button>
         <button class="submitButon" type="submit">Submit</button>
+        
+        
     </form>
 
     <div class="card"><img src="background1.webp" alt="first background image" /></div>
