@@ -1,10 +1,26 @@
-.font {
-    text-align: center;
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+*{
+    font-family: 'poppins', sans-serif;
 }
+
 body {
-    background-color: #83f099;
-    font-family: "poppins", sans-serif;
+    background-color: #e4e4e4;
+}
+
+header {
+    background-color: rgb(26, 157, 26);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    height: 50px;
+    margin-top: -7px;
+    margin-left: -7px;
+    margin-right: -7px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin: 0;
 }
 
 #cart {
@@ -16,7 +32,10 @@ body {
     position: fixed; 
     right: 0;
     top: 30px;
-    padding: 10px;
+    padding: 10px 15px;
+
+
+    padding-left: none;
     border-radius: 50px;
     text-decoration: none;
 }
@@ -31,17 +50,18 @@ body {
 }
 
 .box {
-    /* background-color: rgb(255, 255, 255); */
-    align-items: center;
-    justify-content: center;
+
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 2em 1em;
+    grid-template-columns: repeat(auto-fit,minmax(220px,auto));
+    gap: 0.5rem 1.5rem;
+    justify-content: center;
+    align-content: center;
+    width: 70%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
     margin: 0 auto;
-    height: 800px; /* You may want to adjust this value based on your content */
-    width: 80%;
-    position: relative; /* Set the position to relative */
+    margin-bottom: 20px;
 }
 
 .product-name {
@@ -65,32 +85,34 @@ body {
     left: 0; /* Align to the left */
 }
 
-#quantity {
+.quantity {
     width: 30px;
+    font-family: 'poppins', sans-serif;
+    font-size: 15px;
 }
 
 .quantity-text-box {
     display: inline-block;
 }
 
-#add-to-cart {
+.add-to-cart {
     margin-top: 10px;
     text-align: center;
 }
 
 .product {
-    width: 250px;
-    height: 300px;
+    width: 230px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
     justify-content: center;
-    margin: 10px;
-    padding: 10px;
+    margin: 10px 0;
+    padding: 0px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 10px;  
+    /* border-radius: 15px;   */
     transition-duration: 0.5s;
 }
 
@@ -98,39 +120,74 @@ body {
     transform: scale(1.1); /* Scale the product by 10% on hover */
 }
 
-/* cart pop up window */
+/*  Cart Section  */
 
-/* Add these styles to your existing style.css file */
-.cart-popup {
+.inlinecart {
+    background-color: #f0f0f0;
     position: fixed;
-    top: 50%;
+    top: 0;
     right: 0;
-    transform: translate(100%, -50%);
-    background-color: #fff;
-    width: 300px;
-    height: 400px;
-    border: 1px solid #000;
-    z-index: 9999;
-    transition: transform 0.3s ease-in-out;
+    height: 100vh;
+    width: 350px;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in the width */
 }
 
-.cart-popup.minimized {
-    transform: translate(200%, -50%);
+.cartContent {
+    height: 85vh;
+    margin-bottom: 10px;
 }
 
-#cart-header {
-    background-color: #000;
-    color: #fff;
-    padding: 10px;
-    text-align: right;
-}
-
-#minimize-button {
-    cursor: pointer;
+.fa-square-xmark {
+    scale: 1.5;
     font-size: 20px;
+    cursor: pointer;
+    float: right;
+    margin-top: -10px;
 }
 
-.cart-content {
+.fa-square-xmark:hover {
+    color: red;
+}
+
+.cartBottom {
+    height: 15vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+#chqout {
+    background-color: rgb(0, 79, 20);
+    color: aliceblue;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px; 
     padding: 10px;
-    overflow-y: auto;
+    text-decoration: none;
+}
+
+.cartItem {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.deleteItem {
+    color: red;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.deleteItem:hover {
+    text-decoration: underline;
+}
+
+.totalPrice {
+    margin-top: 10px;
+    font-weight: bold;
 }
