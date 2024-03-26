@@ -11,7 +11,7 @@ body {
     width: 100%;
     background-color: #000000 ;
     text-align: right;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .NavigationBar ul {
