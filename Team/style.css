@@ -21,14 +21,21 @@
     background-attachment: fixed;
 }
 
+.heading-container {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 25%; /* Adjust as needed */
+    padding: 20px;
+    border-radius: 25px;
+    opacity: 0.8;
+}
+
 #heading {
     text-align: center;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 90px; 
-    color: #fff; 
+    color: #000; /* Changed color to make text visible on white background */
     font-size: 25px;
 }
 
