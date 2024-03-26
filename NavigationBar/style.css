@@ -60,7 +60,7 @@ body {
     z-index: 2;
     margin-left: 20px;
     position: relative;
-    top: -25px;
+    top: -30px;
 }
 
 .NavigationBar ul li.SearchBar input[type = "text"]{
