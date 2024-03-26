@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--title-->
+    <title>Team</title>
+    <!--Google Font-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet" />
+    <!--Font Awesome CDN-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="MediaQueries.css" />
+  </head>
+
+  <body>
+    <link rel="stylesheet" href="/NavigationBar/style.css" />
+    <link rel="stylesheet" href="/NavigationBar/mediaQuerise.css" />
+    <div class="NavigationBar">
+      <div class="logo">
+        <img src="/NavigationBar/logo.jpeg" alt="webside logo" />
+        <span class="logoText">Life on Earth</span>
+      </div>
+      <div class="UserProfile1">
+        <a href="/UserProfile/UserProfile.html"><img src="profile.png" alt="user profile" /></a>
+      </div>
+      <div class="moreOption" onclick="toggleDropdown()">&#9776;</div>
+
+      <ul id="navDropdown">
+        <li><a id="Home" href="/HomePage/HomePage.html">Home</a></li>
+        <li><a id="Shop" href="/Shop/Shop.html">Shop</a></li>
+        <li><a id="Site Map" href="/Sitemap/Sitemap.html">Site Map</a></li>
+        <li><a id="About us" href="/Team/Team.html">About us</a></li>
+        <li><a id="Gallery" href="/Gallery/Gallery.html">Gallery</a></li>
+        <li><a id="Feedback" href="/Feedback/Feedback.html">Feedback</a></li>
+        <li class="SearchBar"><input type="text" placeholder="Search Here.. " /></li>
+        <li class="UserProfile">
+          <a href="/UserProfile/UserProfile.html"><img src="profile.png" alt="user profile" /></a>
+        </li>
+      </ul>
+    </div>
+    <script src="/NavigationBar/index.js" defer></script>
+  </body>
+
+  <body>
+    <div class="home-container">
+      <div class="heading-container">
+        <div id="heading"><h1>Our Team</h1></div>
+      </div>
+      <div class="profile-card">
+        <div class="img">
+          <img src="/images/Amiru.jpg" />
+        </div>
+        <div class="caption">
+          <h3>Amiru Ushan</h3>
+          <p>User Role 1</p>
+          <p>Design and Implemented Pages :</p>
+          <p>Splash Screen | Shop</p>
+        </div>
+      </div>
+      <div class="profile-card">
+        <div class="img">
+          <img src="/images/Ashen.jpg" />
+        </div>
+        <div class="caption">
+          <h3>Ashen Maneth</h3>
+          <p>User Role 2</p>
+          <p>Design and Implemented Pages :</p>
+          <p>Home Page | Feedback</p>
+        </div>
+      </div>
+      <div class="profile-card">
+        <div class="img">
+          <img src="/images/20222034 (1).jpg" />
+        </div>
+        <div class="caption">
+          <h3>Nadun Kaveesha</h3>
+          <p>User Role 3</p>
+          <p>Design and Implemented Pages :</p>
+          <p>User Profile | Team</p>
+        </div>
+      </div>
+      <div class="profile-card">
+        <div class="img">
+          <img src="/images/Vihanga.jpg" />
+        </div>
+        <div class="caption">
+          <h3>Vihanga Theekshana</h3>
+          <p>User Role 4</p>
+          <p>Design and Implemented Pages :</p>
+          <p>Gallery | Sitemap</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
