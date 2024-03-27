@@ -43,6 +43,7 @@ body {
     top: 8px;
     left: 20px;
     z-index: 1;
+    cursor: pointer;
 }
 
 .logo img {

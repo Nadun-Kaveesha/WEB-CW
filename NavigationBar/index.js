@@ -16,5 +16,9 @@ if (window.innerWidth <= 720) {
       });
     });
   }
+
+function gotoHome() {
+  window.location.href = "/HomePage/HomePage.html";
+}
   
   
