@@ -1,0 +1,109 @@
+body {
+    background-image: url("/images/resized-image-for-shop.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+
+
+    
+    font-family: 'poppins', sans-serif;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    padding-top: 30px;
+    text-align: center;
+    margin-bottom: -10px;
+}
+
+.text {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 10px;
+    font-weight:normal;
+    font-size: 17px;
+}
+
+.header {
+    background-color: rgb(47, 157, 58);
+    width: relative;
+    height: 100px;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin:-7px;
+    margin-top: -25px;
+}
+
+.form1 {
+    width: 30%;
+    margin: 10px auto;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+.legend {
+    background-color: rgb(10, 110, 1);
+    width: 100%;
+    margin-left: -12px;
+    padding: 12px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    
+}
+
+.fieldset {
+    background-color: rgb(215, 255, 213);
+    /* padding: 60px; */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-bottom: 20px;
+    border: none;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: bold;
+    padding: 8px 20px;
+    background-color: #007bff; /* Button color */
+    color: #fff; /* Text color */
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    cursor:pointer;
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+}
+
+.buttons {
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Button color on hover */
+}
+
+#country {
+    padding: 10px;
+}
+
+#place-order {
+    background-color: tomato;
+    font-family: "poppins", sans-serif;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 15px 60px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    border: none;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+#place-order:hover {
+    background-color: rgb(255, 0, 0);
+}

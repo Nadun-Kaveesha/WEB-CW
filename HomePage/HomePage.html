@@ -3,9 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HomePage</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaQueries.css" />
+    <!--Google Font-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet" />
+    <!--Font Awesome CDN-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
 </head>
 <body>
-    <p>hello there  </p>
+    <link rel="stylesheet" href="/NavigationBar/style.css">
+    <link rel="stylesheet" href="/NavigationBar/mediaQuerise.css" >
+    <div class="NavigationBar">
+      <div class="logo">
+        <img src="/NavigationBar/logo.jpeg" alt="webside logo" />
+        <span class="logoText">Life on Land</span>
+      </div>
+      <div class="UserProfile1">
+        <a href="/UserProfile/UserProfile.html"><img src="profile.png" alt="user profile" /></a>
+      </div>
+      <div class="moreOption" onclick="toggleDropdown()">&#9776;</div>
+
+      <ul id="navDropdown">
+        <li><a id="Home" href="/HomePage/HomePage.html">Home</a></li>
+        <li><a id="Shop" href="/Shop/Shop.html">Shop</a></li>
+        <li><a id="Site Map" href="/Sitemap/Sitemap.html">Site Map</a></li>
+        <li><a id="About us" href="/Team/Team.html">About us</a></li>
+        <li><a id="Gallery" href="/Gallery/Gallery.html">Gallery</a></li>
+        <li><a id="Feedback" href="/Feedback/Feedback.html">Feedback</a></li>
+        <li class="SearchBar"><input type="text" placeholder="Search Here.. " /></li>
+        <li class="UserProfile">
+          <a href="/UserProfile/UserProfile.html"><img src="profile.png" alt="user profile" /></a>
+        </li>
+      </ul>
+    </div>
+    <script src="/NavigationBar/index.js" defer></script>
 </body>
+
+<body>
+    <div class="card"><img src="background2.jpg" alt="second background image" /></div>
+
+    <div class="backgroundCon">
+
+      <video controls autoplay muted  loop >
+        <source src="/HomePage/video.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+
+      <div class="MissionOverlay">
+        <div class="Mission">OUR MISSION</div>
+        <div class="content">Lorem ipsum dolor sit
+          amet consectetur adipisicing elit. Voluptas modi vero fugiat, placeat vel fugit corrupti soluta
+          odio, saepe illo, repellendus eius pariatur illum officiis quae ullam voluptatibus eligendi reprehenderit!</div>
+      </div>
+    
+      <!-- <div class="card"><img src="background1.webp" alt="first background image" /></div> -->
+
+    </div>
+
+    
+   
+
+
+<footer>
+  <link rel="stylesheet" href="/Footer/style.css" />
+  <link rel="stylesheet" href="/Footer/mediaQueries.css" />
+    <ul>
+        <li><a href="/Team/Team.html">About us |</a></li>
+        <li><a href="/Footer/references.html">References |</a></li>
+        <li><a href="/Footer/contact.html">Contact |</a></li>
+        <li><a href="/Footer/faq.html">FAQ</a></li>
+    </ul>
+
+    <p>&copy; 2024 Life on Land. All rights reserved</p>
+</footer>
+
+</body>
+
 </html>

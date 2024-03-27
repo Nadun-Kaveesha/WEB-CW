@@ -1,0 +1,122 @@
+@media screen and (max-width : 720px) {
+    
+    body {
+        margin: 0;
+        font-family:"poppins" , sans-serif;
+        padding-top: 0px;
+    }
+
+    .card{
+        width: 100%;
+        margin: 0px auto;
+        overflow: hidden;    
+    }
+    
+    .card img {
+        width: 300%;
+        display: block;
+    }
+    
+    .NavigationBar {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: 60px;
+        background-color: #000000 ;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .logo{
+        position: relative;
+        display: inline-block;
+
+    }
+
+    .logo img {
+        width: 110px;
+        height: 64px;
+    }
+
+    .logoText{
+        display: none;
+    }
+
+    .UserProfile1 {
+        display: block;
+        position: absolute;
+        top: 7px;
+        left: 7px;
+        width: 40px;
+        height: 40px;
+        
+    }
+
+    .UserProfile1 img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 3px solid rgb(0, 52, 0) ;
+        background-color: rgb(109, 109, 109);
+    }
+    
+    .NavigationBar ul {
+        padding-top: 23px;
+        list-style: none;
+        margin: 0px;
+        overflow: hidden;
+        display: none;
+        background-color: #000000;
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        width: 100% ;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    .moreOption {
+        display: block;
+        float: right;
+        margin-top: -5px;
+        margin-right: 14px;
+        color: white;
+        font-size: 45px;
+        cursor: pointer;
+    }
+    
+    .NavigationBar ul li {
+        display: block ;
+        text-align: center;
+    }
+    
+    .NavigationBar ul li a {
+        display: block;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        padding: 8px;
+        padding-top: 3px;
+        font-size: 19px;
+        font-weight: bold;
+        text-decoration: none;
+        
+    }
+    
+    .NavigationBar ul li a:hover {
+        background-color: #d7fddf;
+        color: black;
+        border-radius: 0% !important ;
+    }
+
+
+    
+    .NavigationBar ul li.SearchBar input[type = "text"]{
+        display: none;
+    
+    }
+
+    .NavigationBar ul li.UserProfile {
+        display: none;
+    }
+
+}

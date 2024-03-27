@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+.background {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+}
+
+.background h1{
+    position: absolute;
+    top: 40px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 70px;
+    color: #ffffff;
+    -webkit-text-stroke: 1.5px rgb(0, 90, 19);
+}
+
+.background::before{
+    content: "";
+    position: absolute;
+    background-image: url(../images/splash-2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    inset: 0;
+    opacity: 0.49;
+}
+
+.mission {
+    position: absolute;
+    margin: auto;
+    margin-top: 180px;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+    
+}
