@@ -1,0 +1,64 @@
+@media screen and (max-width : 720px) {
+
+    .MissionOverlay {
+        position: absolute ;
+        top: 100px;
+        left: 40px;;
+        background-color: white;
+        width: 70%;
+        height: auto;
+        padding: 20px;
+        border-radius: 10px;
+        opacity: 0.8;
+    
+    }
+    
+    .Mission{
+        font-family: Georgia, 'Times New Roman', Times, serif ;
+        font-size: 40px;
+        color: black;
+        text-align: left;
+        font-weight: 900;
+    
+    }
+    
+    .content{
+        margin-top: 30px;
+        font-family: "poppins" , sans-serif;
+        font-size: 20px ;
+        color: rgb(0, 3, 37);
+        font-weight: 450;
+        text-align: center;
+    }
+    
+    .backgroundCon video {
+        
+        position: absolute ;
+        top: 580px;
+        width: 80%;
+        height: 160px;
+        border-radius: 10px;
+        background-color: transparent;
+        padding: 0;
+        left: 40px ;
+    
+    }
+
+    .card{
+        padding: 0;
+        margin: 0;
+        position: relative;
+        width: 10%;
+        height: 100%;
+        margin: 0px auto;
+        overflow: hidden;
+        opacity: 0.65;   
+    }
+    
+    .card img {
+        width: 100%;
+        display: block;
+    }
+
+
+}
