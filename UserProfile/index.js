@@ -5,6 +5,21 @@ const questions = [
   { description: "Age :", placeholder: "Please Enter Your Age" },
   { description: "Gender :", placeholder: "Please Enter Your Gender" },
   { description: "Agree with the conditions :", placeholder: "Yes or No" },
+  { description: "Rational :", placeholder: "Please Enter Your Rationality" },
+  { description: "DoA :", placeholder: "Please Enter Your DoA" },
+  { description: "Task :", placeholder: "Please Enter Your Task" },
+  { description: "Place :", placeholder: "Please Enter Your Place" },
+  { description: "Assignment Type :", placeholder: "Please Enter Your Assignment Type" },
+  { description: "Area of Study :", placeholder: "Please Enter Your Area of Study" },
+  { description: "Highest Degree :", placeholder: "Please Enter Highest Degree Level" },
+  { description: "University :", placeholder: "Please Enter Your University / Institute" },
+  { description: "Complete Year :", placeholder: "Please Enter Your Completion Year of Study" },
+  { description: "Country :", placeholder: "Please Enter Country the University Belongs" },
+  { description: "Availability for Volunteering :", placeholder: "Min Hours Per Week " },
+  { description: "Surname :", placeholder: "Please Enter Your Surname" },
+  { description: "Telephone No. :", placeholder: "Please Enter Your Telephone No." },
+  { description: "Availability on Social Media :", placeholder: "Yes or No" },
+  { description: "Email :", placeholder: "Please Enter Your Email address" },
 ];
 
 // Initialize question index and progress index
@@ -16,6 +31,9 @@ function updateInputDescriptionAndPlaceholder() {
   const currentQuestion = questions[questionIndex];
   document.getElementById("inputDescription").innerText = currentQuestion.description;
   document.querySelector("#newtask input").placeholder = currentQuestion.placeholder;
+  document.getElementById("questionDescription").innerText = `Step 1 Personal Details | Question ${
+    questionIndex + 1
+  } of ${questions.length}`;
 }
 
 // Function to update the progress bar
@@ -25,33 +43,35 @@ function updateProgressBar(progressBar, value) {
   progressBar.querySelector("#progress__text").textContent = `${value}%`;
 }
 
-document.querySelector("#next").onclick = function () {
-  // Update the progress bar
-  progressIndex += 25;
-  const myProgressBar = document.querySelector("#progress");
-  updateProgressBar(myProgressBar, progressIndex);
-};
+// Function to increment the progressbar and proceed to next page
+function initializeProgressBarIncrement() {
+  let isFirstClick = true; // Flag to track the first click
 
+  document.querySelector("#next").onclick = function () {
+    if (isFirstClick) {
+      // Update the progress bar only on the first click
+      progressIndex += 25;
+      const myProgressBar = document.querySelector("#progress");
+      updateProgressBar(myProgressBar, progressIndex);
+      isFirstClick = false; // Set the flag to false after the first click
+    }
+  };
+}
 
-
-// Function to handle click event on the "Add" button
-document.querySelector("#add").onclick = function () {
-  const inputValue = document.querySelector("#newtask input").value;
-
-  // Update the task with the answer to the current question
+// Function to handle click event on the "Skip" button
+document.querySelector("#skip").onclick = function () {
   document.querySelector("#tasks").innerHTML += `
-    <div class="task">
-      <span id="taskname">
-        ${questions[questionIndex].description} ${inputValue}
-      </span>
-    </div>
-  `;
-
-  // Clear the input field after adding the answer
-  document.querySelector("#newtask input").value = "";
-
+      <div class="task">
+        <span id="taskname">
+          ${questions[questionIndex].description} ${"?"}
+        </span>
+      </div>
+    `;
   // Move to the next question
   questionIndex++;
+
+  // Adjust progress index by subtracting 5
+  progressIndex -= 5;
 
   // If all questions have been asked, hide the "Add" button
   if (questionIndex >= questions.length) {
@@ -62,11 +82,51 @@ document.querySelector("#add").onclick = function () {
     inputField.placeholder = "Press Next to Proceed..";
     inputField.style.width = "100%";
     inputField.style.textAlign = "center";
+    initializeProgressBarIncrement();
     return;
   }
 
   // Update input description and placeholder for the next question
   updateInputDescriptionAndPlaceholder();
+};
+
+// Function to handle click event on the "Add" button
+document.querySelector("#add").onclick = function () {
+  // Update the task with the answer to the current question
+  const inputValue = document.querySelector("#newtask input").value;
+  if (inputValue == 0) {
+    alert("Please Enter a Valid Input");
+  } else {
+    document.querySelector("#tasks").innerHTML += `
+      <div class="task">
+        <span id="taskname">
+          ${questions[questionIndex].description} ${inputValue}
+        </span>
+      </div>
+    `;
+
+    // Clear the input field after adding the answer
+    document.querySelector("#newtask input").value = "";
+
+    // Move to the next question
+    questionIndex++;
+
+    // If all questions have been asked, hide the "Add" button
+    if (questionIndex >= questions.length) {
+      document.querySelector("#add").style.display = "none";
+      document.getElementById("inputDescription").innerText = "";
+      const inputField = document.querySelector("#newtask input");
+      inputField.readOnly = true;
+      inputField.placeholder = "Press Next to Proceed..";
+      inputField.style.width = "100%";
+      inputField.style.textAlign = "center";
+      initializeProgressBarIncrement();
+      return;
+    }
+
+    // Update input description and placeholder for the next question
+    updateInputDescriptionAndPlaceholder();
+  }
 };
 
 // Add keypress event listener to the input field
