@@ -21,9 +21,9 @@
     <link rel="stylesheet" href="/NavigationBar/style.css">
     <link rel="stylesheet" href="/NavigationBar/mediaQuerise.css" >
     <div class="NavigationBar">
-      <div class="logo">
+      <div class="logo" onclick="gotoHome()">
         <img src="/NavigationBar/logo.jpeg" alt="webside logo" />
-        <span class="logoText">Life on Earth</span>
+        <span class="logoText">Life on Land</span>
       </div>
       <div class="UserProfile1">
         <a href="/UserProfile/UserProfile.html"><img src="profile.png" alt="user profile" /></a>
@@ -47,7 +47,7 @@
 </body>
 
 <body>
-        <h1>Feedback Form</h1>
+    <h1>Feedback Form</h1>
     <form id="feedbackform" onsubmit="return confirmation()">
 
         <label for="name">Enter your Name : </label>
@@ -135,6 +135,22 @@
 
     <script src="index.js"></script>
     
+
     
+
+
+    <footer>
+        <link rel="stylesheet" href="/Footer/style.css" />
+        <link rel="stylesheet" href="/Footer/mediaQueries.css" />
+          <ul>
+              <li><a href="/Team/Team.html">About us |</a></li>
+              <li><a href="/Footer/references.html">References |</a></li>
+              <li><a href="/Footer/contact.html">Contact |</a></li>
+              <li><a href="/Footer/faq.html">FAQ</a></li>
+          </ul>
+      
+          <p>&copy; 2024 Life on Land. All rights reserved</p>
+      </footer>
+
 </body>
 </html>

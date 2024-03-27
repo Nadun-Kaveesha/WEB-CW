@@ -20,9 +20,9 @@
     <link rel="stylesheet" href="/NavigationBar/style.css">
     <link rel="stylesheet" href="/NavigationBar/mediaQuerise.css" >
     <div class="NavigationBar">
-      <div class="logo">
+      <div class="logo" onclick="gotoHome()">
         <img src="/NavigationBar/logo.jpeg" alt="webside logo" />
-        <span class="logoText">Life on Earth</span>
+        <span class="logoText">Life on Land</span>
       </div>
       <div class="UserProfile1">
         <a href="/UserProfile/UserProfile.html"><img src="profile.png" alt="user profile" /></a>
@@ -47,14 +47,42 @@
 
 <body>
     <div class="card"><img src="background2.jpg" alt="second background image" /></div>
-    <div class="MissionOverlay">
-      <div class="Mission">OUR MISSION</div>
-      <div class="content">Lorem ipsum dolor sit
-         amet consectetur adipisicing elit. Voluptas modi vero fugiat, placeat vel fugit corrupti soluta
-         odio, saepe illo, repellendus eius pariatur illum officiis quae ullam voluptatibus eligendi reprehenderit!</div>
-    </div>
+
+    <div class="backgroundCon">
+
+      <video controls autoplay muted  loop >
+        <source src="/HomePage/video.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+
+      <div class="MissionOverlay">
+        <div class="Mission">OUR MISSION</div>
+        <div class="content">Lorem ipsum dolor sit
+          amet consectetur adipisicing elit. Voluptas modi vero fugiat, placeat vel fugit corrupti soluta
+          odio, saepe illo, repellendus eius pariatur illum officiis quae ullam voluptatibus eligendi reprehenderit!</div>
+      </div>
     
-    <div class="card"><img src="background1.webp" alt="first background image" /></div>
+      <!-- <div class="card"><img src="background1.webp" alt="first background image" /></div> -->
+
+    </div>
+
+    
    
+
+
+<footer>
+  <link rel="stylesheet" href="/Footer/style.css" />
+  <link rel="stylesheet" href="/Footer/mediaQueries.css" />
+    <ul>
+        <li><a href="/Team/Team.html">About us |</a></li>
+        <li><a href="/Footer/references.html">References |</a></li>
+        <li><a href="/Footer/contact.html">Contact |</a></li>
+        <li><a href="/Footer/faq.html">FAQ</a></li>
+    </ul>
+
+    <p>&copy; 2024 Life on Land. All rights reserved</p>
+</footer>
+
 </body>
+
 </html>
