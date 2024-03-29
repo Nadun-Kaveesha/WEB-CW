@@ -26,10 +26,13 @@ const questions = [
 let questionIndex = 0;
 let progressIndex = 0;
 
-// Function to hide or show the task container based on question index
+//Function to hide the task container if there is no inputs
 function toggleTaskContainerVisibility() {
-  const tasksContainer = document.querySelector("#tasks");
-  tasksContainer.style.display = questionIndex > 0 ? "block" : "none";
+  if (questionIndex > 0) {
+    document.querySelector("#tasks").style.display = "block";
+  } else {
+    document.querySelector("#tasks").style.display = "none";
+  }
 }
 
 // Function to update input description and placeholder
@@ -40,75 +43,125 @@ function updateInputDescriptionAndPlaceholder() {
   document.getElementById("questionDescription").innerText = `Step 1 Personal Details | Question ${
     questionIndex + 1
   } of ${questions.length}`;
+
+  // Toggle task container visibility
   toggleTaskContainerVisibility();
 }
 
 // Function to update the progress bar
-function updateProgressBar(value) {
+function updateProgressBar(progressBar, value) {
   value = Math.round(value);
-  const progressBar = document.querySelector("#progress");
   progressBar.querySelector("#progress__fill").style.width = `${value}%`;
   progressBar.querySelector("#progress__text").textContent = `${value}%`;
 }
 
-// Function to initialize progress bar and input fields
-function initialize() {
-  updateInputDescriptionAndPlaceholder();
-  updateProgressBar(progressIndex);
+// Function to increment the progressbar and proceed to next page
+function initializeProgressBarIncrement() {
+  let isFirstClick = true; // Flag to track the first click
 
-  // Add click event listener for the "Skip" button
-  document.querySelector("#skip").addEventListener("click", function () {
-    document.querySelector(
-      "#tasks"
-    ).innerHTML += `<div class="task"><span id="taskname">${questions[questionIndex].description} ?</span></div>`;
+  document.querySelector("#next").onclick = function () {
+    if (isFirstClick) {
+      // Update the progress bar only on the first click
+
+      isFirstClick = false; // Set the flag to false after the first click
+    }
+  };
+}
+
+// Function to handle click event on the "Skip" button
+document.querySelector("#skip").onclick = function () {
+  document.querySelector("#tasks").innerHTML += `
+      <div class="task">
+        <span id="taskname">
+          ${questions[questionIndex].description} ${"?"}
+        </span>
+      </div>
+    `;
+  // Move to the next question
+  questionIndex++;
+
+  // Adjust progress index by subtracting 5
+  progressIndex -= 5;
+
+  // If all questions have been asked, hide the "Add" button
+  if (questionIndex >= questions.length) {
+    document.querySelector("#add").style.display = "none";
+    document.getElementById("inputDescription").innerText = "";
+    const inputField = document.querySelector("#newtask input");
+    inputField.readOnly = true;
+    inputField.placeholder = "Press Next to Proceed..";
+    inputField.style.width = "100%";
+    inputField.style.textAlign = "center";
+    initializeProgressBarIncrement();
+    return;
+  }
+
+  // Update input description and placeholder for the next question
+  updateInputDescriptionAndPlaceholder();
+
+  // Toggle task container visibility
+  toggleTaskContainerVisibility();
+};
+
+// Function to handle click event on the "Add" button
+document.querySelector("#add").onclick = function () {
+  // Update the task with the answer to the current question
+  const inputValue = document.querySelector("#newtask input").value;
+  if (questionIndex<=19 && inputValue == 0) {
+    alert("Please Enter a Valid Input");
+  } else {
+    document.querySelector("#tasks").innerHTML += `
+      <div class="task">
+        <span id="taskname">
+          ${questions[questionIndex].description} ${inputValue}
+        </span>
+      </div>
+    `;
+    progressIndex += 5;
+    const myProgressBar = document.querySelector("#progress");
+    updateProgressBar(myProgressBar, progressIndex);
+
+    // Clear the input field after adding the answer
+    document.querySelector("#newtask input").value = "";
+
+    // Move to the next question
     questionIndex++;
-    progressIndex -= 5;
+
+    // If all questions have been asked, hide the "Add" button
     if (questionIndex >= questions.length) {
       document.querySelector("#add").style.display = "none";
+      document.getElementById("inputDescription").innerText = "";
       const inputField = document.querySelector("#newtask input");
       inputField.readOnly = true;
       inputField.placeholder = "Press Next to Proceed..";
       inputField.style.width = "100%";
       inputField.style.textAlign = "center";
+      initializeProgressBarIncrement();
+      return;
     }
+
+    // Update input description and placeholder for the next question
     updateInputDescriptionAndPlaceholder();
-    updateProgressBar(progressIndex);
-  });
 
-  // Add click event listener for the "Add" button
-  document.querySelector("#add").addEventListener("click", function () {
-    const inputValue = document.querySelector("#newtask input").value;
-    if (questionIndex <= 19 && inputValue == 0) {
-      alert("Please Enter a Valid Input");
-    } else {
-      document.querySelector(
-        "#tasks"
-      ).innerHTML += `<div class="task"><span id="taskname">${questions[questionIndex].description} ${inputValue}</span></div>`;
-      progressIndex += 5;
-      const myProgressBar = document.querySelector("#progress");
-      updateProgressBar(progressIndex);
-      document.querySelector("#newtask input").value = "";
-      questionIndex++;
-      if (questionIndex >= questions.length) {
-        document.querySelector("#add").style.display = "none";
-        const inputField = document.querySelector("#newtask input");
-        inputField.readOnly = true;
-        inputField.placeholder = "Press Next to Proceed..";
-        inputField.style.width = "100%";
-        inputField.style.textAlign = "center";
-      }
-      updateInputDescriptionAndPlaceholder();
-    }
-  });
+    // Toggle task container visibility
+    toggleTaskContainerVisibility();
+  }
+};
 
-  // Add keypress event listener to the input field
-  document.querySelector("#newtask input").addEventListener("keypress", function (event) {
-    if (event.keyCode === 13) {
-      event.preventDefault();
-      document.querySelector("#add").click();
-    }
-  });
-}
+// Add keypress event listener to the input field
+document.querySelector("#newtask input").addEventListener("keypress", function (event) {
+  // Check if the pressed key is Enter
+  if (event.keyCode === 13) {
+    // Prevent the default behavior of the Enter key
+    event.preventDefault();
+    // Trigger the click event of the "Add" button
+    document.querySelector("#add").click();
+  }
+});
 
-// Initialize everything when the DOM content is loaded
-document.addEventListener("DOMContentLoaded", initialize);
+// Initialize input description and placeholder for the first question
+updateInputDescriptionAndPlaceholder();
+
+// Initialize the progress bar
+const myProgressBar = document.querySelector("#progress");
+updateProgressBar(myProgressBar, progressIndex);
