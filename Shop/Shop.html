@@ -8,118 +8,182 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
-    <h1 class="font">
-        Shop
-      
-    </h1>
-    <a href="cart.html" id="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+  <body>
+    <link rel="stylesheet" href="/NavigationBar/style.css" />
+    <link rel="stylesheet" href="/NavigationBar/mediaQuerise.css" />
+    <div class="NavigationBar">
+      <div class="logo" onclick="gotoHome()">
+        <img src="/NavigationBar/logo.jpeg" alt="webside logo" />
+        <span class="logoText">Life on Land</span>
+      </div>
+      <div class="UserProfile1">
+        <a href="/UserProfile/UserProfile.html"><img src="profile.png" alt="user profile" /></a>
+      </div>
+      <div class="moreOption" onclick="toggleDropdown()">&#9776;</div>
 
+      <ul id="navDropdown">
+        <li><a id="Home" href="/HomePage/HomePage.html">Home</a></li>
+        <li><a id="Shop" href="/Shop/Shop.html">Shop</a></li>
+        <li><a id="Site Map" href="/Sitemap/Sitemap.html">Site Map</a></li>
+        <li><a id="About us" href="/Team/Team.html">About us</a></li>
+        <li><a id="Gallery" href="/Gallery/Gallery.html">Gallery</a></li>
+        <li><a id="Feedback" href="/Feedback/Feedback.html">Feedback</a></li>
+        <li class="SearchBar"><input type="text" placeholder="Search Here.. " /></li>
+        <li class="UserProfile">
+          <a href="/UserProfile/UserProfile.html"><img src="profile.png" alt="user profile" /></a>
+        </li>
+      </ul>
+    </div>
+    <script src="/NavigationBar/index.js" defer></script>
+  </body>
+
+
+
+<body>
+    <header class="header">
+        <h1>SHOP</h1>
+        <a href=# id="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+    </header>
     <div class="box">
 
         <div class="product">
             <img class="img" src="/images/product.jpg" width="90%">
-            <h2 class="product-name" id="product-name1">Product 1</h2>
-            <div class="price" id="product-price1">$9.99</div>
+            <h2 class="product-name">Product 1</h2>
+            <div class="price">$9.99</div>
             <!-- Quantity selection -->
             <div class="quantity-text-box">
                 <label for="quantity">Quantity:</label>
-                <input type="number" id="quantity" name="quantity" min="1" value="1"><br>
+                <input type="number" class="quantity" name="quantity" min="1" value="1"><br>
             </div>
-            <button id="add-to-cart">Add to Cart</button>  
+            <button class="add-to-cart">Add to Cart</button>  
         </div>
 
         <div class="product">
             <img class="img" src="/images/product.jpg" width="90%">
-            <h2 class="product-name" id="product-name2">Product 2</h2>
-            <div class="price" id="product-price2">$9.99</div>
+            <h2 class="product-name">Product 2</h2>
+            <div class="price">$10</div>
             <!-- Quantity selection -->
             <div class="quantity-text-box">
                 <label for="quantity">Quantity:</label>
-                <input type="number" id="quantity" name="quantity" min="1" value="1"><br>
+                <input type="number" class="quantity" name="quantity" min="1" value="1"><br>
             </div>
-            <button class="font" id="add-to-cart">Add to Cart</button>  
+            <button class="add-to-cart">Add to Cart</button>  
         </div>
 
         <div class="product">
             <img class="img" src="/images/product.jpg" width="90%">
-            <h2 class="product-name" id="product-name3">Product 3</h2>
-            <div class="price" id="product-price3">$9.99</div>
+            <h2 class="product-name">Product 3</h2>
+            <div class="price">$9.99</div>
             <!-- Quantity selection -->
             <div class="quantity-text-box">
                 <label for="quantity">Quantity:</label>
-                <input type="number" id="quantity" name="quantity" min="1" value="1"><br>
+                <input type="number" class="quantity" name="quantity" min="1" value="1"><br>
             </div>
-            <button class="font" id="add-to-cart">Add to Cart</button>  
+            <button class="add-to-cart">Add to Cart</button>  
         </div>
 
         <div class="product">
             <img class="img" src="/images/product.jpg" width="90%">
-            <h2 class="product-name" id="product-name4">Product 4</h2>
-            <div class="price" id="product-price4">$9.99</div>
+            <h2 class="product-name">Product 4</h2>
+            <div class="price">$50</div>
             <!-- Quantity selection -->
             <div class="quantity-text-box">
                 <label for="quantity">Quantity:</label>
-                <input type="number" id="quantity" name="quantity" min="1" value="1"><br>
+                <input type="number" class="quantity" name="quantity" min="1" value="1"><br>
             </div>
-            <button class="font" id="add-to-cart">Add to Cart</button>  
+            <button class="add-to-cart">Add to Cart</button>  
         </div>
 
         <div class="product">
             <img class="img" src="/images/product.jpg" width="90%">
-            <h2 class="product-name" id="product-name5">Product 5</h2>
-            <div class="price" id="product-price5">$9.99</div>
+            <h2 class="product-name">Product 5</h2>
+            <div class="price">$9.99</div>
             <!-- Quantity selection -->
             <div class="quantity-text-box">
                 <label for="quantity">Quantity:</label>
-                <input type="number" id="quantity" name="quantity" min="1" value="1"><br>
+                <input type="number" class="quantity" name="quantity" min="1" value="1"><br>
             </div>
-            <button class="font" id="add-to-cart">Add to Cart</button>  
+            <button class="add-to-cart">Add to Cart</button>  
         </div>
 
         <div class="product">
             <img class="img" src="/images/product.jpg" width="90%">
-            <h2 class="product-name" id="product-name6">Product 6</h2>
-            <div class="price" id="product-price6">$9.99</div>
+            <h2 class="product-name">Product 6</h2>
+            <div class="price">$9.99</div>
             <!-- Quantity selection -->
             <div class="quantity-text-box">
                 <label for="quantity">Quantity:</label>
-                <input type="number" id="quantity" name="quantity" min="1" value="1"><br>
+                <input type="number" class="quantity" name="quantity" min="1" value="1"><br>
             </div>
-            <button class="font" id="add-to-cart">Add to Cart</button>  
+            <button class="add-to-cart">Add to Cart</button>  
         </div>
 
         <div class="product">
             <img class="img" src="/images/product.jpg" width="90%">
-            <h2 class="product-name" id="product-name7">Product 7</h2>
-            <div class="price" id="product-price7">$9.99</div>
+            <h2 class="product-name">Product 7</h2>
+            <div class="price">$9.99</div>
             <!-- Quantity selection -->
             <div class="quantity-text-box">
                 <label for="quantity">Quantity:</label>
-                <input type="number" id="quantity" name="quantity" min="1" value="1"><br>
+                <input type="number" class="quantity" name="quantity" min="1" value="1"><br>
             </div>
-            <button class="font" id="add-to-cart">Add to Cart</button>  
+            <button class="add-to-cart">Add to Cart</button>  
         </div>
 
         <div class="product">
             <img class="img" src="/images/product.jpg" width="90%">
-            <h2 class="product-name" id="product-name8">Product 8</h2>
-            <div class="price" id="product-price8">$9.99</div>
+            <h2 class="product-name">Product 8</h2>
+            <div class="price">$9.99</div>
             <!-- Quantity selection -->
             <div class="quantity-text-box">
                 <label for="quantity">Quantity:</label>
-                <input type="number" id="quantity" name="quantity" min="1" value="1"><br>
+                <input type="number" class="quantity" name="quantity" min="1" value="1"><br>
             </div>
-            <button class="font" id="add-to-cart">Add to Cart</button>  
+            <button class="add-to-cart">Add to Cart</button>  
             
         </div>
     </div>
-    <div class="footer">
-        <h1 class="font">About</h1>
+
+    <div class="inlinecart" style="display: none;">
+
+        <div class="cartContent">
+            <a href="#"><i class="fa-solid fa-square-xmark"></i></a>
+            <h2>Cart</h2>
+        </div>
+
+        <div class="cartBottom">
+            <a href="checkout.html" id="chqout">Proceed to checkout</a>
+        </div>
         
     </div>
+    
+
+    <footer>
+        <link rel="stylesheet" href="/Footer/style.css" />
+        <link rel="stylesheet" href="/Footer/mediaQueries.css" />
+          <ul>
+              <li><a href="/Team/Team.html">About us |</a></li>
+              <li><a href="/Footer/references.html">References |</a></li>
+              <li><a href="/Footer/contact.html">Contact |</a></li>
+              <li><a href="/Footer/faq.html">FAQ</a></li>
+          </ul>
+    
+          <p>&copy; 2024 Life on Land. All rights reserved</p>
+    csds  </footer>
 
     <script src="index.js"></script>
+    <footer>
+      <link rel="stylesheet" href="/Footer/style.css" />
+      <link rel="stylesheet" href="/Footer/mediaQueries.css" />
+        <ul>
+            <li><a href="/Team/Team.html">About us |</a></li>
+            <li><a href="/Footer/references.html">References |</a></li>
+            <li><a href="/Footer/contact.html">Contact |</a></li>
+            <li><a href="/Footer/faq.html">FAQ</a></li>
+        </ul>
+  
+        <p>&copy; 2024 Life on Land. All rights reserved</p>
+    </footer>
 </body>
 
 </html>
