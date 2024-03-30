@@ -35,6 +35,19 @@ let questionIndex = 0;
 let questionSetIndex = 0;
 let progressIndex = 0;
 
+// Define the delay in milliseconds (e.g., 2000 milliseconds = 2 seconds)
+const delayInMillis = 2000;
+
+// Function to refresh the page after a delay
+function refreshPageWithDelay() {
+  // Set a timeout to reload the page after the specified delay
+  setTimeout(function() {
+    // Reload the page
+    location.reload();
+  }, delayInMillis);
+}
+
+
 //Function to hide the task container if there is no inputs
 function toggleTaskContainerVisibility() {
   if (questionIndex > 0) {
@@ -135,7 +148,6 @@ document.querySelector("#add").onclick = function () {
       inputField.placeholder = "Press Next to Proceed..";
       inputField.style.width = "100%";
       inputField.style.textAlign = "center";
-      initializeProgressBarIncrement();
       return;
     }
 
@@ -147,26 +159,41 @@ document.querySelector("#add").onclick = function () {
   }
 };
 
-// Function to handle click event on the "Next" button
-document.querySelector("#next").onclick = function () {
-  // Move to the next question within the current question set
-  questionIndex++;
 
-  // If all questions in the current set have been asked, move to the next set
+
+// Initialize the click event listener for the "Next" button
+document.querySelector("#next").onclick =function(){
   if (questionIndex >= questionSets[questionSetIndex].length) {
-    questionSetIndex++;
-    questionIndex = 0;
-  }
-
-  // If all question sets have been completed, hide the "Next" button
-  if (questionSetIndex >= questionSets.length) {
-    document.querySelector("#next").style.display = "none";
-    return;
+      questionSetIndex++;
+      questionIndex = 0;
+      document.querySelector("#tasks").innerHTML = "";
+      //inputField.style.width = "70%";
+      document.querySelector("#add").style.display = "inline-block";
+      document.getElementById("inputDescription").innerText = "";
+      const inputField = document.querySelector("#newtask input");
+      inputField.readOnly = false;
   }
 
   // Update input description and placeholder for the next question
   updateInputDescriptionAndPlaceholder();
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Initialize input description and placeholder for the first question
 updateInputDescriptionAndPlaceholder();
