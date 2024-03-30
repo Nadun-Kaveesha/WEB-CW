@@ -7,6 +7,14 @@
   --font-family: "Poppins", sans-serif;
 }
 
+h1{
+  margin-left: 15px;
+}
+
+#modal-content h2{
+  margin-left: 5px;
+}
+
 h6{
   margin: 1.52em;
 }
@@ -24,7 +32,7 @@ h6{
   flex-wrap: wrap;
 }
 .images .image-box {
-  margin: 12opx;
+  margin: 12px;
 }
 .images .image-box img {
   height: 31.64%;
@@ -83,6 +91,7 @@ h6{
     flex-wrap: wrap;
     align-items: center;
     font-family:var(--font-family);
+    margin-bottom: 5px;
 }
 
 .modal-image {
@@ -93,10 +102,13 @@ h6{
     display: flex !important;
     justify-content: center!important;
     align-items: center !important;
+    margin-left: 20px;
 }
 
 .modal-description {
-    margin-top:10px;                   /* top margin for modal description */
+    margin-top:20px;
+    margin-left: 20px;
+    margin-bottom: 20px;                   /* top margin for modal description */
     word-wrap: break-word;            /* word wrap for modal description   doesnt work as i want*/
 }
 
@@ -121,25 +133,12 @@ h6{
 
 .x {
   display: inline-block;
-  margin-left: 690px;
+  margin-left: 1000px;
 }
 
 .y {
   display: inline-block; 
-  margin-left: 50px;
+  margin-left: 10px;
 }
 
-.left-image img {    /* Left image float */
-  float: left;
-  margin-right: 20px;
-}
-
-
-/* .image-box img{
-    height: 300px;
-    width: 200px;
-} */
-
-/* CSS for modal */
-/* CSS for styling */
 
