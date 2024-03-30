@@ -154,3 +154,7 @@ button:disabled {
 .radioContainer input[type="radio"] {
     display: none;
 }
+
+.UserProfile {
+    display: none;
+}
