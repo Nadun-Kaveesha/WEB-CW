@@ -7,14 +7,14 @@ if (window.innerWidth <= 720) {
         dropdown.style.display = "none";
       }
     }
-  
-    var navLink = document.querySelectorAll(".NavigationBar ul li a");
-    navLink.forEach(function (navLink) {
-      navLink.addEventListener("click", function () {
-        var dropdown = document.getElementById("navDropdown");
-        dropdown.style.display = "none";
-      });
-    });
   }
+
+function gotoHome() {
+  window.location.href = "/HomePage/HomePage.html";
+}
   
-  
+
+function gotoHome() {
+  window.location.href = "/HomePage/HomePage.html"
+}
+

@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback Form</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaQueries.css" >
+    <link rel="stylesheet" href="style.css"> <!-- Link css file -->
+    <link rel="stylesheet" href="mediaQueries.css" >  <!-- Link mediaqurie file -->
     
     <!-- goole fonts -->
     <link 
@@ -16,73 +16,101 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
 </head>
-<body>
-    
-    <link rel="stylesheet" href="/NavigationBar/style.css">
-    <link rel="stylesheet" href="/NavigationBar/mediaQuerise.css" >
-    <div class="NavigationBar">
-      <div class="logo">
-        <img src="/NavigationBar/logo.jpeg" alt="webside logo" />
-        <span class="logoText">Life on Earth</span>
-      </div>
-      <div class="UserProfile1">
-        <a href="/UserProfile/UserProfile.html"><img src="profile.png" alt="user profile" /></a>
-      </div>
-      <div class="moreOption" onclick="toggleDropdown()">&#9776;</div>
 
-      <ul id="navDropdown">
+<!-- #################################################################################################################################################################################### -->
+
+<body> <!-- this body for a Navigation bar -->
+
+    <link rel="stylesheet" href="/NavigationBar/style.css"> <!-- link navigation bar css file -->
+    <link rel="stylesheet" href="/NavigationBar/mediaQuerise.css" > <!-- link navigation bar media querie file -->
+
+    <div class="NavigationBar">
+
+
+      <div class="logo" onclick="gotoHome()"> <!-- creat class for logo section and link it home page using js -->
+
+        <img src="/NavigationBar/logo.jpeg" alt="webside logo" /> <!-- website logo -->
+        <span class="logoText">Life on Land</span> <!-- website name -->
+
+      </div>
+
+      <div class="UserProfile1"> <!-- this is for a media querie navigation bar avatar -->
+
+        <a href="/UserProfile/UserProfile.html"><img src="profile.png" alt="user profile" /></a> <!-- link it userprofile page -->
+
+      </div>
+
+      <div class="moreOption" onclick="toggleDropdown()">&#9776;</div> <!-- "more" icon and set it if click on top of it display navigation links (use js) -->
+
+      <ul id="navDropdown"> <!-- navigation links -->
+
         <li><a id="Home" href="/HomePage/HomePage.html">Home</a></li>
         <li><a id="Shop" href="/Shop/Shop.html">Shop</a></li>
         <li><a id="Site Map" href="/Sitemap/Sitemap.html">Site Map</a></li>
         <li><a id="About us" href="/Team/Team.html">About us</a></li>
         <li><a id="Gallery" href="/Gallery/Gallery.html">Gallery</a></li>
         <li><a id="Feedback" href="/Feedback/Feedback.html">Feedback</a></li>
-        <li class="SearchBar"><input type="text" placeholder="Search Here.. " /></li>
-        <li class="UserProfile">
+
+        <li class="SearchBar"><input type="text" placeholder="Search Here.. " /></li> <!-- add search bar in to navigation bar -->
+
+        <li class="UserProfile"> <!-- avatar for desktop view -->
           <a href="/UserProfile/UserProfile.html"><img src="profile.png" alt="user profile" /></a>
         </li>
+
       </ul>
+
     </div>
-    <script src="/NavigationBar/index.js" defer></script>
+
+    <script src="/NavigationBar/index.js" defer></script> <!-- link navigation bar js file -->
+
 </body>
 
-<body>
-        <h1>Feedback Form</h1>
+<!-- ###################################################################################################################################################################################################-->
+
+<body> <!-- feedback form code here -->
+
+    <h1>Feedback Form</h1>
+
     <form id="feedbackform" onsubmit="return confirmation()">
 
         <label for="name">Enter your Name : </label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" name="name" required> <!-- get user name and set it as a required field -->
 
         <label for="email">Enter your Email : </label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" required> <!-- get user email and set it as a required field (use email type) -->
 
         <div class="FT_Visite">
+
             <p>Was this your first time visiting ? </p>
             
             <input type="radio" id="FT_VisiteYes" name="FT_Visite" value="Yes" >
-            <label for="FT_VisiteYes">Yes</label>
+            <label for="FT_VisiteYes">Yes</label> <!-- use radio buttons for a yes and no -->
 
             <input type="radio" id="FT_VisiteNo" name="FT_Visite" value="No">
-            <label for="FT_VisiteNo">No</label>
+            <label for="FT_VisiteNo">No</label> <!-- use radio buttons for a yes and no -->
+
         </div>
 
         <div class="isInformative">
+
             <p>Was this website informative and easy to navigate through ?</p>
 
             <input type="radio" id="isInformativeYes" name="isInformative" value="Yes" >
-            <label for="isInformativeYes">Yes</label>
+            <label for="isInformativeYes">Yes</label> 
 
             <input type="radio" id="isInformativeNo" name="isInformative" value="No" >
             <label for="isInformativeNo">No</label>
+
         </div>
 
         <label for="suggestImprovements">If "No", suggest any improvementes for the future :</label>
-        <textarea id="suggestImprovements" name="suggestImprovements"></textarea>
+        <textarea id="suggestImprovements" name="suggestImprovements"></textarea> <!-- for this use textarea -->
 
         <div class="isSatisfied">
+
             <p>How satisfied are you with our services ? </p>
 
-            <div class="radioContainer" >
+            <div class="radioContainer" > <!-- use radio buttons with images and after hide radio buttones using css -->
 
                 <label for="satisfied1">
                     <img src="excellent.jpeg" alt="excellent satisfied Face" satisfied="1">
@@ -104,6 +132,7 @@
         </div>
 
         <div class="isRecommended">
+
             <P>Would you recommend our service ?</P>
 
             <input type="radio" id="isRecommendedYes" name="isRecommended" value="Yes" >
@@ -111,15 +140,19 @@
 
             <input type="radio" id="isRecommendedNo" name="isRecommended" value="No" >
             <label for="isRecommendedYes">No</label>
+
         </div>
 
         <div class="getUpdates">
+
             <p>Would you like to receive updatedes about the website and any offers ? </p>
 
             <select id="getUpdates" name="getUpdates">
                 <option value="Email">Yes - via Email</option>
-                <option value="Notification">Yes - via Chrome Notification</option>
+                <option value="Notification">Yes - via Chrome Notification</option> <!-- use select option for this -->
+
             </select>
+
         </div>
 
         <label for="Comments">Do you have any additional questions or requests ? </label>
@@ -135,6 +168,27 @@
 
     <script src="index.js"></script>
     
+
     
+
+
+    <footer> <!-- this is for footer -->
+
+        <link rel="stylesheet" href="/Footer/style.css" /> <!-- link css file -->
+        <link rel="stylesheet" href="/Footer/mediaQueries.css" /> <!-- link media queriw file-->
+
+          <ul>
+
+              <li><a href="/Team/Team.html">About us |</a></li>
+              <li><a href="/Footer/references.html">References |</a></li>
+              <li><a href="/Footer/contact.html">Contact |</a></li>
+              <li><a href="/Footer/faq.html">FAQ</a></li>
+
+          </ul>
+      
+          <p>&copy; 2024 Life on Land. All rights reserved</p>
+
+      </footer>
+
 </body>
 </html>
