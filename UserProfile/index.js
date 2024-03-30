@@ -167,11 +167,11 @@ document.querySelector("#next").onclick =function(){
       questionSetIndex++;
       questionIndex = 0;
       document.querySelector("#tasks").innerHTML = "";
-      //inputField.style.width = "70%";
       document.querySelector("#add").style.display = "inline-block";
       document.getElementById("inputDescription").innerText = "";
       const inputField = document.querySelector("#newtask input");
       inputField.readOnly = false;
+      inputField.style.width = "70%";
   }
 
   // Update input description and placeholder for the next question
