@@ -30,6 +30,22 @@ const questionSets = [
   ],
 ];
 
+// Function to get question description based on question set index
+function getQuestionDescription(setIndex) {
+  switch (setIndex) {
+    case 0:
+      return "Personal Details";
+    case 1:
+      return "Volunteering Tasks";
+    case 2:
+      return "Qualifications";
+    case 3:
+      return "Availability and Tasks";
+    default:
+      return "";
+  }
+}
+
 // Initialize question index and progress index
 let questionIndex = 0;
 let questionSetIndex = 0;
@@ -51,10 +67,12 @@ function updateInputDescriptionAndPlaceholder() {
   const currentQuestion = questionSets[questionSetIndex][questionIndex];
   document.getElementById("inputDescription").innerText = currentQuestion.description;
   document.querySelector("#newtask input").placeholder = currentQuestion.placeholder;
+  //updating the question description
   document.getElementById("questionDescription").innerText = `Step ${
     questionSetIndex + 1
-  } Personal Details | Question ${questionIndex + 1} of ${questionSets[questionSetIndex].length}`;
-
+  } ${getQuestionDescription(questionSetIndex)} | Question ${questionIndex + 1} of ${
+    questionSets[questionSetIndex].length
+  }`;
   // Toggle task container visibility
   toggleTaskContainerVisibility();
 }
@@ -90,7 +108,6 @@ document.querySelector("#skip").onclick = function () {
     `;
   // Move to the next question
   questionIndex++;
-  
 
   // Update input description and placeholder for the next question
   updateInputDescriptionAndPlaceholder();
@@ -143,41 +160,22 @@ document.querySelector("#add").onclick = function () {
   }
 };
 
-
-
 // Initialize the click event listener for the "Next" button
-document.querySelector("#next").onclick =function(){
+document.querySelector("#next").onclick = function () {
   if (questionIndex >= questionSets[questionSetIndex].length) {
-      questionSetIndex++;
-      questionIndex = 0;
-      document.querySelector("#tasks").innerHTML = "";
-      document.querySelector("#add").style.display = "inline-block";
-      document.getElementById("inputDescription").innerText = "";
-      const inputField = document.querySelector("#newtask input");
-      inputField.readOnly = false;
-      inputField.style.width = "70%";
+    questionSetIndex++;
+    questionIndex = 0;
+    document.querySelector("#tasks").innerHTML = "";
+    document.querySelector("#add").style.display = "inline-block";
+    document.getElementById("inputDescription").innerText = "";
+    const inputField = document.querySelector("#newtask input");
+    inputField.readOnly = false;
+    inputField.style.width = "70%";
   }
 
   // Update input description and placeholder for the next question
   updateInputDescriptionAndPlaceholder();
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Initialize input description and placeholder for the first question
 updateInputDescriptionAndPlaceholder();
