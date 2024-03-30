@@ -17,7 +17,7 @@ body {
     height: 100%;
     background-size: cover;
     background-position: center;
-    opacity: 0.35;
+    opacity: 0.35;  
     z-index: -1;    
 }
 
@@ -152,5 +152,9 @@ button:disabled {
 }
 
 .radioContainer input[type="radio"] {
+    display: none;
+}
+
+.UserProfile {
     display: none;
 }
