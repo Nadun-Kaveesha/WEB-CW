@@ -35,25 +35,14 @@ let questionIndex = 0;
 let questionSetIndex = 0;
 let progressIndex = 0;
 
-// Define the delay in milliseconds (e.g., 2000 milliseconds = 2 seconds)
-const delayInMillis = 2000;
-
-// Function to refresh the page after a delay
-function refreshPageWithDelay() {
-  // Set a timeout to reload the page after the specified delay
-  setTimeout(function() {
-    // Reload the page
-    location.reload();
-  }, delayInMillis);
-}
-
-
 //Function to hide the task container if there is no inputs
 function toggleTaskContainerVisibility() {
   if (questionIndex > 0) {
     document.querySelector("#tasks").style.display = "block";
+    document.querySelector("#task-description").style.display = "block";
   } else {
     document.querySelector("#tasks").style.display = "none";
+    document.querySelector("#task-description").style.display = "none";
   }
 }
 
@@ -101,12 +90,7 @@ document.querySelector("#skip").onclick = function () {
     `;
   // Move to the next question
   questionIndex++;
-
-  // Adjust progress index by subtracting 5
-  progressIndex -= 5;
-
-  // If all questionSets have been asked, hide the "Add" button
-
+  
 
   // Update input description and placeholder for the next question
   updateInputDescriptionAndPlaceholder();

@@ -205,3 +205,21 @@ body {
   font-size: 18px;
   font-weight: 400;
 }
+
+#task-description {
+  position: relative;
+  background-color: #e5f7e4;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-family: "poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: underline;
+  text-decoration-color: #03b727;
+  text-decoration-thickness: 2px;
+
+}
+
