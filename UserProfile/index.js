@@ -18,7 +18,7 @@ const questionSets = [
     { description: "Area of Study :", placeholder: "Please Enter Your Area of Study" },
     { description: "Highest Degree :", placeholder: "Please Enter Highest Degree Level" },
     { description: "University :", placeholder: "Please Enter Your University / Institute" },
-    { description: "Complete Year :", placeholder: "Please Enter Your Completion Year of Study" },
+    { description: "Complete Year :", placeholder: "Please Enter Your Completion YoS" },
     { description: "Country :", placeholder: "Please Enter Country the University Belongs" },
   ],
   [
@@ -84,22 +84,11 @@ function updateProgressBar(progressBar, value) {
   progressBar.querySelector("#progress__text").textContent = `${value}%`;
 }
 
-// Function to increment the progressbar and proceed to next page
-function initializeProgressBarIncrement() {
-  let isFirstClick = true; // Flag to track the first click
-
-  document.querySelector("#next").onclick = function () {
-    if (isFirstClick) {
-      // Update the progress bar only on the first click
-
-      isFirstClick = false; // Set the flag to false after the first click
-    }
-  };
-}
 
 // Function to handle click event on the "Skip" button
 document.querySelector("#skip").onclick = function () {
-  document.querySelector("#tasks").innerHTML += `
+  alert("You can edit the skipped details later !");
+  document.querySelector("#task-container").innerHTML += `
       <div class="task">
         <span id="taskname">
           ${questionSets[questionSetIndex][questionIndex].description} ${"?"}
