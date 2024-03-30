@@ -60,5 +60,36 @@
         display: block;
     }
 
+    .firstOverlay{
+        position: absolute ;
+        top: 150px;
+        left: 15%;
+        background-color: rgb(0, 0, 0);
+        width: 70%;
+        height: 18%;
+        padding: 20px;
+        border-radius: 10px;
+        opacity: 0.8;
+        border: 9px solid rgb(255, 255, 255);
+    
+    }
+    
+    .heddingText { 
+        padding-top: 10px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 40px;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        font-weight: 900;
+    
+    }
+    
+    .qoute{
+        color: white;
+        text-align: center;
+        margin-top: 30px;
+        font-size: 20px;
+    }
+
 
 }
