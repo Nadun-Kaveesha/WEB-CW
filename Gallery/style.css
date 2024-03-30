@@ -6,6 +6,10 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
+h6{
+  margin: 1.52em;
+}
 .images .image-box {
   position: relative;
   height: 350px;
@@ -23,8 +27,8 @@
   margin: 12opx;
 }
 .images .image-box img {
-  height: 300px;
-  width: 200px;
+  height: 31.64%;
+  width: 56.25%;
   border-radius: 6px;                           /* round corners for img */
   transition: transform 0.1s linear;            /* time it takes to pop up the img when hovered */
 }
@@ -32,6 +36,8 @@
   transform: scale(1.2);
 }
 .image-box {
+    margin: 10px;
+    text-align: center;
     display: inline-block;              /* Sets the element with class 'image-box' to behave as an inline block-level element */
 }
 .image-box img {
@@ -45,6 +51,10 @@
   font-size: 18px;
   font-weight: 400;
   text-transform: capitalize;
+}
+
+.thumbnail {
+    cursor: pointer;
 }
 
 .modal {
@@ -65,7 +75,24 @@
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    border-radius: 6px;
 }
+
+.modal-image {
+    height: 300px;
+    width: 200px;
+    border-radius: 6px;                           /* round corners for img */
+    transition: transform 0.1s linear;
+    display: flex !important;
+    justify-content: center!important;
+    align-items: center !important;
+}
+
+.modal-description {
+    margin-top:10px;                   /* top margin for modal description */
+    word-wrap: break-word;            /* word wrap for modal description   doesnt work as i want*/
+}
+
 .close {
     color: #aaa;
     float: right;
@@ -78,3 +105,34 @@
     text-decoration: none;
     cursor: pointer;
 }
+.data-image img {
+    height: 300px;
+    width: 200px;
+    border-radius: 6px;                           /* round corners for img */
+    transition: transform 0.1s linear;
+}
+
+.x {
+  display: inline-block;
+  margin-left: 690px;
+}
+
+.y {
+  display: inline-block; 
+  margin-left: 50px;
+}
+
+.left-image img {    /* Left image float */
+  float: left;
+  margin-right: 20px;
+}
+
+
+/* .image-box img{
+    height: 300px;
+    width: 200px;
+} */
+
+/* CSS for modal */
+/* CSS for styling */
+
