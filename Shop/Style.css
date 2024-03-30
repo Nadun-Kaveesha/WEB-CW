@@ -135,7 +135,9 @@ header h1 {
 }
 
 .cartContent {
+
     height: 80vh;
+
     margin-bottom: 10px;
 }
 
@@ -144,7 +146,9 @@ header h1 {
     font-size: 20px;
     cursor: pointer;
     float: right;
+
     margin-top: 10px;
+
 }
 
 .fa-square-xmark:hover {
@@ -156,7 +160,9 @@ header h1 {
     justify-content: center;
     align-items: center;
     text-align: center;
+
     margin-top: -30px;
+
 }
 
 
