@@ -86,8 +86,8 @@ h6{
 }
 
 .modal-image {
-    height: 300px;
-    width: 200px;
+    height: 169px;
+    width: 300px;
     border-radius: 6px;                           /* round corners for img */
     transition: transform 0.1s linear;
     display: flex !important;
