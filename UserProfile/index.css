@@ -229,3 +229,23 @@ body {
   font-weight: 400;
 }
 
+#form {
+  background-color: #e5f7e4;
+  padding: 10px 20px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  margin-top: 8%;
+  position: absolute;
+  font-family: "poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+

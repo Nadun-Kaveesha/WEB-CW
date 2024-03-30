@@ -50,6 +50,8 @@ function getQuestionDescription(setIndex) {
 let questionIndex = 0;
 let questionSetIndex = 0;
 let progressIndex = 0;
+// Define an array to store question-answer pairs
+let questionAnswers = [];
 
 //Function to hide the task container if there is no inputs
 function toggleTaskContainerVisibility() {
@@ -84,10 +86,13 @@ function updateProgressBar(progressBar, value) {
   progressBar.querySelector("#progress__text").textContent = `${value}%`;
 }
 
-
 // Function to handle click event on the "Skip" button
 document.querySelector("#skip").onclick = function () {
   alert("You can edit the skipped details later !");
+  questionAnswers.push({
+    question: questionSets[questionSetIndex][questionIndex].description,
+    answer: "Skipped",
+  });
   document.querySelector("#task-container").innerHTML += `
       <div class="task">
         <span id="taskname">
@@ -112,6 +117,11 @@ document.querySelector("#add").onclick = function () {
   if (questionIndex <= 4 && inputValue == 0) {
     alert("Please Enter a Valid Input");
   } else {
+    // Add the question and its answer to the list
+    questionAnswers.push({
+      question: questionSets[questionSetIndex][questionIndex].description,
+      answer: inputValue,
+    });
     document.querySelector("#task-container").innerHTML += `
       <div class="task">
         <span id="taskname">
@@ -129,13 +139,16 @@ document.querySelector("#add").onclick = function () {
     // Move to the next question
     questionIndex++;
 
-    // If all questionSets have been asked, hide the "Add" button
+    // If all questions of a certain questionSet have been asked, hide the "Add" button and do others things
     if (questionIndex >= questionSets[questionSetIndex].length) {
       document.querySelector("#add").style.display = "none";
       document.getElementById("inputDescription").innerText = "";
       const inputField = document.querySelector("#newtask input");
       inputField.readOnly = true;
-      inputField.placeholder = "Press Next to Proceed..";
+      inputField.placeholder =
+        questionSetIndex + 1 < questionSets.length
+          ? "Press Next to Proceed.."
+          : "Please Press Next to See the Form of Details!";
       inputField.style.width = "100%";
       inputField.style.textAlign = "center";
       return;
@@ -149,21 +162,29 @@ document.querySelector("#add").onclick = function () {
   }
 };
 
-// Initialize the click event listener for the "Next" button
+// Function to handle click event on the "Next" button
 document.querySelector("#next").onclick = function () {
   if (questionIndex >= questionSets[questionSetIndex].length) {
-    questionSetIndex++;
-    questionIndex = 0;
-    document.querySelector("#task-container").innerHTML = "";
-    document.querySelector("#add").style.display = "inline-block";
-    document.getElementById("inputDescription").innerText = "";
-    const inputField = document.querySelector("#newtask input");
-    inputField.readOnly = false;
-    inputField.style.width = "70%";
-    document.getElementById("task-description").innerText =
-      getQuestionDescription(questionSetIndex);
-  }
+    if (questionSetIndex + 1 < questionSets.length) {
+      // Move to the next question set
+      questionSetIndex++;
+      questionIndex = 0;
+      document.querySelector("#task-container").innerHTML = "";
+      document.querySelector("#add").style.display = "inline-block";
+      document.getElementById("inputDescription").innerText = "";
+      const inputField = document.querySelector("#newtask input");
+      inputField.readOnly = false;
+      inputField.style.width = "70%";
+      document.getElementById("task-description").innerText =
+        getQuestionDescription(questionSetIndex);
+    } else {
+      // If all questions in all question sets are asked, display the form and hide the continer
+      document.querySelector(".container").style.display = "none";
+      document.querySelector("#form").style.display = "block";
 
+      return;
+    }
+  } 
   // Update input description and placeholder for the next question
   updateInputDescriptionAndPlaceholder();
 };
@@ -190,3 +211,10 @@ updateInputDescriptionAndPlaceholder();
 // Initialize the progress bar
 const myProgressBar = document.querySelector("#progress");
 updateProgressBar(myProgressBar, progressIndex);
+
+
+document.querySelector("#form").style.display = "none";
+
+
+//-----------------------------------------------------------------//
+
