@@ -100,13 +100,6 @@ document.querySelector("#skip").onclick = function () {
         </span>
       </div>
     `;
-  document.querySelector("#form").innerHTML += `
-      <div class="task">
-        <span id="taskname">
-          ${questionSets[questionSetIndex][questionIndex].description} ${"?"}
-        </span>
-      </div>
-    `;
   // Move to the next question
   questionIndex++;
 
@@ -130,14 +123,6 @@ document.querySelector("#add").onclick = function () {
       answer: inputValue,
     });
     document.querySelector("#task-container").innerHTML += `
-      <div class="task">
-        <span id="taskname">
-          ${questionSets[questionSetIndex][questionIndex].description} ${inputValue}
-        </span>
-      </div>
-    `;
-    
-    document.querySelector("#form").innerHTML += `
       <div class="task">
         <span id="taskname">
           ${questionSets[questionSetIndex][questionIndex].description} ${inputValue}
@@ -190,9 +175,8 @@ document.querySelector("#next").onclick = function () {
       const inputField = document.querySelector("#newtask input");
       inputField.readOnly = false;
       inputField.style.width = "70%";
-      document.getElementById("task-description").innerText =getQuestionDescription(questionSetIndex);
-      
-
+      document.getElementById("task-description").innerText =
+        getQuestionDescription(questionSetIndex);
     } else {
       // If all questions in all question sets are asked, display the form and hide the continer
       document.querySelector(".container").style.display = "none";
@@ -203,32 +187,111 @@ document.querySelector("#next").onclick = function () {
 
       return;
     }
-  } 
+  }
   // Update input description and placeholder for the next question
   updateInputDescriptionAndPlaceholder();
 };
 
-// Function to print all questions and answers in the form
+//adding the task heading(description)
+document.getElementById("task-description").innerText = getQuestionDescription(questionSetIndex);
+
+
+
+
+
+
+//printing the Q&As in form 
+let editingQuestion = null;
+
 function printQuestionsAndAnswers() {
   const form = document.querySelector("#form");
   form.innerHTML = ""; // Clear previous content
   questionSets.forEach((questionSet, index) => {
     form.innerHTML += `
-      <h3 id="task-description-form">
+      <h4 id="task-description-form">
         ${getQuestionDescription(index)}
-      </h3>`;
+      </h4>`;
     questionSet.forEach((question) => {
-      const answer = questionAnswers.find((qa) => qa.question === question.description)?.answer || "Skipped";
+      const answerObj = questionAnswers.find((qa) => qa.question === question.description);
+      const answer = answerObj ? answerObj.answer : "Skipped";
       form.innerHTML += `
         <div class="task">
-          <span id="taskname">
-            ${question.description} ${answer}
+          <span id="taskname-${question.description}" data-question="${question.description}">
+            ${question.description} 
+            <span class="answer-span" id="answer-${question.description}">${answer}</span>
           </span>
         </div>
       `;
     });
   });
+
+  // Adding buttons
+  form.innerHTML += `
+    <div>
+      <button id="editButton">Edit</button>
+      <button id="submitForm" style="display: none;">Submit</button>
+    </div>
+  `;
+
+  // Add event listener for the "Edit" button
+  document.getElementById("editButton").addEventListener("click", enableEditing);
 }
+
+// Function to enable editing of answers
+function enableEditing() {
+  const form = document.querySelector("#form");
+  const answerSpans = form.querySelectorAll(".answer-span");
+  editingQuestion = null;
+
+  // Replace answer spans with input fields
+  answerSpans.forEach((span) => {
+    const question = span.parentNode.dataset.question;
+    const answerText = span.textContent;
+    const inputField = document.createElement("input");
+    inputField.setAttribute("type", "text");
+    inputField.setAttribute("value", answerText);
+    inputField.addEventListener("input", function () {
+      editingQuestion = question;
+      span.textContent = inputField.value;
+    });
+    span.parentNode.replaceChild(inputField, span);
+  });
+
+  // Show the "Submit" button and hide the "Edit" button
+  document.getElementById("submitForm").style.display = "inline-block";
+  document.getElementById("editButton").style.display = "none";
+
+  // Add event listener for the "Submit" button
+  document.getElementById("submitForm").addEventListener("click", submitForm);
+}
+
+// Example function to handle form submission
+function submitForm() {
+  const form = document.querySelector("#form");
+  const answerInputs = form.querySelectorAll("input[type='text']");
+  answerInputs.forEach((input) => {
+    if (input.parentNode.dataset.question === editingQuestion) {
+      const question = input.parentNode.dataset.question;
+      const answer = input.value;
+      // Update the answer in the questionAnswers array
+      const index = questionAnswers.findIndex((qa) => qa.question === question);
+      if (index !== -1) {
+        questionAnswers[index].answer = answer;
+      }
+      // Update the answer displayed on the form
+      input.parentNode.innerHTML = answer;
+    }
+  });
+
+  // Hide the "Submit" button and show the "Edit" button
+  document.getElementById("submitForm").style.display = "none";
+  document.getElementById("editButton").style.display = "inline-block";
+}
+
+
+
+
+
 
 
 // Initialize input description and placeholder for the first question
@@ -252,9 +315,5 @@ updateInputDescriptionAndPlaceholder();
 const myProgressBar = document.querySelector("#progress");
 updateProgressBar(myProgressBar, progressIndex);
 
-
 document.querySelector("#form").style.display = "none";
-
-
-//-----------------------------------------------------------------//
 
