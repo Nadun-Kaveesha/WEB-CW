@@ -55,17 +55,17 @@ let progressIndex = 0;
 function toggleTaskContainerVisibility() {
   if (questionIndex > 0) {
     document.querySelector("#tasks").style.display = "block";
-    document.querySelector("#task-description").style.display = "block";
+    document.querySelector("#task-description").style.visibility = "visible";
   } else {
     document.querySelector("#tasks").style.display = "none";
-    document.querySelector("#task-description").style.display = "none";
+    document.querySelector("#task-description").style.visibility = "visible";
   }
 }
 
 // Function to update input description and placeholder
 function updateInputDescriptionAndPlaceholder() {
   const currentQuestion = questionSets[questionSetIndex][questionIndex];
-  document.getElementById("inputDescription").innerText = currentQuestion.description;
+  document.getElementById("inputDescription").textContent = currentQuestion.description;
   document.querySelector("#newtask input").placeholder = currentQuestion.placeholder;
   //updating the question description
   document.getElementById("questionDescription").innerText = `Step ${
@@ -123,7 +123,7 @@ document.querySelector("#add").onclick = function () {
   if (questionIndex <= 4 && inputValue == 0) {
     alert("Please Enter a Valid Input");
   } else {
-    document.querySelector("#tasks").innerHTML += `
+    document.querySelector("#task-container").innerHTML += `
       <div class="task">
         <span id="taskname">
           ${questionSets[questionSetIndex][questionIndex].description} ${inputValue}
@@ -165,17 +165,21 @@ document.querySelector("#next").onclick = function () {
   if (questionIndex >= questionSets[questionSetIndex].length) {
     questionSetIndex++;
     questionIndex = 0;
-    document.querySelector("#tasks").innerHTML = "";
+    document.querySelector("#task-container").innerHTML = "";
     document.querySelector("#add").style.display = "inline-block";
     document.getElementById("inputDescription").innerText = "";
     const inputField = document.querySelector("#newtask input");
     inputField.readOnly = false;
     inputField.style.width = "70%";
+    document.getElementById("task-description").innerText =
+      getQuestionDescription(questionSetIndex);
   }
 
   // Update input description and placeholder for the next question
   updateInputDescriptionAndPlaceholder();
 };
+
+document.getElementById("task-description").innerText = getQuestionDescription(questionSetIndex);
 
 // Initialize input description and placeholder for the first question
 updateInputDescriptionAndPlaceholder();
