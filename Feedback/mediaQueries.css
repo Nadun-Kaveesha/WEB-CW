@@ -13,5 +13,20 @@
     .radioContainer label img[satisfied="3"] {
         margin-right: 35px;
     }
+
+    button {
+        display: inline-block;
+        padding: 12px 22px;
+        background-color: #00891b;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 100px;
+        margin-bottom: 100px;
+        margin-top: 50px;   
+    }
     
 }

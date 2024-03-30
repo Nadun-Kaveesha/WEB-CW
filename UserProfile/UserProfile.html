@@ -20,9 +20,40 @@
   </head>
 
   <body>
+    <link rel="stylesheet" href="/NavigationBar/style.css" />
+    <link rel="stylesheet" href="/NavigationBar/mediaQuerise.css" />
+    <div class="NavigationBar">
+      <div class="logo" onclick="gotoHome()">
+        <img src="/NavigationBar/logo.jpeg" alt="webside logo" />
+        <span class="logoText">Life on Land</span>
+      </div>
+      <div class="UserProfile1">
+        <a href="/UserProfile/UserProfile.html"><img src="profile.png" alt="user profile" /></a>
+      </div>
+      <div class="moreOption" onclick="toggleDropdown()">&#9776;</div>
+
+      <ul id="navDropdown">
+        <li><a id="Home" href="/HomePage/HomePage.html">Home</a></li>
+        <li><a id="Shop" href="/Shop/Shop.html">Shop</a></li>
+        <li><a id="Site Map" href="/Sitemap/Sitemap.html">Site Map</a></li>
+        <li><a id="About us" href="/Team/Team.html">About us</a></li>
+        <li><a id="Gallery" href="/Gallery/Gallery.html">Gallery</a></li>
+        <li><a id="Feedback" href="/Feedback/Feedback.html">Feedback</a></li>
+        <li class="SearchBar"><input type="text" placeholder="Search Here.. " /></li>
+        <li class="UserProfile">
+          <a href="/UserProfile/UserProfile.html"><img src="profile.png" alt="user profile" /></a>
+        </li>
+      </ul>
+    </div>
+    <script src="/NavigationBar/index.js" defer></script>
+  </body>
+
+ 
+
+  <body>
+    
     <!--main Container-->
     <div class="container">
-      
       <div id="newtask">
         <div id="questionDescription">Step 1 Personal Details | Question 1 of 5</div>
         <div id="line"></div>
@@ -51,5 +82,7 @@
       <div id="tasks"></div>
     </div>
     <script src="index.js"></script>
+
+
   </body>
 </html>

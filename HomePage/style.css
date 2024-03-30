@@ -13,12 +13,11 @@
 
 .MissionOverlay {
     position: absolute ;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50% , -50%);
+    top: 150px;
+    left: 52%;
     background-color: white;
-    width: 80%;
-    height: 50%;
+    width: 40%;
+    height: 60%;
     padding: 20px;
     border-radius: 10px;
     opacity: 0.8;
@@ -41,4 +40,18 @@
     color: rgb(0, 3, 37);
     font-weight: 450;
 }
+
+.backgroundCon video {
+    position: absolute ;
+    top: 150px;
+    left: 70px;
+    width: 40%;
+    height: 60%;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+
+}
+
+
 
