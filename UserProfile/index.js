@@ -100,6 +100,13 @@ document.querySelector("#skip").onclick = function () {
         </span>
       </div>
     `;
+  document.querySelector("#form").innerHTML += `
+      <div class="task">
+        <span id="taskname">
+          ${questionSets[questionSetIndex][questionIndex].description} ${"?"}
+        </span>
+      </div>
+    `;
   // Move to the next question
   questionIndex++;
 
@@ -123,6 +130,14 @@ document.querySelector("#add").onclick = function () {
       answer: inputValue,
     });
     document.querySelector("#task-container").innerHTML += `
+      <div class="task">
+        <span id="taskname">
+          ${questionSets[questionSetIndex][questionIndex].description} ${inputValue}
+        </span>
+      </div>
+    `;
+    
+    document.querySelector("#form").innerHTML += `
       <div class="task">
         <span id="taskname">
           ${questionSets[questionSetIndex][questionIndex].description} ${inputValue}
@@ -175,12 +190,16 @@ document.querySelector("#next").onclick = function () {
       const inputField = document.querySelector("#newtask input");
       inputField.readOnly = false;
       inputField.style.width = "70%";
-      document.getElementById("task-description").innerText =
-        getQuestionDescription(questionSetIndex);
+      document.getElementById("task-description").innerText =getQuestionDescription(questionSetIndex);
+      
+
     } else {
       // If all questions in all question sets are asked, display the form and hide the continer
       document.querySelector(".container").style.display = "none";
       document.querySelector("#form").style.display = "block";
+
+      // Print all questions and answers in the form
+      printQuestionsAndAnswers();
 
       return;
     }
@@ -189,7 +208,28 @@ document.querySelector("#next").onclick = function () {
   updateInputDescriptionAndPlaceholder();
 };
 
-document.getElementById("task-description").innerText = getQuestionDescription(questionSetIndex);
+// Function to print all questions and answers in the form
+function printQuestionsAndAnswers() {
+  const form = document.querySelector("#form");
+  form.innerHTML = ""; // Clear previous content
+  questionSets.forEach((questionSet, index) => {
+    form.innerHTML += `
+      <h3 id="task-description-form">
+        ${getQuestionDescription(index)}
+      </h3>`;
+    questionSet.forEach((question) => {
+      const answer = questionAnswers.find((qa) => qa.question === question.description)?.answer || "Skipped";
+      form.innerHTML += `
+        <div class="task">
+          <span id="taskname">
+            ${question.description} ${answer}
+          </span>
+        </div>
+      `;
+    });
+  });
+}
+
 
 // Initialize input description and placeholder for the first question
 updateInputDescriptionAndPlaceholder();
