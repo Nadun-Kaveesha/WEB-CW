@@ -1,10 +1,10 @@
 /* ===== Google Font Import - Poppins ===== */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
-* {
+:root {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  --font-family: "Poppins", sans-serif;
 }
 
 h6{
@@ -76,6 +76,13 @@ h6{
     border: 1px solid #888;
     width: 80%;
     border-radius: 6px;
+}
+
+#modal-content .modal-description{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-family:var(--font-family);
 }
 
 .modal-image {
