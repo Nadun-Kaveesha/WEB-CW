@@ -238,7 +238,7 @@ body {
   top: 50%;
   left: 50%;
   width: 40%;
-  height: 125%;
+  height: 120%;
   margin-top: 14%;
   position: absolute;
   font-family: "poppins", sans-serif;
@@ -254,4 +254,35 @@ body {
   text-decoration-color: #03b727;
   text-decoration-thickness: 2px;
   
+}
+
+#editButton,
+#submitForm{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 1%;
+  left: 74%;
+  width: 25%;
+  height: 45px;
+  font-family: "poppins", sans-serif;
+  font-size: 15px;
+  border: 2px solid #d1d3d4;
+  padding: 12px;
+  margin-right: 56px;
+  font-weight: 500;
+  position: absolute;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  background-color: #83f099;
+   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  color: #000000;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+#editButton:hover,
+#submitForm:hover {
+  background-color: #00ff33;
 }

@@ -232,8 +232,8 @@ function printQuestionsAndAnswers() {
   // Adding buttons
   form.innerHTML += `
     <div>
-      <button id="editButton">Edit</button>
-      <button id="submitForm" style="display: none;">Submit</button>
+      <button id="editButton" type="button">Edit <i class='bx bxs-edit'></i></button>
+      <button id="submitForm" type="button">Save <i class='bx bx-save' ></i></button>
     </div>
   `;
 
