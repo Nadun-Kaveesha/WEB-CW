@@ -25,8 +25,8 @@ header h1 {
 
 #cart {
     float: right;
-    background-color: rgb(0, 79, 20);
-    color: aliceblue;
+    background-color: black;
+    color: #00ff00;
     margin-right: 30px;  
     font-size: 30px; 
     position: fixed; 
@@ -41,13 +41,83 @@ header h1 {
 }
 
 #cart:hover {
-    background-color: rgb(0, 0, 0);
-    color: #00ff00;
+    background-color: rgb(255, 255, 255);
+    color: black;
 }
 
 .img {
     border-radius: 6px;
 }
+
+#prdct-1{
+    width: 140px;
+}
+
+#prdct-2, #prdct-3 {
+    width: 150px;
+}
+
+#prdct-3 {
+    margin-top: 6px;
+    margin-bottom: -5px;
+}
+
+#prdct-4 {
+    margin-top: 3px;
+    margin-bottom: -5px;
+    width: 151px;
+}
+
+#prdct-6 {
+    width: 150px;
+    margin-bottom: -15px;
+}
+
+#prdct-7 {
+    width: 170px;
+    margin-top: 0px;
+}
+
+#prdct-8 {
+    width: 155px;
+    margin-bottom: 20px;
+}
+
+#name-1 {
+    text-align: center;
+    font-size: medium;
+}
+
+#name-2 {
+    text-align: center;
+    font-size: 20px;
+}
+
+#name-3, #name-4 {
+    text-align: center;
+    font-size: 20px;
+}
+
+#name-6 {
+    text-align: center;
+    font-size: 19px;
+    margin-bottom: 4px;
+}
+
+#name-7 {
+    text-align: center;
+    font-size: 19px;
+    margin-bottom: 20px; 
+    margin-top: 10px;
+}
+
+#name-8 {
+    text-align: center;
+    font-size: 20px;
+    margin-top: -8px;
+    margin-bottom: 15px;
+}
+
 
 .box {
 
@@ -89,6 +159,9 @@ header h1 {
     width: 30px;
     font-family: 'poppins', sans-serif;
     font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 3px;
 }
 
 .quantity-text-box {
@@ -96,8 +169,24 @@ header h1 {
 }
 
 .add-to-cart {
+    
     margin-top: 10px;
     text-align: center;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 10px; 
+}
+
+.add-to-cart, #chqout {
+    background-color: #28ff28;
+    color: black;
+    font-weight: 600;
+}
+
+.add-to-cart:hover {
+    background-color: rgb(0, 0, 0);
+    color: #00ff00;
+    cursor: pointer;
 }
 
 .product {
@@ -167,13 +256,16 @@ header h1 {
 
 
 #chqout {
-    background-color: rgb(0, 79, 20);
-    color: aliceblue;
+    border-radius: 10px;
     text-align: center;
     margin-bottom: 10px;
     font-size: 20px; 
     padding: 10px;
     text-decoration: none;
+}
+
+#chqout:hover {
+    color: rgb(255, 0, 0);
 }
 
 .cartItem {
