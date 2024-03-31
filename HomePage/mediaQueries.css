@@ -2,11 +2,11 @@
 
     .MissionOverlay {
         position: absolute ;
-        top: 100px;
-        left: 40px;;
+        top: 36%;
+        left: 12%;;
         background-color: white;
         width: 70%;
-        height: auto;
+        height: 34%;
         padding: 20px;
         border-radius: 10px;
         opacity: 0.8;
@@ -15,61 +15,64 @@
     
     .Mission{
         font-family: Georgia, 'Times New Roman', Times, serif ;
-        font-size: 40px;
+        font-size: 30px;
         color: black;
-        text-align: left;
+        text-align: center;
         font-weight: 900;
     
     }
     
     .content{
-        margin-top: 30px;
+        margin-top: 10%;
         font-family: "poppins" , sans-serif;
-        font-size: 20px ;
+        font-size: 15px ;
         color: rgb(0, 3, 37);
         font-weight: 450;
         text-align: center;
+        padding-bottom: 10px;
     }
     
     .backgroundCon video {
-        
         position: absolute ;
-        top: 580px;
+        top: 80%;
         width: 80%;
-        height: 160px;
+        height: 40%;
         border-radius: 10px;
         background-color: transparent;
         padding: 0;
-        left: 40px ;
+        left: 12% ;
     
     }
 
     .card{
-        padding: 0;
-        margin: 0;
-        position: relative;
-        width: 10%;
-        height: 100%;
-        margin: 0px auto;
-        overflow: hidden;
-        opacity: 0.65;   
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 110%;
+        width: 100%;
+        opacity: 0.8; 
+        background-position: center;  
+        background-size: cover;
+        z-index: -1;
     }
     
     .card img {
-        width: 100%;
+        position: absolute;
+        width: 190%;
+        height: 105%;
         display: block;
     }
 
     .firstOverlay{
         position: absolute ;
-        top: 150px;
-        left: 15%;
+        top: 13%;
+        left: 10%;
         background-color: rgb(0, 0, 0);
         width: 70%;
         height: 18%;
         padding: 20px;
         border-radius: 10px;
-        opacity: 0.8;
+        opacity: 0.7;
         border: 9px solid rgb(255, 255, 255);
     
     }
@@ -87,9 +90,79 @@
     .qoute{
         color: white;
         text-align: center;
-        margin-top: 30px;
+        margin-top: 8%;
         font-size: 20px;
     }
+    
+    .targets{
+        position: absolute ;
+        top: 170%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: white;
+        width: 85%;
+        height: 79%;
+        padding: 15px;
+        border-radius: 10px;
+        opacity: 0.8;
+    }
+    
+    .targetTxt{
+        text-align: center;
+        font-weight: 700;
+        font-size: 40px;
+    }
+    
+    .target1,
+    .target2,
+    .target3,
+    .target4{
+        text-decoration: underline;
+        color: white;
+        opacity: 1;
+        margin-bottom: 10px;
+        font-weight: 300;
+        font-size: 15px;
+    }
+    
+    .target1content,
+    .target2content,
+    .target3content,
+    .target4content{
+        font-size: 12px;
+        margin-top: 6%;
+        color: white;
+        opacity: 1;
+    
+    }
+    
+    .target1content,
+    .target3content {
+        margin-top: 40%;
+    }
+    
+    .t1 , .t2 ,.t3 ,.t4 {
+        background-color: black;
+        opacity: 0.8;
+        margin-right: 2%;
+        height: 35%;
+        margin-top: 2%;
+        text-align: center;
+        padding: 10px;
+        width: 38%;
+        border: 2px solid black;
+        border-radius: 10px;
+        float: left;
+    }
+    .t1 , .t3{
+        margin-left: 4%;
+    }
+
+    .backgroundCon{
+        height: 205vh;
+    }
+
+    
 
 
 }

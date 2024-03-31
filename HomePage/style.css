@@ -1,7 +1,7 @@
 .backgroundCon{
     height: 175vh;
-
 }
+
 .card{
     position: fixed;
     top: 0;
@@ -74,7 +74,7 @@
     height: 18%;
     padding: 20px;
     border-radius: 10px;
-    opacity: 0.8;
+    opacity: 0.7;
     border: 9px solid rgb(255, 255, 255);
 
 }
@@ -92,7 +92,7 @@
 .qoute{
     color: white;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 2%;
     font-size: 20px;
 }
 

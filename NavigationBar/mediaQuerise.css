@@ -5,17 +5,6 @@
         font-family:"poppins" , sans-serif;
         padding-top: 0px;
     }
-
-    .card{
-        width: 100%;
-        margin: 0px auto;
-        overflow: hidden;    
-    }
-    
-    .card img {
-        width: 300%;
-        display: block;
-    }
     
     .NavigationBar {
         position: sticky;
@@ -45,8 +34,8 @@
     .UserProfile1 {
         display: block;
         position: absolute;
-        top: 7px;
-        left: 7px;
+        top: 9%;
+        left: 6%;
         width: 40px;
         height: 40px;
         
