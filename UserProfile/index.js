@@ -179,8 +179,8 @@ document.querySelector("#next").onclick = function () {
         getQuestionDescription(questionSetIndex);
     } else {
       // If all questions in all question sets are asked, display the form and hide the continer
-      document.querySelector(".container").style.display = "none";
-      document.querySelector("#form").style.display = "block";
+      document.querySelector(".home-container").style.display = "none";
+      document.querySelector(".form-container").style.display = "block";
 
       // Print all questions and answers in the form
       printQuestionsAndAnswers();
@@ -296,4 +296,33 @@ updateInputDescriptionAndPlaceholder();
 const myProgressBar = document.querySelector("#progress");
 updateProgressBar(myProgressBar, progressIndex);
 
-document.querySelector("#form").style.display = "none";
+document.querySelector(".form-container").style.display = "none";
+
+
+
+// Get the footer element
+const footer = document.querySelector('footer');
+
+// Function to check the display style of form-container and adjust the margin-top of the footer
+function adjustFooterMarginTop() {
+  const formContainer = document.querySelector('.form-container');
+  if (formContainer.style.display === "block") {
+    // If form-container is displayed, set margin-top of footer to 58%
+    footer.style.marginTop = '58%';
+  } else {
+    // If form-container is not displayed, set margin-top of footer to 40%
+    footer.style.marginTop = '40%';
+  }
+}
+
+// Add event listener to check for changes in the display style of form-container
+// and adjust the margin-top of the footer accordingly
+document.addEventListener('DOMContentLoaded', function () {
+  adjustFooterMarginTop(); // Initially adjust margin-top based on form-container's display style
+  window.addEventListener('resize', adjustFooterMarginTop); // Listen for window resize events
+  // Listen for changes in the display style of form-container
+  const observer = new MutationObserver(adjustFooterMarginTop);
+  observer.observe(document.querySelector('.form-container'), { attributes: true });
+});
+
+

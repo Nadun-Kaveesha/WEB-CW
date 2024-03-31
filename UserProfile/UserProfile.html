@@ -49,40 +49,62 @@
   </body>
 
   <body>
-    <!--main Container-->
-    <div class="container">
-      <div id="newtask">
-        <div id="questionDescription">Step 1 Personal Details | Question 1 of 5</div>
-        <div id="line"></div>
-        <div id="inputDescription">Name :</div>
-        <input type="text" name="name" placeholder="Please Enter Your Name" />
-        <button id="add" type="button">Add</button>
+    <!--home Container-->
+    <div class="home-container">
+      <div class="main-container">
+        <div id="newtask">
+          <div id="questionDescription">Step 1 Personal Details | Question 1 of 5</div>
+          <div id="line"></div>
+          <div id="inputDescription">Name :</div>
+          <input type="text" name="name" placeholder="Please Enter Your Name" />
+          <button id="add" type="button">Add</button>
 
-        <!--Navigation Buttons-->
-        <div class="button-container">
-          <button id="skip" type="button">Skip</button>
-          <button id="next" type="button">Next <i class="bx bx-skip-next"></i></button>
+          <!--Navigation Buttons-->
+          <div class="button-container">
+            <button id="skip" type="button">Skip</button>
+            <button id="next" type="button">Next <i class="bx bx-skip-next"></i></button>
+          </div>
         </div>
-      </div>
 
-      <!--Progress Bar-->
-      <div class="progress-container">
-        Profile Completed :
-        <div id="progress">
-          <div id="progress__fill"></div>
-          <div id="progress__text">0%</div>
+        <!--Progress Bar-->
+        <div class="progress-container">
+          Profile Completed :
+          <div id="progress">
+            <div id="progress__fill"></div>
+            <div id="progress__text">0%</div>
+          </div>
         </div>
-      </div>
 
-      <!--Tasks-->
-      <div id="tasks">
-        <div id="task-description"></div>
-        <div id="task-container"></div>
+        <!--Tasks-->
+        <div id="tasks">
+          <div id="task-description"></div>
+          <div id="task-container"></div>
+        </div>
       </div>
     </div>
-
+    
     <!--Form-->
-    <div id="form"></div>
+    <div class="form-container">
+      <div id="form"></div>
+    </div>
+
+    <footer>
+      <link rel="stylesheet" href="index.css" />
+      <link rel="stylesheet" href="mediaQueries.css" />
+        <ul>
+            <li><a href="/Team/Team.html">About us |</a></li>
+            <li><a href="/Footer/references.html">References |</a></li>
+            <li><a href="/Footer/contact.html">Contact |</a></li>
+            <li><a href="/Footer/faq.html">FAQ</a></li>
+        </ul>
+  
+        <p>&copy; 2024 Life on Land. All rights reserved</p>
+        <script src="index.js"></script>
+    </footer>
+    
+    
+
+
     <script src="index.js"></script>
   </body>
 

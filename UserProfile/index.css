@@ -6,30 +6,39 @@
   box-sizing: border-box;
 }
 
-body {
-  height: 145vh;
-  /*background: linear-gradient(
-        135deg,
-        #8052ec,
-        #d161ff
-    );*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:"poppins", sans-serif;
+    font-weight: 500;
+}
+
+
+
+.home-container {
+  height: 100%;
   background-image: url("background.jpg");
   background-size: cover;
   background-position: center center;
-  background-attachment: fixed;
+  background-attachment: fixed; /* Background stays fixed */
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto; /* Enable vertical scrolling for content */
 }
 
-.container {
+.main-container {
   border: 2px solid white;
   width: 40%;
-  min-width: 450px;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
+  position: relative;
   padding: 20px 30px;
   padding-bottom: 15px;
-  margin-top: 48px;
+  margin-top: -95px;
+  
 }
 
 #questionDescription{
@@ -229,21 +238,33 @@ body {
   font-weight: 400;
 }
 
+.form-container {
+  height: 130%;
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; 
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #form {
   background-color: #e5f7e4;
-  padding: 20px 20px;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-  transform: translate(-50%, -50%);
+  position: absolute;
   top: 50%;
   left: 50%;
   width: 40%;
-  height: 120%;
-  margin-top: 14%;
-  position: absolute;
-  font-family: "poppins", sans-serif;
+  height: 120vh; 
+  transform: translate(-50%, -50%);
   font-size: 18px;
   font-weight: 400;
+  margin-top: -1%;
 }
 
 #task-description-form{
@@ -285,4 +306,37 @@ body {
 #editButton:hover,
 #submitForm:hover {
   background-color: #00ff33;
+}
+
+footer {
+  position: relative;
+  margin-top: 0%;
+  left: 0;
+  width: 100%;
+  background-color: #ccc;
+  text-align: center;
+  padding: 40px ;
+}
+
+
+/* Style the links in the footer */
+footer ul {
+  list-style: none;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #2e2e2e;
+}
+
+footer p {
+    margin-top: 12px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #888;
 }
