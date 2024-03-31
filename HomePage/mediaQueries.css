@@ -102,7 +102,7 @@
         background-color: white;
         width: 85%;
         height: 79%;
-        padding: 15px;
+        padding: 5px;
         border-radius: 10px;
         opacity: 0.8;
     }
@@ -149,17 +149,17 @@
         margin-top: 2%;
         text-align: center;
         padding: 10px;
-        width: 38%;
+        width: 39%;
         border: 2px solid black;
         border-radius: 10px;
         float: left;
     }
     .t1 , .t3{
-        margin-left: 4%;
+        margin-left: 2%;
     }
 
     .backgroundCon{
-        height: 205vh;
+        height: 220vh;
     }
 
     
