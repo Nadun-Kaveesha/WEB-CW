@@ -1,5 +1,5 @@
 .backgroundCon{
-    height: 275vh;
+    height: 295vh;
 }
 
 .card{
@@ -168,11 +168,11 @@
 
 .pageEditorsandContentPages{
     position: absolute ;
-    top: 230%;
+    top: 250%;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: 50%;
-    height: 60%;
+    width: 65%;
+    height: 80%;
     padding-top: 2%;
     padding-bottom: 2%;
     border-radius: 10px;
@@ -224,7 +224,7 @@
 .Amiru , .Ashen ,.Nadun ,.Vihanga {
     background-color: rgb(255, 255, 255);
     margin-right: 5%;
-    height: 27%;
+    height: 26%;
     margin-top: 5%;
     text-align: center;
     padding: 15px;
