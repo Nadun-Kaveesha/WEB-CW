@@ -13,7 +13,7 @@ body {
         #8052ec,
         #d161ff
     );*/
-  background-image: url("/images/ImageForUserProfile1.png");
+  background-image: url("background.jpg");
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;

@@ -200,7 +200,9 @@ document.getElementById("task-description").innerText = getQuestionDescription(q
 
 
 
-//printing the Q&As in form 
+
+
+//printing the Q&As in form
 let editingQuestion = null;
 
 function printQuestionsAndAnswers() {
@@ -218,7 +220,9 @@ function printQuestionsAndAnswers() {
         <div class="task">
           <span id="taskname-${question.description}" data-question="${question.description}">
             ${question.description} 
-            <span class="answer-span" id="answer-${question.description}">${answer}</span>
+            <span class="answer-span" id="answer-${question.description}">
+              <span class="editable-answer" contenteditable="true">${answer}</span>
+            </span>
           </span>
         </div>
       `;
@@ -240,22 +244,8 @@ function printQuestionsAndAnswers() {
 // Function to enable editing of answers
 function enableEditing() {
   const form = document.querySelector("#form");
-  const answerSpans = form.querySelectorAll(".answer-span");
+  const editableAnswers = form.querySelectorAll(".editable-answer");
   editingQuestion = null;
-
-  // Replace answer spans with input fields
-  answerSpans.forEach((span) => {
-    const question = span.parentNode.dataset.question;
-    const answerText = span.textContent;
-    const inputField = document.createElement("input");
-    inputField.setAttribute("type", "text");
-    inputField.setAttribute("value", answerText);
-    inputField.addEventListener("input", function () {
-      editingQuestion = question;
-      span.textContent = inputField.value;
-    });
-    span.parentNode.replaceChild(inputField, span);
-  });
 
   // Show the "Submit" button and hide the "Edit" button
   document.getElementById("submitForm").style.display = "inline-block";
@@ -263,30 +253,34 @@ function enableEditing() {
 
   // Add event listener for the "Submit" button
   document.getElementById("submitForm").addEventListener("click", submitForm);
+
+  // Add event listeners for editable spans
+  editableAnswers.forEach((span) => {
+    span.contentEditable = "true"; // Make the span editable
+    span.addEventListener("input", function () {
+      editingQuestion = span.parentNode.parentNode.dataset.question;
+    });
+  });
 }
 
 // Example function to handle form submission
 function submitForm() {
   const form = document.querySelector("#form");
-  const answerInputs = form.querySelectorAll("input[type='text']");
-  answerInputs.forEach((input) => {
-    if (input.parentNode.dataset.question === editingQuestion) {
-      const question = input.parentNode.dataset.question;
-      const answer = input.value;
-      // Update the answer in the questionAnswers array
-      const index = questionAnswers.findIndex((qa) => qa.question === question);
-      if (index !== -1) {
-        questionAnswers[index].answer = answer;
-      }
-      // Update the answer displayed on the form
-      input.parentNode.innerHTML = answer;
-    }
+  const editableAnswers = form.querySelectorAll(".editable-answer");
+
+  // Remove event listeners from editable spans
+  editableAnswers.forEach((span) => {
+    span.contentEditable = "false";
+    span.removeEventListener("input", enableEditing);
   });
 
   // Hide the "Submit" button and show the "Edit" button
   document.getElementById("submitForm").style.display = "none";
   document.getElementById("editButton").style.display = "inline-block";
 }
+
+
+
 
 
 
@@ -316,4 +310,3 @@ const myProgressBar = document.querySelector("#progress");
 updateProgressBar(myProgressBar, progressIndex);
 
 document.querySelector("#form").style.display = "none";
-
