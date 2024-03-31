@@ -226,7 +226,7 @@ function printQuestionsAndAnswers() {
   form.innerHTML += `
     <div>
       <button id="editButton" type="button">Edit <i class='bx bxs-edit'></i></button>
-      <button id="submitForm" type="button" style="display: none;" >Save <i class='bx bx-save' ></i></button>
+      <button id="submitForm" type="button" style="display: none;" >Save <i class='bx bxs-save' ></i></button>
     </div>
   `;
 
@@ -250,6 +250,7 @@ function enableEditing() {
   // Add event listeners for editable spans
   editableAnswers.forEach((span) => {
     span.contentEditable = "true"; // Make the span editable
+    span.style.border = "1px solid blue"; // Add a blue border to indicate editability
     span.addEventListener("input", function () {
       editingQuestion = span.parentNode.parentNode.dataset.question;
     });
@@ -264,6 +265,8 @@ function submitForm() {
   // Remove event listeners from editable spans
   editableAnswers.forEach((span) => {
     span.contentEditable = "false";
+    span.style.border = "none"; // Removed the blue border to indicate uneditability
+
     span.removeEventListener("input", enableEditing);
   });
 
