@@ -195,13 +195,6 @@ document.querySelector("#next").onclick = function () {
 //adding the task heading(description)
 document.getElementById("task-description").innerText = getQuestionDescription(questionSetIndex);
 
-
-
-
-
-
-
-
 //printing the Q&As in form
 let editingQuestion = null;
 
@@ -233,7 +226,7 @@ function printQuestionsAndAnswers() {
   form.innerHTML += `
     <div>
       <button id="editButton" type="button">Edit <i class='bx bxs-edit'></i></button>
-      <button id="submitForm" type="button">Save <i class='bx bx-save' ></i></button>
+      <button id="submitForm" type="button" style="display: none;" >Save <i class='bx bx-save' ></i></button>
     </div>
   `;
 
@@ -278,15 +271,6 @@ function submitForm() {
   document.getElementById("submitForm").style.display = "none";
   document.getElementById("editButton").style.display = "inline-block";
 }
-
-
-
-
-
-
-
-
-
 
 // Initialize input description and placeholder for the first question
 updateInputDescriptionAndPlaceholder();
