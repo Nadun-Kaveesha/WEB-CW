@@ -1,11 +1,11 @@
 const nodes = document.querySelectorAll('rect');
 nodes.forEach(node => {
     node.addEventListener('mouseover', function() {
-        this.setAttribute('fill', 'red'); // Change the color on hover
+        this.setAttribute('fill', 'rgb(13,152,186)'); // Change the color on hover
     });
 
     node.addEventListener('mouseout', function() {
-        this.setAttribute('fill', 'blue'); // Revert the color on mouseout
+        this.setAttribute('fill', 'rgb(144,238,238)'); // Revert the color on mouseout
     });
 
     node.addEventListener('click', function() {    // Redirect to corresponding page when clicked
