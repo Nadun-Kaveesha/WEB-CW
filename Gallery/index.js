@@ -1,7 +1,3 @@
-
-
-
-// JavaScript for modal functionality
 document.addEventListener("DOMContentLoaded", function() {
     var images = document.querySelectorAll('.image-box');
     var modal = document.getElementById("myModal");
@@ -17,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Function to update the font of modal content
     function updateModalFont(font) {                                
-        modalContent.style.fontFamily = font;
+        modalContent.style.setProperty('--font-family', font); // New line to set the font = font;
     }
 
     images.forEach(function(image) {
@@ -52,8 +48,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Event listener for when the font selector value changes
-    fontSelector.addEventListener('input', function() {
+    fontSelector.addEventListener('change', function() {
         // Set the font of modal content to the chosen font
         updateModalFont(fontSelector.value);
-    })
+    });
 });
