@@ -22,6 +22,8 @@ nodes.forEach(node => {
             window.location.href = '/Team/Team.html';
         } else if (this.id === 'Site Map') {
             window.location.href = '/Sitemap/Sitemap.html';
+        } else if (this.id === 'UserProfile') {
+            window.location.href = '/UserProfile/UserProfile.html';
         }
     });
 
