@@ -74,10 +74,10 @@
     <form id="feedbackform" onsubmit="return confirmation()">
 
         <label for="name">Enter your Name : </label>
-        <input type="text" id="name" name="name" required> <!-- get user name and set it as a required field -->
+        <input placeholder="  James Smith" type="text" id="name" name="name" required> <!-- get user name and set it as a required field -->
 
         <label for="email">Enter your Email : </label>
-        <input type="email" id="email" name="email" required> <!-- get user email and set it as a required field (use email type) -->
+        <input placeholder="    abcd@gmail.com" type="email" id="email" name="email" required> <!-- get user email and set it as a required field (use email type) -->
 
         <div class="FT_Visite">
 
@@ -104,7 +104,7 @@
         </div>
 
         <label for="suggestImprovements">If "No", suggest any improvementes for the future :</label>
-        <textarea id="suggestImprovements" name="suggestImprovements"></textarea> <!-- for this use textarea -->
+        <textarea placeholder=" Write Something...." id="suggestImprovements" name="suggestImprovements"></textarea> <!-- for this use textarea -->
 
         <div class="isSatisfied">
 
@@ -156,7 +156,7 @@
         </div>
 
         <label for="Comments">Do you have any additional questions or requests ? </label>
-        <textarea id="Comments" name="Comments"></textarea>
+        <textarea placeholder=" Write Something...." id="Comments" name="Comments"></textarea>
 
         <button class="clear" type="button" onclick="clearform()">Clear</button>
         <button class="submitButon" type="submit">Submit</button>
