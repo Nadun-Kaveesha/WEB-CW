@@ -163,9 +163,6 @@
     margin-left: 7%;
 }
 
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
-
-
 .pageEditorsandContentPages{
     position: absolute ;
     top: 250%;
@@ -200,7 +197,7 @@
 .ashen,
 .nadun,
 .vihanga{
-    margin-bottom: 4.5%;
+    margin-bottom: 9%;
     color: rgb(0, 0, 0);
     opacity: 1;
     font-weight: 600;

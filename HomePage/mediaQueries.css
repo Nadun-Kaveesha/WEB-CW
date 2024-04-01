@@ -159,10 +159,79 @@
     }
 
     .backgroundCon{
-        height: 220vh;
+        height: 390vh;
     }
 
-    
+
+    .pageEditorsandContentPages{
+        position: absolute ;
+        top: 300%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 90%;
+        height: 140%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        border-radius: 10px;
+        opacity: 0.7;
+        background-color: black;
+        border: 1px solid white;
+    }
+
+    .hedding{
+        width: 80%;
+        margin: 0 auto;
+        color: rgb(255, 255, 255);
+        background-color: black;
+        text-align: center;
+        font-weight: 700;
+        font-size: 20px;
+        border: 2px solid white;
+        border-radius: 10px;
+        height: 8%;
+        padding-top: 2%;
+        opacity: 1;
+        margin-bottom: 8%;
+        margin-top: 7%;
+    }
+
+    .amiru,
+    .ashen,
+    .nadun,
+    .vihanga{
+        margin-bottom: 4.5%;
+        color: rgb(255, 255, 255);
+        opacity: 1;
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    .container{
+        width: 58%;
+        margin: 0 auto;
+        border: 1px solid rgb(255, 255, 255);
+        margin-top: 3%;
+        border-radius: 10px;
+    }
+
+    .container a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        padding: 5px;
+    }
+
+    .Amiru , .Ashen ,.Nadun ,.Vihanga {
+        background-color: rgb(0, 0, 0);
+        height: 15%;
+        text-align: center;
+        padding: 15px;
+        width: 70%;
+        border-radius: 10px;
+        /* border: 1px solid white; */
+        float: none;
+        margin: 0 auto;
+        margin-top: 6%;
+    }
 
 
 }
