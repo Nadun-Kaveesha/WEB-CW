@@ -49,3 +49,19 @@ background-color: black;
     
 }
 
+@media screen and (max-width : 720px) {
+    h2 {
+        width: 80%;
+        margin-top: 5%;
+    }
+
+    .content{
+        width: 80%;
+    }
+
+    .NamePart {
+        width: 80%;
+    }
+}
+
+

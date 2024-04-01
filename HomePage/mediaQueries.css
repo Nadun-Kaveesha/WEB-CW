@@ -3,7 +3,7 @@
     .MissionOverlay {
         position: absolute ;
         top: 36%;
-        left: 12%;;
+        left: 11%;;
         background-color: white;
         width: 70%;
         height: 34%;
@@ -40,7 +40,7 @@
         border-radius: 10px;
         background-color: transparent;
         padding: 0;
-        left: 12% ;
+        left: 11% ;
     
     }
 
@@ -58,7 +58,7 @@
     
     .card img {
         position: absolute;
-        width: 190%;
+        width: 200%;
         height: 105%;
         display: block;
     }
@@ -67,13 +67,12 @@
         position: absolute ;
         top: 13%;
         left: 10%;
-        background-color: rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
         width: 70%;
         height: 18%;
         padding: 20px;
         border-radius: 10px;
         opacity: 0.7;
-        border: 9px solid rgb(255, 255, 255);
     
     }
     
@@ -81,14 +80,14 @@
         padding-top: 10px;
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-size: 40px;
-        color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
         text-align: center;
         font-weight: 900;
     
     }
     
     .qoute{
-        color: white;
+        color: rgb(0, 0, 0);
         text-align: center;
         margin-top: 8%;
         font-size: 20px;
@@ -97,7 +96,7 @@
     .targets{
         position: absolute ;
         top: 170%;
-        left: 50%;
+        left: 52%;
         transform: translate(-50%,-50%);
         background-color: white;
         width: 85%;
@@ -159,79 +158,133 @@
     }
 
     .backgroundCon{
-        height: 390vh;
+        height: 370vh;
     }
 
-
-    .pageEditorsandContentPages{
+    #signIn {
         position: absolute ;
-        top: 300%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        width: 90%;
-        height: 140%;
-        padding-top: 2%;
-        padding-bottom: 2%;
+        top: 230%;
+        left: 6%;
+        background-color: white;
+        padding: 20px;
         border-radius: 10px;
         opacity: 0.7;
-        background-color: black;
-        border: 1px solid white;
-    }
-
-    .hedding{
         width: 80%;
-        margin: 0 auto;
-        color: rgb(255, 255, 255);
-        background-color: black;
-        text-align: center;
+        height: 260px;
+    
+    }
+    
+    #signInHedding{
+        font-size: 20px;
         font-weight: 700;
-        font-size: 20px;
-        border: 2px solid white;
-        border-radius: 10px;
-        height: 8%;
-        padding-top: 2%;
-        opacity: 1;
-        margin-bottom: 8%;
-        margin-top: 7%;
     }
-
-    .amiru,
-    .ashen,
-    .nadun,
-    .vihanga{
-        margin-bottom: 4.5%;
-        color: rgb(255, 255, 255);
-        opacity: 1;
-        font-weight: 600;
-        font-size: 20px;
+    
+    #signInContent{
+        font-size: 15px;
+        margin-top: 30px;
+        margin-bottom: 0;
+        text-align: right;
+        font-weight: 450;
     }
-
-    .container{
-        width: 58%;
-        margin: 0 auto;
-        border: 1px solid rgb(255, 255, 255);
-        margin-top: 3%;
-        border-radius: 10px;
-    }
-
-    .container a {
-        text-decoration: none;
-        color: rgb(255, 255, 255);
-        padding: 5px;
-    }
-
-    .Amiru , .Ashen ,.Nadun ,.Vihanga {
-        background-color: rgb(0, 0, 0);
-        height: 15%;
+    
+    #signinButton {
         text-align: center;
-        padding: 15px;
-        width: 70%;
-        border-radius: 10px;
-        /* border: 1px solid white; */
-        float: none;
+        width: 40%;
         margin: 0 auto;
-        margin-top: 6%;
+        border: 1px solid black ;
+        border-radius: 10px;
+        margin-top: 5%;
     }
+    
+    #signinButton a {
+        text-decoration: none ;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+    #shop {
+        position: absolute ;
+        top: 332%;
+        left: 6%;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        opacity: 0.7;
+        width: 80%;
+        height: auto;
+    
+    }
+    
+    #shopHedding{
+        font-size: 20px;
+        font-weight: 700;
+    }
+    
+    #shopContent{
+        font-size: 15px;
+        margin-top: 30px;
+        margin-bottom: 0;
+        text-align: right;
+        font-weight: 450;
+    }
+    
+    #shopButton {
+        text-align: center;
+        width: 40%;
+        margin: 0 auto;
+        border: 1px solid black ;
+        border-radius: 10px;
+        margin-top: 5%;
+    }
+    
+    #shopButton a {
+        text-decoration: none ;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+    #feedback {
+        position: absolute ;
+        top: 280%;
+        left: 6%;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        opacity: 0.7;
+        width: 80%;
+        height: auto;
+    
+    }
+    
+    #feedbackHedding{
+        font-size: 20px;
+        font-weight: 700;
+    }
+    
+    #feedbackContent{
+        font-size: 15px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        text-align: right;
+        font-weight: 450;
+    }
+    
+    #feedbackButton {
+        text-align: center;
+        width: 50%;
+        margin: 0 auto;
+        border: 1px solid black ;
+        border-radius: 10px;
+    }
+    
+    #feedbackButton a {
+        text-decoration: none ;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+
+    
 
 
 }
