@@ -35,8 +35,8 @@
 }
 
 .photo:hover img {
-    transform: scale(1.09);
-    transition: transform 0.2s ease-in-out;
+    transform: scale(1.05);
+    transition: transform 0.1.5s ease-in-out;
     cursor: pointer;
 }
 
@@ -68,7 +68,7 @@
     margin-top: 1%;
     margin-bottom: 2%;
     margin-left: 0%;
-    margin-right: 90%;
+    margin-right: 0%;
 }
 
 .modal {
@@ -94,7 +94,7 @@
 }
 
 .modal-image {
-    width: 40%;
+    width: 500px;
     height: 100%;
     border-radius: 5px;
     object-fit: cover;
