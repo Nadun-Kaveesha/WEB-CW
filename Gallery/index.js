@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var images = document.querySelectorAll('.image-box');
+    var images = document.querySelectorAll('.photo');
     var modal = document.getElementById("myModal");
     var modalContent = document.getElementById("modal-content");
     var closeModalButton = document.querySelector('.close');
