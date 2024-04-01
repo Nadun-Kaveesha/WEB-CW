@@ -66,12 +66,12 @@
     }
 
     #newtask input {
-        width: 100%;
+        width: 70%;
         height: 40px;
         font-size: 15px;
         border: 2px solid #d1d3d4;
         padding: 10px;
-        margin-bottom: 15px;
+        margin-bottom: 0px;
         border-radius: 5px;
     }
 
@@ -84,6 +84,10 @@
         display: flex;
         justify-content: space-between;
         margin-top: 20px;
+    }
+    
+    #add{
+        height: 40px;
     }
 
     #next,
@@ -104,6 +108,64 @@
     #skip:hover,
     #next:hover {
         background-color: #00ff33;
+    }
+
+    .form-container {
+        min-height: 100vh; /* Ensure the container takes at least the full height of the viewport */
+         /* Allow the container to expand as needed */
+        background-image: url("background.jpg");
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed; 
+        width: 100%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #form {
+        height: 780px;
+        background-color: #e5f7e4;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        position: absolute;
+        
+        top: 50%;
+        left: 50%;
+        width: 90%;
+        max-width: 400px; /* Limit width on smaller screens */
+        transform: translate(-50%, -50%);
+        font-size: 18px;
+        font-weight: 400;
+        margin-top: -10%;
+    }
+
+    #editButton,
+    #submitForm{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 1%;
+        left: 74%;
+        width: 85px;
+        height: 45px;
+        font-family: "poppins", sans-serif;
+        font-size: 15px;
+        border: 2px solid #d1d3d4;
+        padding: 12px;
+        margin-right: 56px;
+        font-weight: 500;
+        position: absolute;
+        font-size: 16px;
+        border-radius: 10px;
+        border: none;
+        background-color: #83f099;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        color: #000000;
+        cursor: pointer;
+        box-sizing: border-box;
     }
 
     footer {
