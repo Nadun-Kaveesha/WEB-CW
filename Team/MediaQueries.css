@@ -26,11 +26,24 @@
         padding: 20px;
     }
 
+    .heading-container {
+        position: absolute;
+        top: 18%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        width: 75%; 
+        height: 10%;
+        border-radius: 25px;
+        opacity: 0.8;
+
+    }
+
     #heading {
         text-align: center;
-        color: #fff;
+        color: #000000;
         font-size: 20px;
-        margin-top: 20px;
+        margin-top: -10px;
     }
 
     .profile-card {
@@ -45,6 +58,10 @@
         transition: all 0.4s;
         margin: 140px 0 -120px 0;
         overflow: hidden; /* Hide overflowing content */
+    }
+
+    .profile-card:last-child {
+        margin-bottom: 20px; 
     }
 
     .profile-card:hover {
