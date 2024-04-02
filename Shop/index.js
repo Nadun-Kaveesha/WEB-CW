@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const itemElement = document.createElement('div');
         itemElement.classList.add('cartItem');
-        itemElement.innerHTML = `${productName} - Qty: ${quantity} - Price: LKR ${itemTotalPrice}`;
+        itemElement.innerHTML = `${productName}<br> Quantity: ${quantity}<br> Price: LKR ${itemTotalPrice}`;
 
         const deleteButton = document.createElement('a');
         deleteButton.href = '#';
