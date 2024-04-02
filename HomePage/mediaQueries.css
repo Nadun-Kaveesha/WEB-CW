@@ -2,7 +2,7 @@
 
     .MissionOverlay {
         position: absolute ;
-        top: 36%;
+        top: 40%;
         left: 11%;;
         background-color: white;
         width: 70%;
@@ -10,6 +10,7 @@
         padding: 20px;
         border-radius: 10px;
         opacity: 0.8;
+        box-shadow: 7px 7px 10px black;
     
     }
     
@@ -19,6 +20,7 @@
         color: black;
         text-align: center;
         font-weight: 900;
+        transition-duration: 0.5s;
     
     }
     
@@ -34,13 +36,14 @@
     
     .backgroundCon video {
         position: absolute ;
-        top: 80%;
+        top: 84%;
         width: 80%;
         height: 40%;
         border-radius: 10px;
         background-color: transparent;
         padding: 0;
         left: 11% ;
+        box-shadow: 7px 7px 10px black;
     
     }
 
@@ -73,6 +76,7 @@
         padding: 20px;
         border-radius: 10px;
         opacity: 0.7;
+        box-shadow: 7px 7px 10px black;
     
     }
     
@@ -83,6 +87,7 @@
         color: rgb(0, 0, 0);
         text-align: center;
         font-weight: 900;
+        transition-duration: 0.5s;
     
     }
     
@@ -91,12 +96,13 @@
         text-align: center;
         margin-top: 8%;
         font-size: 20px;
+        transition-duration: 0.5s;
     }
     
     .targets{
         position: absolute ;
         top: 170%;
-        left: 52%;
+        left: 51%;
         transform: translate(-50%,-50%);
         background-color: white;
         width: 85%;
@@ -104,6 +110,7 @@
         padding: 5px;
         border-radius: 10px;
         opacity: 0.8;
+        box-shadow: 7px 7px 10px black;
     }
     
     .targetTxt{
@@ -152,18 +159,19 @@
         border: 2px solid black;
         border-radius: 10px;
         float: left;
+        box-shadow: 7px 7px 10px black;
     }
     .t1 , .t3{
         margin-left: 2%;
     }
 
     .backgroundCon{
-        height: 370vh;
+        height: 600vh;
     }
 
     #signIn {
         position: absolute ;
-        top: 230%;
+        top: 485%;
         left: 6%;
         background-color: white;
         padding: 20px;
@@ -171,12 +179,14 @@
         opacity: 0.7;
         width: 80%;
         height: 260px;
+        box-shadow: 7px 7px 10px black;
     
     }
     
     #signInHedding{
         font-size: 20px;
         font-weight: 700;
+        transition-duration: 0.5s;
     }
     
     #signInContent{
@@ -194,6 +204,7 @@
         border: 1px solid black ;
         border-radius: 10px;
         margin-top: 5%;
+        transition-duration: 0.5s;
     }
     
     #signinButton a {
@@ -204,7 +215,7 @@
     
     #shop {
         position: absolute ;
-        top: 332%;
+        top: 538%;
         left: 6%;
         background-color: white;
         padding: 20px;
@@ -212,12 +223,14 @@
         opacity: 0.7;
         width: 80%;
         height: auto;
+        box-shadow: 7px 7px 10px black;
     
     }
     
     #shopHedding{
         font-size: 20px;
         font-weight: 700;
+        transition-duration: 0.5s;
     }
     
     #shopContent{
@@ -235,6 +248,7 @@
         border: 1px solid black ;
         border-radius: 10px;
         margin-top: 5%;
+        transition-duration: 0.5s;
     }
     
     #shopButton a {
@@ -245,7 +259,7 @@
     
     #feedback {
         position: absolute ;
-        top: 280%;
+        top: 590%;
         left: 6%;
         background-color: white;
         padding: 20px;
@@ -253,12 +267,14 @@
         opacity: 0.7;
         width: 80%;
         height: auto;
+        box-shadow: 7px 7px 10px black;
     
     }
     
     #feedbackHedding{
         font-size: 20px;
         font-weight: 700;
+        transition-duration: 0.5s;
     }
     
     #feedbackContent{
@@ -275,12 +291,188 @@
         margin: 0 auto;
         border: 1px solid black ;
         border-radius: 10px;
+        transition-duration: 0.5s;
     }
     
     #feedbackButton a {
         text-decoration: none ;
         font-size: 16px;
         font-weight: 500;
+    }
+
+    .heddingText:hover,
+    .t1:hover , .t2:hover ,.t3:hover ,.t4:hover,
+    #feedbackHedding:hover, #feedbackButton:hover , #shopButton:hover,#shopHedding:hover,
+    #signinButton:hover , #signInHedding:hover , .Mission:hover , .qoute:hover , #wetland:hover , #forest:hover , #urbanArea:hover,
+    #desert:hover {
+        transform: scale(1.1);
+    }
+
+
+
+    #wetland {
+        position: absolute ;
+        overflow: hidden;
+        top: 230%;
+        left: 6%;
+        background-image: url(wetLand.jpg);
+        background-size: cover;
+        padding: 20px;
+        border-radius: 10px;
+        width: 80%;
+        height: 50%;
+        box-shadow: 7px 7px 10px black;
+        transition-duration: 0.5s;
+
+    }
+
+    #wetlandHedding{
+        background-color: rgba(0, 0, 0, 0.459);
+        text-align: center;
+        color: white;
+        font-size: 45px;
+        font-weight: 700;
+
+    }
+
+    #wetlandContent{
+        background-color: rgba(0, 0, 0, 0.459);
+        color: white;
+        font-size: 17px;
+        margin-top: 30px;
+        margin-bottom: 0;
+        text-align: center;
+        font-weight: 450;
+    }
+
+    #wetlandContent a {
+        color: rgb(175, 174, 250);
+        margin-left: 3px;
+        font-size: 14px;
+        font-weight: 500;
+
+    }
+
+    #forest {
+        position: absolute ;
+        top: 292%;
+        left: 6%;
+        background-image: url(forest.jpg);
+        background-size: cover;
+        padding: 20px;
+        border-radius: 10px;
+        width: 80%;
+        height: 50%;
+        box-shadow: 7px 7px 10px black;
+        transition-duration: 0.5s;
+
+    }
+
+    #forestHedding{
+        background-color: rgba(0, 0, 0, 0.459);
+        text-align: center;
+        color: white;
+        font-size: 45px;
+        font-weight: 700;
+
+    }
+
+    #forestContent{
+        background-color: rgba(0, 0, 0, 0.459);
+        color: white;
+        font-size: 17px;
+        margin-top: 30px;
+        margin-bottom: 0;
+        text-align: center;
+        font-weight: 450;
+    }
+
+    #forestContent a {
+        font-size: 14px;
+        font-weight: 500;
+        margin-left: 3px;
+        color: rgb(175, 174, 250);
+    }
+
+    #desert {
+        position: absolute ;
+        top: 355%;
+        left: 6%;
+        background-image: url(desert.jpg);
+        background-size: cover;
+        padding: 20px;
+        border-radius: 10px;
+        width: 80%;
+        height: 50%;
+        box-shadow: 7px 7px 10px black;
+        transition-duration: 0.5s;
+
+    }
+
+    #desertHedding{
+        background-color: rgba(0, 0, 0, 0.459);
+        text-align: center;
+        color: white;
+        font-size: 45px;
+        font-weight: 700;
+    }
+
+    #desertContent{
+        background-color: rgba(0, 0, 0, 0.459);
+        color: white;
+        font-size: 17px;
+        margin-top: 30px;
+        margin-bottom: 0;
+        text-align: center;
+        font-weight: 450;
+    }
+
+    #desertContent a {
+        font-size: 14px;
+        font-weight: 500;
+        margin-left: 3px;
+        color: rgb(175, 174, 250);
+    }
+
+    #urbanArea {
+        position: absolute ;
+        top: 420%;
+        left: 6%;
+        background-image: url(urban.jpg);
+        background-size: cover;
+        padding: 20px;
+        border-radius: 10px;
+        width: 80%;
+        height: 50%;
+        box-shadow: 7px 7px 10px black;
+        transition-duration: 0.5s;
+
+    }
+
+    #urbanAreaHedding{
+        background-color: rgba(0, 0, 0, 0.459);
+        text-align: center;
+        color: white;
+        font-size: 45px;
+        font-weight: 700;
+        
+    }
+
+    #urbanAreaContent{
+        background-color: rgba(0, 0, 0, 0.459);
+        color: white;
+        font-size: 17px;
+        margin-top: 30px;
+        margin-bottom: 0;
+        text-align: center;
+        font-weight: 450;
+    }
+
+    #urbanAreaContent a {
+        font-size: 14px;
+        font-weight: 500;
+        margin-left: 3px;
+        color: rgb(175, 174, 250);
     }
 
 
