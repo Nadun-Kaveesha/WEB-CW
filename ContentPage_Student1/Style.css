@@ -6,16 +6,32 @@
 
 h1{
     /* background-color: rgb(26, 157, 26); */
-    color: white;  
+    color: rgb(0, 0, 0);  
+    font-size: 40px;
 }
 
 body {
-    background-color: #e4e4e4;
+    background-color: hsl(125, 100%, 93%);
+    
 }
 
 header {
-    background-color: rgb(54, 117, 20);
+    /* background-color: rgb(54, 117, 20); */
     padding: 1px 0;
     align-items: center;
     text-align: center;
+}
+
+.content {
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.content h2 {
+    background-color: rgb(41, 146, 51);
+    color: white;
+    padding: 10px 0;
+    padding-left: 15px;
 }
