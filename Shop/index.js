@@ -7,10 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
     let totalPrice = 0;
     const addedProducts = {}; // Store added products
 
-    cartIcon.addEventListener('click', function() {
+    // ---------------Open the Cart---------------
+    cartIcon.addEventListener('click', function() { 
         inlineCart.style.display = 'block';
     });
 
+     // ---------------Close the Cart---------------
     closeIcon.addEventListener('click', function() {
         inlineCart.style.display = 'none';
     });
