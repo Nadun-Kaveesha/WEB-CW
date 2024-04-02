@@ -1,5 +1,9 @@
+body {
+    background-color: rgb(17, 138, 17);
+}
+
 .backgroundCon{
-    height: 310vh;
+    height: 330vh;
 }
 
 .card{
@@ -11,6 +15,7 @@
     background-position: center;  
     background-size: cover;
     z-index: -1;
+
 }
 
 .card img {
@@ -18,32 +23,35 @@
     width: 110%;
     height: 110%;
     display: block;
+    opacity: 0.8;
 }
 
 
 
 .MissionOverlay {
     position: absolute ;
-    top: 50%;
-    left: 8%;
+    top: 70%;
+    left: 6%;
     background-color: white;
     width: 40%;
     height: 40%;
     padding: 20px;
     border-radius: 10px;
     opacity: 0.7;
-    margin-top: 70px;
+    box-shadow: 7px 7px 10px black;
 
 }
 
 .Mission{
     font-family: "poppins" , sans-serif;
     font-size: 50px;
-    margin-left: 25px;
+    margin-right: 25px;
     color: black;
     font-weight: 700;
     opacity: 1;
     transition-duration: 0.5s;
+    text-align: right;
+    
 
 }
 
@@ -58,39 +66,40 @@
 
 .backgroundCon video {
     position: absolute ;
-    top: 70%;
+    top: 20%;
     left: 52%;
     width: 40%;
     height: 40%;
     border-radius: 10px;
     padding: 20px;
     background-color: white;
-    margin-top: 70px;
+    box-shadow: 7px 7px 10px black;
 
 }
 .firstOverlay{
     position: absolute ;
     top: 20%;
-    left: 4%;
+    left: 6%;
     background-color: rgb(255, 255, 255);
-    width: 90%;
-    height: 18%;
+    width: 40%;
+    height: 40%;
     padding: 20px;
     border-radius: 10px;
     opacity: 0.7;
+    box-shadow: 7px 7px 10px black;
 
 
 
 }
 
 .heddingText { 
-    padding-top: 10px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 70px;
+    padding-top: 30px;
+    font-size: 80px;
     color: rgb(0, 0, 0);
     text-align: center;
     font-weight: 900;
     transition-duration: 0.5s;
+    
 
 }
 
@@ -98,13 +107,14 @@
     color: rgb(0, 0, 0);
     text-align: center;
     margin-top: 2%;
-    font-size: 20px;
+    font-size: 25px;
     transition-duration: 0.5s;
+    font-weight: 500 ;
 }
 
 .targets{
     position: absolute ;
-    top: 267%;
+    top: 280%;
     left: 50%;
     transform: translate(-50%,-50%);
     background-color: white;
@@ -114,6 +124,7 @@
     border-radius: 10px;
     opacity: 0.7;
     margin-top: 70px;
+    box-shadow: 7px 7px 10px black;
 }
 
 .targetTxt{
@@ -162,6 +173,7 @@
     border-radius: 10px;
     float: left;
     transition-duration: 0.5s;
+    box-shadow: 7px 7px 10px black;
 }
 .t1{
     margin-left: 7%;
@@ -169,14 +181,15 @@
 
 #signIn {
     position: absolute ;
-    top: 110%;
-    left: 8%;
+    top: 70%;
+    left: 52%;
     background-color: white;
     padding: 20px;
     border-radius: 10px;
     opacity: 0.7;
     width: 40%;
-    height: auto;
+    height: 40%;
+    box-shadow: 7px 7px 10px black;
 
 }
 
@@ -185,13 +198,14 @@
     font-weight: 700;
     transition-duration: 0.5s;
     margin-left: 25px;
+    text-align: left;
 }
 
 #signInContent{
     font-size: 22px;
     margin-top: 30px;
     margin-bottom: 0;
-    text-align: right;
+    text-align: left;
     font-weight: 450;
 }
 
@@ -208,26 +222,29 @@
     text-decoration: none ;
     font-size: 16px;
     font-weight: 500;
+
 }
 
 #shop {
     position: absolute ;
-    top: 165%;
-    left: 8%;
+    top: 120%;
+    left: 6%;
     background-color: white;
     padding: 20px;
     border-radius: 10px;
     opacity: 0.7;
     width: 40%;
-    height: auto;
+    height: 60%;
+    box-shadow: 7px 7px 10px black;
 
 }
 
 #shopHedding{
-    margin-left: 25px;
+    margin-right: 25px;
     font-size: 45px;
     font-weight: 700;
     transition-duration: 0.5s;
+    text-align: right;
 }
 
 #shopContent{
@@ -255,20 +272,21 @@
 
 #feedback {
     position: absolute ;
-    top: 130%;
+    top: 120%;
     left: 52%;
     background-color: white;
     padding: 20px;
     border-radius: 10px;
     opacity: 0.7;
     width: 40%;
-    height: auto;
+    height: 60%;
+    box-shadow: 7px 7px 10px black;
 
 }
 
 #feedbackHedding{
     margin-left: 25px;
-    font-size: 50px;
+    font-size: 45px;
     font-weight: 700;
     transition-duration: 0.5s;
 }
@@ -299,6 +317,174 @@
 .heddingText:hover,
 .t1:hover , .t2:hover ,.t3:hover ,.t4:hover,
 #feedbackHedding:hover, #feedbackButton:hover , #shopButton:hover,#shopHedding:hover,
-#signinButton:hover , #signInHedding:hover , .Mission:hover , .qoute:hover {
+#signinButton:hover , #signInHedding:hover , .Mission:hover , .qoute:hover , #wetland:hover , #forest:hover , #urbanArea:hover,
+#desert:hover {
     transform: scale(1.1);
 }
+
+
+#wetland {
+    position: absolute ;
+    overflow: hidden;
+    top: 192%;
+    left: 3%;
+    background-image: url(wetLand.jpg);
+    background-size: cover;
+    padding: 20px;
+    border-radius: 10px;
+    width: 19%;
+    height: 50%;
+    box-shadow: 7px 7px 10px black;
+    transition-duration: 0.5s;
+
+}
+
+#wetlandHedding{
+    background-color: rgba(0, 0, 0, 0.459);
+    text-align: center;
+    color: white;
+    font-size: 45px;
+    font-weight: 700;
+
+}
+
+#wetlandContent{
+    background-color: rgba(0, 0, 0, 0.459);
+    color: white;
+    font-size: 17px;
+    margin-top: 30px;
+    margin-bottom: 0;
+    text-align: center;
+    font-weight: 450;
+}
+
+#wetlandContent a {
+    color: rgb(175, 174, 250);
+    margin-left: 3px;
+    font-size: 14px;
+    font-weight: 500;
+
+}
+
+#forest {
+    position: absolute ;
+    top: 192%;
+    left: 27%;
+    background-image: url(forest.jpg);
+    background-size: cover;
+    padding: 20px;
+    border-radius: 10px;
+    width: 19%;
+    height: 50%;
+    box-shadow: 7px 7px 10px black;
+    transition-duration: 0.5s;
+
+}
+
+#forestHedding{
+    background-color: rgba(0, 0, 0, 0.459);
+    text-align: center;
+    color: white;
+    font-size: 45px;
+    font-weight: 700;
+
+}
+
+#forestContent{
+    background-color: rgba(0, 0, 0, 0.459);
+    color: white;
+    font-size: 17px;
+    margin-top: 30px;
+    margin-bottom: 0;
+    text-align: center;
+    font-weight: 450;
+}
+
+#forestContent a {
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 3px;
+    color: rgb(175, 174, 250);
+}
+
+#desert {
+    position: absolute ;
+    top: 192%;
+    left: 51%;
+    background-image: url(desert.jpg);
+    background-size: cover;
+    padding: 20px;
+    border-radius: 10px;
+    width: 19%;
+    height: 50%;
+    box-shadow: 7px 7px 10px black;
+    transition-duration: 0.5s;
+
+}
+
+#desertHedding{
+    background-color: rgba(0, 0, 0, 0.459);
+    text-align: center;
+    color: white;
+    font-size: 45px;
+    font-weight: 700;
+}
+
+#desertContent{
+    background-color: rgba(0, 0, 0, 0.459);
+    color: white;
+    font-size: 17px;
+    margin-top: 30px;
+    margin-bottom: 0;
+    text-align: center;
+    font-weight: 450;
+}
+
+#desertContent a {
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 3px;
+    color: rgb(175, 174, 250);
+}
+
+#urbanArea {
+    position: absolute ;
+    top: 192%;
+    left: 75%;
+    background-image: url(urban.jpg);
+    background-size: cover;
+    padding: 20px;
+    border-radius: 10px;
+    width: 19%;
+    height: 50%;
+    box-shadow: 7px 7px 10px black;
+    transition-duration: 0.5s;
+
+}
+
+#urbanAreaHedding{
+    background-color: rgba(0, 0, 0, 0.459);
+    text-align: center;
+    color: white;
+    font-size: 45px;
+    font-weight: 700;
+    
+}
+
+#urbanAreaContent{
+    background-color: rgba(0, 0, 0, 0.459);
+    color: white;
+    font-size: 17px;
+    margin-top: 30px;
+    margin-bottom: 0;
+    text-align: center;
+    font-weight: 450;
+}
+
+#urbanAreaContent a {
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 3px;
+    color: rgb(175, 174, 250);
+}
+
