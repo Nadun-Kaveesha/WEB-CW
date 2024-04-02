@@ -7,15 +7,13 @@ body {
     background-color: #e4e4e4;
 }
 
+/* ------------------------------SHOP heading------------------------------ */
 header {
     background-color: rgb(26, 157, 26);
     color: white;
     padding: 20px;
     text-align: center;
     height: 50px;
-    margin-top: -9px;
-    margin-left: -7px;
-    margin-right: -7px;
     margin-bottom: 30px;
 }
 
@@ -23,103 +21,8 @@ header h1 {
     margin: 0;
 }
 
-#cart {
-    float: right;
-    background-color: black;
-    color: #00ff00;
-    margin-right: 30px;  
-    font-size: 30px; 
-    position: fixed; 
-    right: 0;
-    top: 30px;
-    padding: 10px 15px;
 
-
-    padding-left: none;
-    border-radius: 50px;
-    text-decoration: none;
-}
-
-#cart:hover {
-    background-color: rgb(255, 255, 255);
-    color: black;
-}
-
-.img {
-    border-radius: 6px;
-}
-
-#prdct-1{
-    width: 140px;
-}
-
-#prdct-2, #prdct-3 {
-    width: 150px;
-}
-
-#prdct-3 {
-    margin-top: 6px;
-    margin-bottom: -5px;
-}
-
-#prdct-4 {
-    margin-top: 3px;
-    margin-bottom: -5px;
-    width: 151px;
-}
-
-#prdct-6 {
-    width: 150px;
-    margin-bottom: -15px;
-}
-
-#prdct-7 {
-    width: 170px;
-    margin-top: 0px;
-}
-
-#prdct-8 {
-    width: 155px;
-    margin-bottom: 20px;
-}
-
-#name-1 {
-    text-align: center;
-    font-size: medium;
-}
-
-#name-2 {
-    text-align: center;
-    font-size: 20px;
-}
-
-#name-3, #name-4 {
-    text-align: center;
-    font-size: 20px;
-}
-
-#name-6 {
-    text-align: center;
-    font-size: 19px;
-    margin-bottom: 4px;
-}
-
-#name-7 {
-    text-align: center;
-    font-size: 19px;
-    margin-bottom: 20px; 
-    margin-top: 10px;
-}
-
-#name-8 {
-    text-align: center;
-    font-size: 20px;
-    margin-top: -8px;
-    margin-bottom: 15px;
-}
-
-
-.box {
+.box {  /*------Class for store all the product boxes------*/
 
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(220px,auto));
@@ -134,9 +37,106 @@ header h1 {
     margin-bottom: 20px;
 }
 
-.product-name {
+.product {      /*__________Product Boxes__________*/
+    width: 230px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    padding: 0px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* border-radius: 15px;   */
+    transition-duration: 0.5s;
+}
+
+.product:hover {
+    transform: scale(1.1); /* Scale the product by 10% on hover */
+}
+
+
+/* ___________________________Product Names and Images___________________________ */
+
+
+/* ------------------- Product images---------------- */
+
+.img {
+    border-radius: 6px;
+}
+
+#prdct-1{
+    width: 140px;
+}
+
+#prdct-2, #prdct-3, #prdct-6 {
+    width: 150px;
+}
+
+#prdct-3 {
+    margin-top: 6px;
+}
+
+#prdct-3 , #prdct-4  {
+    margin-bottom: -5px;
+}
+
+#prdct-4 {
+    margin-top: 3px;
+    width: 151px;
+}
+
+#prdct-6 {
+    margin-bottom: -15px;
+}
+
+#prdct-7 {
+    width: 170px;
+    margin-top: 0px;
+}
+
+#prdct-8 {
+    width: 155px;
+    margin-bottom: 20px;
+}
+
+/*------------------- Product names---------------- */
+
+.product-name {  
     text-align: center;
 }
+
+#name-1 {
+    font-size: medium;
+}
+
+#name-2, #name-3, #name-4, #name-8 {
+    font-size: 20px;
+}
+
+#name-6 {
+    margin-bottom: 4px;
+}
+
+#name-6, #name-7{
+    font-size: 19px;
+}
+
+#name-7 {
+    margin-bottom: 20px; 
+    margin-top: 10px;
+}
+
+#name-8 {
+    margin-top: -8px;
+    margin-bottom: 15px;
+}
+
+/* --------------------------------------------------------------- */
+
+/* _________________________product price________________________ */
 
 .price {
     color: rgb(0, 0, 0);
@@ -146,14 +146,29 @@ header h1 {
     padding-bottom: 10px;
 }
 
-.footer {
-    background-color: aqua;
-    width: 100%; /* Adjust the width as needed */
-    height: 300px; /* Adjust the height as needed */
-    position: absolute; /* Set the position to absolute */
-    top: calc(800px + 80px + 20px); /* Place the footer below the box div */
-    left: 0; /* Align to the left */
+
+#cart { 
+    float: right;
+    background-color: black;
+    color: #00ff00;
+    margin-right: 30px;  
+    font-size: 30px; 
+    position: fixed; 
+    right: 0;
+    top: 120px;
+    padding: 10px 15px;
+    padding-left: none;
+    border-radius: 50px;
+    text-decoration: none;
 }
+
+#cart:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+
+/* _______________Quantity Selection_______________ */
 
 .quantity {
     width: 30px;
@@ -167,6 +182,9 @@ header h1 {
 .quantity-text-box {
     display: inline-block;
 }
+
+
+/* _______________Add to cart button_______________ */
 
 .add-to-cart {
     
@@ -189,27 +207,9 @@ header h1 {
     cursor: pointer;
 }
 
-.product {
-    width: 230px;
-    height: 350px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    margin: 10px 0;
-    padding: 0px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    /* border-radius: 15px;   */
-    transition-duration: 0.5s;
-}
 
-.product:hover {
-    transform: scale(1.1); /* Scale the product by 10% on hover */
-}
 
-/*  Cart Section  */
+/* _______________Cart___________________*/
 
 .inlinecart {
     background-color: #f0f0f0;
@@ -223,11 +223,18 @@ header h1 {
     box-sizing: border-box; /* Include padding in the width */
 }
 
+
+
+#cart-title {
+    margin-top: 100px;
+}
+
 .cartContent {
-
-    height: 80vh;
-
+    height: 60vh;
     margin-bottom: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-radius: 10px;
 }
 
 .fa-square-xmark {
@@ -235,9 +242,8 @@ header h1 {
     font-size: 20px;
     cursor: pointer;
     float: right;
-
+    margin-right: 10px;
     margin-top: 10px;
-
 }
 
 .fa-square-xmark:hover {
@@ -249,9 +255,7 @@ header h1 {
     justify-content: center;
     align-items: center;
     text-align: center;
-
-    margin-top: -30px;
-
+    margin-bottom: 0px;
 }
 
 
