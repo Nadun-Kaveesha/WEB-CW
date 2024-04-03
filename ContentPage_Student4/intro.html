@@ -5,25 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Urban Landscape</title>
     <link rel="stylesheet" href="IntroStyles.css" />
+    <link rel="stylesheet" href="IntroMediaQueries.css" />
   </head>
+
+  <body> <!-- nav bar -->
+    <link rel="stylesheet" href="navigationStyle.css"> 
+    <link rel="stylesheet" href="/NavigationBar/mediaQuerise.css" > <!-- link navigation bar media querie file -->
+    <div class="NavigationBar">
+      <div class="logo" onclick="gotoHome()"> <!-- creat class for logo section and link it home page using js -->
+        <img src="/NavigationBar/logo.jpeg" alt="webside logo" /> <!-- website logo -->
+        <span class="logoText">Life on Land</span> <!-- website name -->
+      </div>
+      <div class="UserProfile1"> <!-- this is for a media querie navigation bar avatar -->
+        <a href="/UserProfile/UserProfile.html"><img src="/NavigationBar/profile.png" alt="user profile" /></a> <!-- link it userprofile page -->
+      </div>
+      <div class="moreOption" onclick="toggleDropdown()">&#9776;</div> <!-- "more" icon and set it if click on top of it display navigation links (use js) -->
+      <ul id="navDropdown"> <!-- navigation links -->
+        <li><a id="Home" href="/HomePage/HomePage.html">Home</a></li>
+        <li><a id="Shop" href="/Shop/Shop.html">Shop</a></li>
+        <li><a id="Site Map" href="/Sitemap/Sitemap.html">Site Map</a></li>
+        <li><a id="About us" href="/Team/Team.html">About us</a></li>
+        <li><a id="Gallery" href="/Gallery/Gallery.html">Gallery</a></li>
+        <li><a id="Feedback" href="/Feedback/Feedback.html">Feedback</a></li>
+        <li class="SearchBar"><input type="text" placeholder="Search Here.. " /></li> <!-- add search bar in to navigation bar -->
+        <li class="UserProfile"> <!-- avatar for desktop view -->
+          <a href="/UserProfile/UserProfile.html"><img src="profile.png" alt="user profile" /></a>
+        </li>
+      </ul>
+
+    </div>
+    <script src="/NavigationBar/index.js" defer></script> <!-- link navigation bar js file -->
+</body>
 
   <body>
     <div class="home-container">
       <video autoplay loop muted plays-inline class="back-video">
         <source src="/ContentPage_Student4/Media/BgVideo.mp4" type="video/mp4" />
       </video>
-
-      <nav>
-        <img src="/ContentPage_Student4/Media/Untitled design.png" class="logo" />
-        <ul>
-          <li><a href="/HomePage/HomePage.html">Home</a></li>
-          <li><a href="/Shop/Shop.html">Shop</a></li>
-          <li><a href="/Sitemap/Sitemap.html">Site Map</a></li>
-          <li><a href="/Team/Team.html">About Us</a></li>
-          <li><a href="/Gallery/Gallery.html">Gallery</a></li>
-          <li><a href="/Feedback/Feedback.html">Feedback</a></li>
-        </ul>
-      </nav>
 
       <div class="content">
         <h1>Urban Landscape</h1>
