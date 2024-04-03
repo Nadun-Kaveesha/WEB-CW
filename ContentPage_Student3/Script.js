@@ -1,4 +1,4 @@
-//Function to make the jump to bottom link work
+//function to make the bottom of the page jump to bottom.
 const scrollToBottomLink = document.getElementById("scrollToBottom");
 const footer = document.querySelector("footer");
 
@@ -7,18 +7,18 @@ scrollToBottomLink.addEventListener("click", (event) => {
   footer.scrollIntoView({ behavior: "smooth" });
 });
 
-// Function to detect display scale
+//to detect display scale
 function getDisplayScale() {
   const mediaQuery = window.matchMedia("(resolution: 1dppx)");
   if (mediaQuery && mediaQuery.media === "(resolution: 1dppx)") {
-    return 1; // 100% scale
+    return 1; // 100% s cale
   } else {
-    // If unable to detect, assume 100% scale
+    // If not able to detect, assume 100% scale
     return 1;
   }
 }
 
-// Function to set page height to 150vh if display scale is 100%
+// function to set page height to 150vh ,if display s cale = 100%
 function setPageHeight() {
   const scale = getDisplayScale();
   const homeContainer = document.querySelector("home-container");
@@ -30,7 +30,7 @@ function setPageHeight() {
   }
 }
 
-// Call the setPageHeight function when the page loads
+// call the setPageHeight function when page loads
 window.onload = setPageHeight;
 
 
