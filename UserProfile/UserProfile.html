@@ -15,53 +15,99 @@
     <title>User Profile</title>
     <!--Stylesheet-->
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="mediaQueries.css" />
     <!--Icons-->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   </head>
 
   <body>
-    <!--main Container-->
-    <div class="container">
-      <div id="newtask">
-        <div id="questionDescription">Step 1 Personal Details | Question 1 of 5</div>
-        <div id="line"></div>
-        <div id="inputDescription">Name :</div>
-        <input type="text" name="name" placeholder="Please Enter Your Name" />
-        <button id="add" type="button">Add</button>
-
-        <!--Navigation Buttons-->
-        <div class="button-container">
-          <button id="previous" type="button"><i class="bx bx-skip-previous"></i> Previous</button>
-          <button id="skip" type="button">Skip</button>
-          <button id="next" type="button">Next <i class="bx bx-skip-next"></i></button>
-        </div>
+    <link rel="stylesheet" href="/NavigationBar/style.css" />
+    <link rel="stylesheet" href="/NavigationBar/mediaQuerise.css" />
+    <div class="NavigationBar">
+      <div class="logo" onclick="gotoHome()">
+        <img src="/NavigationBar/logo.jpeg" alt="webside logo" />
+        <span class="logoText">Life on Land</span>
       </div>
-
-      <!--Progress Bar-->
-      <div class="progress-container">
-        Profile Completed :
-        <div id="progress">
-          <div id="progress__fill"></div>
-          <div id="progress__text">0%</div>
-        </div>
+      <div class="UserProfile1">
+        <a href="/UserProfile/UserProfile.html"><img src="profile.png" alt="user profile" /></a>
       </div>
+      <div class="moreOption" onclick="toggleDropdown()">&#9776;</div>
 
-      <!--Tasks-->
-      <div id="tasks"></div>
+      <ul id="navDropdown">
+        <li><a id="Home" href="/HomePage/HomePage.html">Home</a></li>
+        <li><a id="Shop" href="/Shop/Shop.html">Shop</a></li>
+        <li><a id="Site Map" href="/Sitemap/Sitemap.html">Site Map</a></li>
+        <li><a id="About us" href="/Team/Team.html">About us</a></li>
+        <li><a id="Gallery" href="/Gallery/Gallery.html">Gallery</a></li>
+        <li><a id="Feedback" href="/Feedback/Feedback.html">Feedback</a></li>
+        <li class="SearchBar"><input type="text" placeholder="Search Here.. " /></li>
+        <li class="UserProfile">
+          <a href="/UserProfile/UserProfile.html"><img src="profile.png" alt="user profile" /></a>
+        </li>
+      </ul>
     </div>
-    <script src="index.js"></script>
+    <script src="/NavigationBar/index.js" defer></script>
+  </body>
+
+  <body>
+    <!--home Container-->
+    <div class="home-container">
+      <div class="main-container">
+        <div id="newtask">
+          <div id="questionDescription">Step 1 Personal Details | Question 1 of 5</div>
+          <div id="line"></div>
+          <div id="inputDescription">Name :</div>
+          <input type="text" name="name" placeholder="Please Enter Your Name" />
+          <button id="add" type="button">Add</button>
+
+          <!--Navigation Buttons-->
+          <div class="button-container">
+            <button id="skip" type="button">Skip</button>
+            <button id="next" type="button">Next <i class="bx bx-skip-next"></i></button>
+          </div>
+        </div>
+
+        <!--Progress Bar-->
+        <div class="progress-container">
+          Profile Completed :
+          <div id="progress">
+            <div id="progress__fill"></div>
+            <div id="progress__text">0%</div>
+          </div>
+        </div>
+
+        <!--Tasks-->
+        <div id="tasks">
+          <div id="task-description"></div>
+          <div id="task-container"></div>
+        </div>
+      </div>
+    </div>
+    
+    <!--Form-->
+    <div class="form-container">
+      <div id="form"></div>
+    </div>
 
     <footer>
-      <link rel="stylesheet" href="/Footer/style.css" />
-      <link rel="stylesheet" href="/Footer/mediaQueries.css" />
-      <ul>
-        <li><a href="/Team/Team.html">About us |</a></li>
-        <li><a href="/Footer/references.html">References |</a></li>
-        <li><a href="/Footer/contact.html">Contact |</a></li>
-        <li><a href="/Footer/faq.html">FAQ</a></li>
-      </ul>
-
-      <p>&copy; 2024 Life on Land. All rights reserved</p>
+      <link rel="stylesheet" href="index.css" />
+      <link rel="stylesheet" href="mediaQueries.css" />
+        <ul>
+            <li><a href="/Team/Team.html">About us |</a></li>
+            <li><a href="/Footer/references.html">References |</a></li>
+            <li><a href="/Footer/contact.html">Contact |</a></li>
+            <li><a href="/Footer/faq.html">FAQ</a></li>
+        </ul>
+  
+        <p>&copy; 2024 Life on Land. All rights reserved</p>
+        <script src="index.js"></script>
     </footer>
+    
+    
+
+
+    <script src="index.js"></script>
   </body>
+
+  
 </html>

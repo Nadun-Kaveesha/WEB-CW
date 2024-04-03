@@ -7,10 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
     let totalPrice = 0;
     const addedProducts = {}; // Store added products
 
-    cartIcon.addEventListener('click', function() {
+    // ---------------Open the Cart---------------
+    cartIcon.addEventListener('click', function() { 
         inlineCart.style.display = 'block';
     });
 
+     // ---------------Close the Cart---------------
     closeIcon.addEventListener('click', function() {
         inlineCart.style.display = 'none';
     });
@@ -32,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const itemElement = document.createElement('div');
         itemElement.classList.add('cartItem');
-        itemElement.innerHTML = `${productName} - Qty: ${quantity} - Price: $${itemTotalPrice}`;
+        itemElement.innerHTML = `${productName}<br> Quantity: ${quantity}<br> Price: LKR ${itemTotalPrice}`;
 
         const deleteButton = document.createElement('a');
         deleteButton.href = '#';
@@ -42,13 +44,13 @@ document.addEventListener('DOMContentLoaded', function() {
         deleteButton.addEventListener('click', function() {
             totalPrice -= parseFloat(itemTotalPrice);
             cartContent.removeChild(itemElement);
-            cartBottom.querySelector('.totalPrice').textContent = `Price: $${totalPrice.toFixed(2)}`;
+            cartBottom.querySelector('.totalPrice').textContent = `Price: LKR ${totalPrice.toFixed(2)}`;
             delete addedProducts[productName]; // Remove product from addedProducts object
         });
 
         itemElement.appendChild(deleteButton);
         cartContent.appendChild(itemElement);
-        cartBottom.querySelector('.totalPrice').textContent = `Total Price: $${totalPrice.toFixed(2)}`;
+        cartBottom.querySelector('.totalPrice').textContent = `Total Price: LKR ${totalPrice.toFixed(2)}`;
         addedProducts[productName] = true; // Add product to addedProducts object
     }
 
@@ -57,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function() {
             const productContainer = this.closest('.product');
             const productName = productContainer.querySelector('.product-name').textContent;
-            const productPrice = parseFloat(productContainer.querySelector('.price').textContent.slice(1)); // Extracting price without '$'
+            const productPrice = parseFloat(productContainer.querySelector('.price').textContent.slice(4)); // Extracting price without '$'
             const productQuantity = parseInt(productContainer.querySelector('.quantity').value);
             
             updateCart(productName, productQuantity, productPrice);

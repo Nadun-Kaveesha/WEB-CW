@@ -7,15 +7,13 @@ body {
     background-color: #e4e4e4;
 }
 
+/* ------------------------------SHOP heading------------------------------ */
 header {
     background-color: rgb(26, 157, 26);
     color: white;
     padding: 20px;
     text-align: center;
     height: 50px;
-    margin-top: -9px;
-    margin-left: -7px;
-    margin-right: -7px;
     margin-bottom: 30px;
 }
 
@@ -23,33 +21,8 @@ header h1 {
     margin: 0;
 }
 
-#cart {
-    float: right;
-    background-color: rgb(0, 79, 20);
-    color: aliceblue;
-    margin-right: 30px;  
-    font-size: 30px; 
-    position: fixed; 
-    right: 0;
-    top: 30px;
-    padding: 10px 15px;
 
-
-    padding-left: none;
-    border-radius: 50px;
-    text-decoration: none;
-}
-
-#cart:hover {
-    background-color: rgb(0, 0, 0);
-    color: #00ff00;
-}
-
-.img {
-    border-radius: 6px;
-}
-
-.box {
+.box {  /*------Class for store all the product boxes------*/
 
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(220px,auto));
@@ -64,43 +37,7 @@ header h1 {
     margin-bottom: 20px;
 }
 
-.product-name {
-    text-align: center;
-}
-
-.price {
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    font-size: 20px;
-    margin-top: 1px;
-    padding-bottom: 10px;
-}
-
-.footer {
-    background-color: aqua;
-    width: 100%; /* Adjust the width as needed */
-    height: 300px; /* Adjust the height as needed */
-    position: absolute; /* Set the position to absolute */
-    top: calc(800px + 80px + 20px); /* Place the footer below the box div */
-    left: 0; /* Align to the left */
-}
-
-.quantity {
-    width: 30px;
-    font-family: 'poppins', sans-serif;
-    font-size: 15px;
-}
-
-.quantity-text-box {
-    display: inline-block;
-}
-
-.add-to-cart {
-    margin-top: 10px;
-    text-align: center;
-}
-
-.product {
+.product {      /*__________Product Boxes__________*/
     width: 230px;
     height: 350px;
     display: flex;
@@ -120,7 +57,159 @@ header h1 {
     transform: scale(1.1); /* Scale the product by 10% on hover */
 }
 
-/*  Cart Section  */
+
+/* ___________________________Product Names and Images___________________________ */
+
+
+/* ------------------- Product images---------------- */
+
+.img {
+    border-radius: 6px;
+}
+
+#prdct-1{
+    width: 140px;
+}
+
+#prdct-2, #prdct-3, #prdct-6 {
+    width: 150px;
+}
+
+#prdct-3 {
+    margin-top: 6px;
+}
+
+#prdct-3 , #prdct-4  {
+    margin-bottom: -5px;
+}
+
+#prdct-4 {
+    margin-top: 3px;
+    width: 151px;
+}
+
+#prdct-6 {
+    margin-bottom: -15px;
+}
+
+#prdct-7 {
+    width: 170px;
+    margin-top: 0px;
+}
+
+#prdct-8 {
+    width: 155px;
+    margin-bottom: 20px;
+}
+
+/*------------------- Product names---------------- */
+
+.product-name {  
+    text-align: center;
+}
+
+#name-1 {
+    font-size: medium;
+}
+
+#name-2, #name-3, #name-4, #name-8 {
+    font-size: 20px;
+}
+
+#name-6 {
+    margin-bottom: 4px;
+}
+
+#name-6, #name-7{
+    font-size: 19px;
+}
+
+#name-7 {
+    margin-bottom: 20px; 
+    margin-top: 10px;
+}
+
+#name-8 {
+    margin-top: -8px;
+    margin-bottom: 15px;
+}
+
+/* --------------------------------------------------------------- */
+
+/* _________________________product price________________________ */
+
+.price {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 1px;
+    padding-bottom: 10px;
+}
+
+
+#cart { 
+    float: right;
+    background-color: black;
+    color: #00ff00;
+    margin-right: 30px;  
+    font-size: 30px; 
+    position: fixed; 
+    right: 0;
+    top: 120px;
+    padding: 10px 15px;
+    padding-left: none;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+#cart:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+
+/* _______________Quantity Selection_______________ */
+
+.quantity {
+    width: 30px;
+    font-family: 'poppins', sans-serif;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 3px;
+}
+
+.quantity-text-box {
+    display: inline-block;
+}
+
+
+/* _______________Add to cart button_______________ */
+
+.add-to-cart {
+    
+    margin-top: 10px;
+    text-align: center;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 10px; 
+}
+
+.add-to-cart, #chqout {
+    background-color: #28ff28;
+    color: black;
+    font-weight: 600;
+}
+
+.add-to-cart:hover {
+    background-color: rgb(0, 0, 0);
+    color: #00ff00;
+    cursor: pointer;
+}
+
+
+
+/* _______________Cart___________________*/
 
 .inlinecart {
     background-color: #f0f0f0;
@@ -134,9 +223,18 @@ header h1 {
     box-sizing: border-box; /* Include padding in the width */
 }
 
+
+
+#cart-title {
+    margin-top: 100px;
+}
+
 .cartContent {
-    height: 85vh;
+    height: 60vh;
     margin-bottom: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-radius: 10px;
 }
 
 .fa-square-xmark {
@@ -144,7 +242,8 @@ header h1 {
     font-size: 20px;
     cursor: pointer;
     float: right;
-    margin-top: -10px;
+    margin-right: 10px;
+    margin-top: 10px;
 }
 
 .fa-square-xmark:hover {
@@ -156,17 +255,21 @@ header h1 {
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-bottom: 0px;
 }
 
 
 #chqout {
-    background-color: rgb(0, 79, 20);
-    color: aliceblue;
+    border-radius: 10px;
     text-align: center;
     margin-bottom: 10px;
     font-size: 20px; 
     padding: 10px;
     text-decoration: none;
+}
+
+#chqout:hover {
+    color: rgb(255, 0, 0);
 }
 
 .cartItem {

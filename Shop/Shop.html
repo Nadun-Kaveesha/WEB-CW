@@ -5,10 +5,13 @@
     <title>Shop</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media.css">
+    <!-- Font awasome icons import for cart button, cart item delete button and close button -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-  <body>
+<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Navigation Bar >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+<body>
     <link rel="stylesheet" href="/NavigationBar/style.css" />
     <link rel="stylesheet" href="/NavigationBar/mediaQuerise.css" />
     <div class="NavigationBar">
@@ -36,8 +39,9 @@
     </div>
     <script src="/NavigationBar/index.js" defer></script>
   </body>
+</html>
 
-
+<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< SHOP >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
 
 <body>
     <header class="header">
@@ -47,9 +51,9 @@
     <div class="box">
 
         <div class="product">
-            <img class="img" src="/images/product.jpg" width="90%">
-            <h2 class="product-name">Product 1</h2>
-            <div class="price">$9.99</div>
+            <img class="img" id="prdct-1" src="/images/product-1.png" width="90%">
+            <h2 class="product-name" id="name-1">Shopping bags made by recycled Plastic</h2>
+            <div class="price">LKR 80.00</div>
             <!-- Quantity selection -->
             <div class="quantity-text-box">
                 <label for="quantity">Quantity:</label>
@@ -59,9 +63,9 @@
         </div>
 
         <div class="product">
-            <img class="img" src="/images/product.jpg" width="90%">
-            <h2 class="product-name">Product 2</h2>
-            <div class="price">$10</div>
+            <img class="img" id="prdct-2" src="/images/product-2.jpg" width="90%">
+            <h2 class="product-name" id="name-2">Glass Water Bottle</h2>
+            <div class="price">LKR 600.00</div>
             <!-- Quantity selection -->
             <div class="quantity-text-box">
                 <label for="quantity">Quantity:</label>
@@ -71,9 +75,9 @@
         </div>
 
         <div class="product">
-            <img class="img" src="/images/product.jpg" width="90%">
-            <h2 class="product-name">Product 3</h2>
-            <div class="price">$9.99</div>
+            <img class="img" id="prdct-3" src="/images/product-3.jpg" width="90%">
+            <h2 class="product-name" id="name-3">Bamboo Utensils set</h2>
+            <div class="price">LKR 900.00</div>
             <!-- Quantity selection -->
             <div class="quantity-text-box">
                 <label for="quantity">Quantity:</label>
@@ -83,9 +87,9 @@
         </div>
 
         <div class="product">
-            <img class="img" src="/images/product.jpg" width="90%">
-            <h2 class="product-name">Product 4</h2>
-            <div class="price">$50</div>
+            <img class="img" id="prdct-4" src="/images/product-4.jpg" width="90%">
+            <h2 class="product-name" id="name-4">Solar Powered Light</h2>
+            <div class="price">LKR 1500.00</div>
             <!-- Quantity selection -->
             <div class="quantity-text-box">
                 <label for="quantity">Quantity:</label>
@@ -95,9 +99,9 @@
         </div>
 
         <div class="product">
-            <img class="img" src="/images/product.jpg" width="90%">
-            <h2 class="product-name">Product 5</h2>
-            <div class="price">$9.99</div>
+            <img class="img" src="/images/product-5.jpg" width="90%">
+            <h2 class="product-name">Plantable Pencil</h2>
+            <div class="price">LKR 200.00</div>
             <!-- Quantity selection -->
             <div class="quantity-text-box">
                 <label for="quantity">Quantity:</label>
@@ -107,9 +111,9 @@
         </div>
 
         <div class="product">
-            <img class="img" src="/images/product.jpg" width="90%">
-            <h2 class="product-name">Product 6</h2>
-            <div class="price">$9.99</div>
+            <img class="img" id="prdct-6" src="/images/product-6.png" width="90%">
+            <h2 class="product-name" id="name-6">Compostable Phone Cases</h2>
+            <div class="price">LKR 350.00</div>
             <!-- Quantity selection -->
             <div class="quantity-text-box">
                 <label for="quantity">Quantity:</label>
@@ -119,9 +123,9 @@
         </div>
 
         <div class="product">
-            <img class="img" src="/images/product.jpg" width="90%">
-            <h2 class="product-name">Product 7</h2>
-            <div class="price">$9.99</div>
+            <img class="img" id="prdct-7" src="/images/product-7.jpg" width="90%">
+            <h2 class="product-name" id="name-7">Recycled Glass Vases</h2>
+            <div class="price">LKR 3350.00</div>
             <!-- Quantity selection -->
             <div class="quantity-text-box">
                 <label for="quantity">Quantity:</label>
@@ -131,9 +135,9 @@
         </div>
 
         <div class="product">
-            <img class="img" src="/images/product.jpg" width="90%">
-            <h2 class="product-name">Product 8</h2>
-            <div class="price">$9.99</div>
+            <img class="img" id="prdct-8" src="/images/product-8.jpg" width="90%">
+            <h2 class="product-name" id="name-8">Organic Fertilizer</h2>
+            <div class="price">LKR 650.00</div>
             <!-- Quantity selection -->
             <div class="quantity-text-box">
                 <label for="quantity">Quantity:</label>
@@ -144,20 +148,27 @@
         </div>
     </div>
 
+    <!-- Cart -->
     <div class="inlinecart" style="display: none;">
 
+        <div class="cartHeader">
+            <a href="#"><i class="fa-solid fa-square-xmark"></i></a> <!--Cart Close button-->
+            <h2 id="cart-title">Cart</h2>
+        </div>
+        
         <div class="cartContent">
-            <a href="#"><i class="fa-solid fa-square-xmark"></i></a>
-            <h2>Cart</h2>
+            <!-- Cart Items will apend to here -->
         </div>
 
         <div class="cartBottom">
+            <h3 class="totalPrice">Total Price: RS 0.00</h3>
             <a href="checkout.html" id="chqout">Proceed to checkout</a>
         </div>
         
     </div>
     
-
+    <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<< Footer >>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    
     <footer>
         <link rel="stylesheet" href="/Footer/style.css" />
         <link rel="stylesheet" href="/Footer/mediaQueries.css" />
@@ -168,22 +179,11 @@
               <li><a href="/Footer/faq.html">FAQ</a></li>
           </ul>
     
-          <p>&copy; 2024 Life on Land. All rights reserved</p>
-    csds  </footer>
-
-    <script src="index.js"></script>
-    <footer>
-      <link rel="stylesheet" href="/Footer/style.css" />
-      <link rel="stylesheet" href="/Footer/mediaQueries.css" />
-        <ul>
-            <li><a href="/Team/Team.html">About us |</a></li>
-            <li><a href="/Footer/references.html">References |</a></li>
-            <li><a href="/Footer/contact.html">Contact |</a></li>
-            <li><a href="/Footer/faq.html">FAQ</a></li>
-        </ul>
-  
         <p>&copy; 2024 Life on Land. All rights reserved</p>
     </footer>
+
+    <script src="index.js"></script>
+    
 </body>
 
 </html>
