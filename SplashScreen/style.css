@@ -69,7 +69,10 @@ p {
     align-items: center;
 }
 
-.team-members #member-img {
+.team-members #member-img_1, 
+.team-members #member-img_2, 
+.team-members #member-img_3, 
+.team-members #member-img_4 {
     width: 135px;
     border-radius: 20px;
     margin: 0 20px;
@@ -85,16 +88,19 @@ p {
     text-align: center;
 }
 
-.member p , .team-members #member-img {
+.member p , 
+.team-members #member-img_1, 
+.team-members #member-img_2, 
+.team-members #member-img_3, 
+.team-members #member-img_4  {
     opacity: 0.99;
 }
 
-#name {
+#name_1, #name_2, #name_3, #name_4 {
     font-weight: 700;
 }
 
 .loading {
-    /* background-color: rgb(255, 0, 0); */
     position: absolute;
     margin: auto;
     width: 310px;
