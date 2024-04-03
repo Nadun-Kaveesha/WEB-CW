@@ -4,19 +4,127 @@ body {
 .card {
     position: relative;
     width: 100%;
-    height: 10%;
+    height: auto ;
+
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+
 }
 
 #hedding {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 135%;
+    left: 45%;
     transform: translate(-50%, -50%);
-    color: white; /* Optional: adjust text color for better contrast */
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: add background color for better readability */
-    padding: 20px; /* Optional: add padding for better spacing */
+    font-size: 68px;
+    font-weight: 800;
+    width: 85%;
+    transition: 0.5s;
+
 }
 
+#hedding:hover {
+    -webkit-text-stroke: 1px #000000;
+    color: transparent;
+  }
+
 #intro {
-    margin-top: 20px; /* Optional: add some space between the image and the intro text */
+    margin-top: 20px; 
+    font-size: 17px;
+    line-height: 2;
+    margin-left: 2%;
+    margin-right: 2%;
+    text-align: justify;
 }
+
+hr {
+
+    height: 5px;
+    background-color: rgb(211, 150, 18);
+    margin-bottom: 10px;
+    
+}
+
+h2 {
+
+    font-size: 40px;
+    line-height: 2;
+
+}
+
+#whatIs , #typeOfDeserts, #diversity
+, #humanImpact , #conclusion {
+    font-size: 17px;
+    line-height: 2;
+    margin-left: 2%;
+    margin-right: 2%;
+    text-align: justify;
+}
+
+#whatIs {
+    clear: both;
+}
+
+#whatIsImg {
+    float: left;
+    margin-right: 10%;
+}
+
+#whatIsImg img {
+    margin-top: 15px;
+    width: 550px;
+    border: 1px solid black;
+}
+
+#whatIsContent {
+    overflow: hidden;
+
+}
+
+#whatIsText{
+    margin-top: 4%;
+    line-height: 2.5;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#hotDesertImg img ,
+#coldDesertImg img ,
+#coastalDesertImg img ,
+#SemiaridDesertImg img  {
+    width: 450px;
+    margin-left: 30px;
+}
+
+#hotDesert ,
+#coldDesert ,
+#coastalDesert ,
+#SemiaridDesert {
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+} 
+
+.discription {
+    width: 60%;
+    margin-left: 40px;
+}
+
+#diversityImg img {
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+}
+
+#humanImpactImg img {
+    position: relative;
+    left: 25%;
+    width: 50%;
+    margin-top: 30px;
+}
+
+
