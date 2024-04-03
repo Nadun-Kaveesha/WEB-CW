@@ -257,7 +257,7 @@ function enableEditing() {
   });
 }
 
-// Example function to handle form submission
+//  function to handle form submission
 function submitForm() {
   const form = document.querySelector("#form");
   const editableAnswers = form.querySelectorAll(".editable-answer");
@@ -299,7 +299,7 @@ updateProgressBar(myProgressBar, progressIndex);
 document.querySelector(".form-container").style.display = "none";
 
 
-
+                                  //The part below is for the css modifications
 // Get the footer element
 const footer = document.querySelector('footer');
 
