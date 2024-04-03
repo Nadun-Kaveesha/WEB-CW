@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content Page</title>
+    <link rel="stylesheet" href="Style.css" />
+    <link rel="stylesheet" href="MediaQueries.css" />
+  </head>
+
+  <body> <!-- this body for a Navigation bar -->
+        <link rel="stylesheet" href="navigationStyle.css"> <!-- link navigation bar css file -->
+        <link rel="stylesheet" href="/NavigationBar/mediaQuerise.css" > <!-- link navigation bar media querie file -->
+        <div class="NavigationBar">
+          <div class="logo" onclick="gotoHome()"> <!-- creat class for logo section and link it home page using js -->
+            <img src="/NavigationBar/logo.jpeg" alt="webside logo" /> <!-- website logo -->
+            <span class="logoText">Life on Land</span> <!-- website name -->
+          </div>
+          <div class="UserProfile1"> <!-- this is for a media querie navigation bar avatar -->
+            <a href="/UserProfile/UserProfile.html"><img src="/NavigationBar/profile.png" alt="user profile" /></a> <!-- link it userprofile page -->
+          </div>
+          <div class="moreOption" onclick="toggleDropdown()">&#9776;</div> <!-- "more" icon and set it if click on top of it display navigation links (use js) -->
+          <ul id="navDropdown"> <!-- navigation links -->
+            <li><a id="Home" href="/HomePage/HomePage.html">Home</a></li>
+            <li><a id="Shop" href="/Shop/Shop.html">Shop</a></li>
+            <li><a id="Site Map" href="/Sitemap/Sitemap.html">Site Map</a></li>
+            <li><a id="About us" href="/Team/Team.html">About us</a></li>
+            <li><a id="Gallery" href="/Gallery/Gallery.html">Gallery</a></li>
+            <li><a id="Feedback" href="/Feedback/Feedback.html">Feedback</a></li>
+            <li class="SearchBar"><input type="text" placeholder="Search Here.. " /></li> <!-- add search bar in to navigation bar -->
+            <li class="UserProfile"> <!-- avatar for desktop view -->
+              <a href="/UserProfile/UserProfile.html"><img src="profile.png" alt="user profile" /></a>
+            </li>
+          </ul>
+
+        </div>
+        <script src="/NavigationBar/index.js" defer></script> <!-- link navigation bar js file -->
+  </body>
+
+  <body>
+    <div class="home-container">
+      <div class="heading">
+        <image src="/images/wetland.jpg" id="main-image"></image>
+        <div id="heading-description">
+          WHAT IS A WETLAND?<br />
+          AND 8 OTHER<br />
+          WETLAND FACTS
+        </div>
+      </div>
+
+      <a href="#" id="scrollToBottom">↓ jump to bottom</a>
+
+
+      <div class="content">
+        <p>
+          All life on Earth depends on water. Drinking, cleaning, farming, transportation,
+          generating energy, and recreation all require freshwater. Though they make up less than 1%
+          of the earth's surface, freshwater ecosystems such as lakes, rivers, streams, and wetlands
+          are home to about 10% of all known animal species and roughly 50% of all known fish
+          species.
+        </p>
+        <br />
+        <p>
+          Wetlands, which are aquatic areas with a freshwater, saltwater, or mixed cover, are one of
+          these freshwater habitats that are sometimes overlooked. They are the planet's natural
+          carbon storage and waste-water treatment facilities. And they are essential to the
+          security of food. There are between 300 million and 400 million people who depend on
+          wetlands and live near them. They are in favor of rice farming, which is a staple food for
+          half of the world's population. They also supply essential habitat, supplies, medications,
+          clean water, protection from storms and shorelines, and flood management.
+        </p>
+        <br />
+        <p>
+          Despite the importance of wetlands to human populations, up to 87% of the world's wetlands
+          have disappeared over the last 300 years, with the majority of this loss occurring around
+          1900. In order to preserve and safeguard these priceless habitats, WWF works.<br /><br />Learn
+          more about the importance of wetlands:
+        </p>
+        <br />
+        <img src="/images/wetland1.jpg" class="wetland1" />
+        <br />
+
+        <h4 id="topic">1. What is a Wetland?</h4>
+        <div id="topic-underline"></div>
+        <br />
+        <p>
+          A wetland is an area of land that is continually or seasonally covered in water, whether
+          it be fresh, salt, or somewhere in between. It operates as a separate ecology of its own.
+          Wetland distinguishes itself from other land uses and water bodies mainly by its
+          vegetation, which has adapted to the damp soil.
+        </p>
+        <br /><br />
+        <div class="image-container">
+          <img src="/images/wetland2.jpg" class="wetland-image" />
+          <img src="/images/wetland3.jpg" class="wetland-image" />
+        </div>
+        <br />
+
+        <h4 id="topic">2. What kinds of species live in wetlands?</h4>
+        <div id="topic-underline2"></div>
+        <br />
+        <p>
+          Wetlands are home to a diverse range of animals. During their lengthy migrations, wetlands
+          serve as rest stops for a variety of birds, including sandpipers, kingfishers, ducks, and
+          geese, giving them food and shelter. Wetlands provide food and refuge for a variety of
+          mammals, including tigers, beavers, and otters. Naturally, marshes are home to a wide
+          variety of fish.
+        </p>
+        <br /><br />
+        <img src="/images/wetland4.jpg" class="wetland1" />
+        <br />
+
+        <h4 id="topic">3. What are some of the world's largest wetlands?</h4>
+        <div id="topic-underline3"></div>
+        <br />
+        <p>
+          Among the world's largest wetlands are the Hudson Bay Lowland, the Amazon River Basin, and
+          the West Siberian Lowland. Llanos de Moxos, in Bolivia, is the largest protected wetland
+          in the world. It is more than 17 million acres, or almost the same as North Dakota.
+        </p>
+        <br /><br />
+        <div class="image-container">
+          <img src="/images/wetland5.jpg" class="wetland-image" />
+          <img src="/images/wetland6.jpg" class="wetland-image" />
+        </div>
+        <br />
+
+        <h4 id="topic">4. How are wetlands natural water filters?</h4>
+        <div id="topic-underline4"></div>
+        <br />
+        <p>
+          Wetlands alter nitrogen so that it is easier for plants to absorb, trap pollutants like
+          phosphorus and heavy metals in their soils, and physically and chemically decompose
+          bacteria. By acquiring and protecting $1.5 billion in land surrounding its upstate
+          reservoirs, New York City discovered that it could avoid spending $3 billion to $8 billion
+          on new wastewater treatment facilities.
+        </p>
+        <br /><br />
+        <img src="/images/wetland7.jpg" class="wetland1" />
+        <br />
+
+        <h4 id="topic">5. What are the different types of wetlands??</h4>
+        <div id="topic-underline5"></div>
+        <br />
+        <p>
+          Rivers, marshes, bogs, mangroves, mudflats, ponds, billabongs, lagoons, lakes, and
+          floodplains are a few examples of wetlands. The majority of sizable wetland areas
+          frequently have a variety of freshwater systems.
+        </p>
+        <br /><br />
+        <div class="image-container">
+          <img src="/images/wetland8.jpg" class="wetland-image" />
+          <img src="/images/wetland9.jpg" class="wetland-image" />
+        </div>
+        <br />
+
+        <h4 id="topic">6. How do wetlands fight climate change??</h4>
+        <div id="topic-underline6"></div>
+        <br />
+        <p>
+          Although they only make up a small percentage of the earth, wetlands are highly effective
+          at absorbing carbon dioxide. They aid in preventing the release of the heat-trapping gas
+          that fuels climate change from the atmosphere by storing 50 times more carbon than rain
+          forests. Wetlands draw debris with a high carbon content, such as leaves and animal feces,
+          down from the water's surface. The wetlands' natural debris is hidden by the sediment and
+          water, keeping them hidden. Wetlands also have the advantage of growing swiftly and
+          staying stable over long periods of time, which allows them to absorb carbon from the
+          atmosphere.
+        </p>
+        <br /><br />
+        <img src="/images/wetland10.jpg" class="wetland1" />
+        <br />
+
+        <h4 id="topic">7. What is the Freshwater Challenge?</h4>
+        <div id="topic-underline7"></div>
+        <br />
+        <p>
+          A national program called the Freshwater Challenge seeks to mobilize the necessary
+          resources to guarantee that 350 million hectares of degraded wetlands and 300,000
+          kilometers of degraded rivers would be restored by 2030. The United States accepted the
+          Freshwater Challenge in December along with forty-three other nations!
+        </p>
+        <br /><br />
+        <div class="image-container">
+          <img src="/images/wetland11.jpg" class="wetland-image" />
+          <img src="/images/wetland12.jpg" class="wetland-image" />
+        </div>
+        <br />
+
+        <h4 id="topic">8. What threats do wetlands face?</h4>
+        <div id="topic-underline8"></div>
+        <br />
+        <p>
+          Development, agriculture, aquaculture, climate change, pollution, and dams are some of the
+          issues facing wetlands. WWF promotes climate change adaptation and supports the Freshwater
+          Challenge as part of its global efforts to protect wetlands.
+        </p>
+        <br /><br />
+        <img src="/images/wetland13.jpg" class="wetland1" />
+        <br />
+      </div>
+      <footer>
+        <link rel="stylesheet" href="Style.css" />
+        <link rel="stylesheet" href="MediaQueries.css" />
+        <ul>
+          <li><a href="/Team/Team.html">About us |</a></li>
+          <li><a href="/Footer/references.html">References |</a></li>
+          <li><a href="/Footer/contact.html">Contact |</a></li>
+          <li><a href="/Footer/faq.html">FAQ</a></li>
+        </ul>
+
+        <p>&copy; 2024 Life on Land. All rights reserved</p>
+      </footer>
+    </div>
+
+    <script>
+        const scrollToBottomLink = document.getElementById('scrollToBottom');
+        const footer = document.querySelector('footer');
+
+        scrollToBottomLink.addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent the default anchor behavior
+            footer.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+  </body>
+</html>
