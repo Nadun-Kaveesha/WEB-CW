@@ -157,7 +157,7 @@ header h1 {
     right: 0;
     top: 120px;
     padding: 10px 15px;
-    padding-left: none;
+    /* padding-left: none; */
     border-radius: 50px;
     text-decoration: none;
 }
