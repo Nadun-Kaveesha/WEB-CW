@@ -1,4 +1,4 @@
-const nodes = document.querySelectorAll('rect, text'); // Include text elements as well
+const nodes = document.querySelectorAll('rect, text'); // Select all rectangles and texts
 nodes.forEach(node => {
     node.addEventListener('mouseover', function() {
         if (this.tagName === 'rect') { // Check if the element is a rectangle
@@ -10,13 +10,13 @@ nodes.forEach(node => {
 
     node.addEventListener('mouseout', function() {
         if (this.tagName === 'rect') {
-            this.setAttribute('fill', 'rgb(144,238,238)'); // Revert the color on mouseout
+            this.setAttribute('fill', 'rgb(144,238,238)'); // back to the exsited the color on mouseout
         } else if (this.tagName === 'text') {
-            this.previousElementSibling.setAttribute('fill', 'rgb(144,238,238)'); // Revert the color of the rectangle on mouseout
+            this.previousElementSibling.setAttribute('fill', 'rgb(144,238,238)'); // return the color of the rectangle on mouseout
         }
     });
 
-    node.addEventListener('click', function() {    // Redirect to corresponding page when clicked
+    node.addEventListener('click', function() {    // redirect to corresponding page when clicked
         if (this.tagName === 'rect') {
             if (this.id === 'Home') {
                 window.location.href = '/HomePage/HomePage.html';

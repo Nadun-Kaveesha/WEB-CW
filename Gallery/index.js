@@ -3,17 +3,17 @@ document.addEventListener("DOMContentLoaded", function() {
     var modal = document.getElementById("myModal");
     var modalContent = document.getElementById("modal-content");
     var closeModalButton = document.querySelector('.close');
-    var colorPicker = document.getElementById('colorPicker'); // New line to select the color picker
-    var fontSelector = document.getElementById('fontSelector'); // New line to select the font selector
+    var colorPicker = document.getElementById('colorPicker'); //to select the color picker
+    var fontSelector = document.getElementById('fontSelector'); //to select the font selector
 
-    // Function to update the background color of modal content
+    // function to update the background color of modal content
     function updateModalBackgroundColor(color) {
         modalContent.style.backgroundColor = color;
     }
 
-    // Function to update the font of modal content
+    // function to update the font of modal content
     function updateModalFont(font) {                                
-        modalContent.style.setProperty('--font-family', font); // New line to set the font = font;
+        modalContent.style.setProperty('--font-family', font); // to set the font = font;
     }
 
     images.forEach(function(image) {
@@ -41,15 +41,15 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Event listener for when the color picker value changes
+    // event listener for when the color picker value changes
     colorPicker.addEventListener('input', function() {
-        // Set the background color of modal content to the chosen color
+        // set the background color of modal content to the chosen color
         updateModalBackgroundColor(colorPicker.value);
     });
 
-    // Event listener for when the font selector value changes
+    // event listener for when the font selector value changes
     fontSelector.addEventListener('change', function() {
-        // Set the font of modal content to the chosen font
+        // set the font of modal content to the selected font
         updateModalFont(fontSelector.value);
     });
 });
