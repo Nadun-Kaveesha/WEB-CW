@@ -119,16 +119,35 @@
 }
 .x {
     display: inline-block;
-    margin-left: 1000px;
+    margin-left: 50%;
   }
   
   .y {
     display: inline-block; 
-    margin-left: 10px;
+    margin-left: 5%;
   }
 
 @media(max-width: 768px){
     .photo-gallery{
         flex-direction: column;
+    }
+    .modal-image{
+        width: 300px;
+        height: 100%;
+    }
+    .x{
+        display: inline-block;
+        margin-left:5%; 
+    }
+    .y{
+        display: inline-block;
+        margin-left: 5%;
+        margin-bottom: 1%;
+    }
+    .close{
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
     }
 }
