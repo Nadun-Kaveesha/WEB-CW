@@ -14,7 +14,7 @@
     }
 
     .footer {
-        /* bottom: calc(height - 300px); */
+        bottom: calc(height - 300px);
         top: auto;
         left: 0;
     }
