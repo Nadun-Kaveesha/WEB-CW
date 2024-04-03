@@ -27,7 +27,7 @@ h1 {
 
 .header {
     background-color: rgb(47, 157, 58);
-    width: relative;
+    /* width: relative; */
     height: 100px;
     position: relative;
     top: 0;
