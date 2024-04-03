@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const cartContent = inlineCart.querySelector('.cartContent');
     const cartBottom = inlineCart.querySelector('.cartBottom');
     let totalPrice = 0;
-    const addedProducts = {}; // Store added products
+    const addedProducts = {}; 
 
     // ---------------Open the Cart---------------
     cartIcon.addEventListener('click', function() { 
@@ -17,12 +17,12 @@ document.addEventListener('DOMContentLoaded', function() {
         inlineCart.style.display = 'none';
     });
 
-    // Function to calculate total price based on quantity
+    // ----------------Total Price-------------------
     function calculateTotalPrice(quantity, price) {
-        return (quantity * price).toFixed(2); // Round to 2 decimal places
+        return (quantity * price).toFixed(2); // -----Round to 2 decimal places-----
     }
 
-    // Function to update cart content and total price
+    // ---------------add product to the cart-----------------
     function updateCart(productName, quantity, price) {
         if (addedProducts[productName]) {
             alert("Product already added to the cart");
@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
         itemElement.classList.add('cartItem');
         itemElement.innerHTML = `${productName}<br> Quantity: ${quantity}<br> Price: LKR ${itemTotalPrice}`;
 
+        // ----------------Delete Item------------------
         const deleteButton = document.createElement('a');
         deleteButton.href = '#';
         deleteButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
@@ -45,21 +46,21 @@ document.addEventListener('DOMContentLoaded', function() {
             totalPrice -= parseFloat(itemTotalPrice);
             cartContent.removeChild(itemElement);
             cartBottom.querySelector('.totalPrice').textContent = `Price: LKR ${totalPrice.toFixed(2)}`;
-            delete addedProducts[productName]; // Remove product from addedProducts object
+            delete addedProducts[productName]; 
         });
 
         itemElement.appendChild(deleteButton);
         cartContent.appendChild(itemElement);
         cartBottom.querySelector('.totalPrice').textContent = `Total Price: LKR ${totalPrice.toFixed(2)}`;
-        addedProducts[productName] = true; // Add product to addedProducts object
+        addedProducts[productName] = true; 
     }
 
-    // Handle add to cart button click
+    // ------------------Add to cart------------------
     document.querySelectorAll('.add-to-cart').forEach(button => {
         button.addEventListener('click', function() {
             const productContainer = this.closest('.product');
             const productName = productContainer.querySelector('.product-name').textContent;
-            const productPrice = parseFloat(productContainer.querySelector('.price').textContent.slice(4)); // Extracting price without '$'
+            const productPrice = parseFloat(productContainer.querySelector('.price').textContent.slice(4)); // -- Geting the price without "LKR" -- 
             const productQuantity = parseInt(productContainer.querySelector('.quantity').value);
             
             updateCart(productName, productQuantity, productPrice);
