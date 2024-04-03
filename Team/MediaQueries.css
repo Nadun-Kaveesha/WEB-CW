@@ -20,7 +20,7 @@
         width: 100%;
         height: auto;
         display: flex;
-        flex-direction: column; /* Stack cards vertically */
+        flex-direction: column; 
         align-items: center;
         justify-content: center;
         padding: 20px;
@@ -50,14 +50,14 @@
         position: relative;
         width: 100%;
         max-width: 220px;
-        height: 220px; /* Set fixed height to maintain circle shape */
+        height: 220px; 
         background-color: #ffffff;
         padding: 20px;
         border-radius: 50%;
         box-shadow: -5px 8px 45px rgba(51, 51, 51, 0.126);
         transition: all 0.4s;
         margin: 140px 0 -120px 0;
-        overflow: hidden; /* Hide overflowing content */
+        overflow: hidden; 
     }
 
     .profile-card:last-child {
@@ -66,7 +66,7 @@
 
     .profile-card:hover {
         border-radius: 10px;
-        height: auto; /* Expand height on hover */
+        height: auto; 
     }
 
     .profile-card .img {
@@ -83,7 +83,7 @@
     .img img {
         object-fit: cover;
         width: 100%;
-        height: 100%; /* Ensure the image covers the entire container */
+        height: 100%; 
         border-radius: 50%;
         border: 5px solid #23a20c;
         transition: all 0.4s;
@@ -102,7 +102,7 @@
     .profile-card:hover .caption {
         opacity: 1;
         pointer-events: all;
-        transform: translateY(-20px); /* Move caption downwards */
+        transform: translateY(-20px); 
     }
 
     .caption h3 {

@@ -14,7 +14,7 @@
   position: absolute;
   padding: 0;
   display: flex;
-  flex-direction: column; /* To stack elements vertically */
+  flex-direction: column; 
 }
 
 @media (resolution: 1.25dppx) {
@@ -37,7 +37,7 @@
 
 #heading-description {
   position: absolute;
-  top: 50px; /* Adjust as needed */
+  top: 50px; 
   left: 150px;
   font-size: 50px;
   color: #fff;

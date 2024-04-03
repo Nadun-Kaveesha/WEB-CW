@@ -1,8 +1,9 @@
+//Function to make the jump to bottom link work
 const scrollToBottomLink = document.getElementById("scrollToBottom");
 const footer = document.querySelector("footer");
 
 scrollToBottomLink.addEventListener("click", (event) => {
-  event.preventDefault(); // Prevent the default anchor behavior
+  event.preventDefault(); 
   footer.scrollIntoView({ behavior: "smooth" });
 });
 

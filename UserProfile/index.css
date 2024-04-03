@@ -22,13 +22,13 @@
   background-image: url("background.jpg");
   background-size: cover;
   background-position: center center;
-  background-attachment: fixed; /* Background stays fixed */
+  background-attachment: fixed; 
   width: 100%;
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow-y: auto; /* Enable vertical scrolling for content */
+  overflow-y: auto; 
 }
 
 .main-container {
