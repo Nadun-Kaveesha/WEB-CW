@@ -328,7 +328,7 @@ body {
     overflow: hidden;
     top: 192%;
     left: 3%;
-    background-image: url(wetLand.jpg);
+    background-image: url(/HomePage/media/wetLand.jpg);
     background-size: cover;
     padding: 20px;
     border-radius: 10px;
@@ -370,7 +370,7 @@ body {
     position: absolute ;
     top: 192%;
     left: 27%;
-    background-image: url(forest.jpg);
+    background-image: url(/HomePage/media/forest.jpg);
     background-size: cover;
     padding: 20px;
     border-radius: 10px;
@@ -411,7 +411,7 @@ body {
     position: absolute ;
     top: 192%;
     left: 51%;
-    background-image: url(desert.jpg);
+    background-image: url(/HomePage/media/desert.jpg);
     background-size: cover;
     padding: 20px;
     border-radius: 10px;
@@ -451,7 +451,7 @@ body {
     position: absolute ;
     top: 192%;
     left: 75%;
-    background-image: url(urban.jpg);
+    background-image: url(/HomePage/media/urban.jpg);
     background-size: cover;
     padding: 20px;
     border-radius: 10px;

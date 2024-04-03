@@ -1,0 +1,19 @@
+body {
+    font-family: "poppins" , sans-serif;
+}
+#intro {
+    margin-top: 2%;
+    font-size: 16px;
+    line-height: 1.2;
+    width: 85%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#hedding {
+    font-size: 50px;
+    font-weight: 600;
+    width: 100%;
+    height: 100%;
+
+}
