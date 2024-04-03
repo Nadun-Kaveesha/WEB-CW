@@ -213,8 +213,8 @@ header h1 {
 
 .inlinecart {
     background-color: #f0f0f0;
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: 110px;
     right: 0;
     height: 100vh;
     width: 350px;
@@ -226,7 +226,7 @@ header h1 {
 
 
 #cart-title {
-    margin-top: 100px;
+    margin-top: 0px;
 }
 
 .cartContent {

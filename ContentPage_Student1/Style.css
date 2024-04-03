@@ -21,7 +21,7 @@ header {
 }
 
 .content {
-    width: 40%;
+    width: 100%;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
@@ -31,5 +31,21 @@ header {
     background-color: rgb(41, 146, 51);
     color: white;
     padding: 10px 0;
-    padding-left: 15px;
+    text-align: center;
+    margin: 0 20px;
+}
+
+.content p, .content h3, .content a{
+    padding: 0 100px;
+}
+
+#img-1 {
+    width: 50%;
+    text-align: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: auto;
+    display: block;
+    
 }
